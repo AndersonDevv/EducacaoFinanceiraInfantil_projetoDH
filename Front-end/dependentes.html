@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integrador - PEFI</title>
+    <link rel="stylesheet" href="css/css_bootstrap_4.5.2/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/estilos_luciano.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!--jquery confirm-->
+    <link rel="stylesheet" href="js/js_confirm/dist/jquery-confirm.min.css">
+
+<!--Links para table-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+-->
+
+<!--Links para Font Awesome-->
+<script src="https://kit.fontawesome.com/1911ed3387"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!--
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+-->
+
+
+
+    <!--Usei o jquery aqui porque o jquery do cdn do bootstrap estava impendindo o efeito-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <style>
+    /*
+    .bodyHome,.bodyHome>ul,.bodyHome>li,.bodyHome>a{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Fredoka One';
+    font-size: 18px;
+}
+*/
+
+/*      
+        obs.: codigo comentado 30/11. Luciano,  o codigo do footer e nav
+        estavam bugados por conta das linhas 55 - 60. 
+        tudo começou a funcionar ok ao adicionar as linhas 44 - 51 
+        body{
+            color: #81858d!important;
+           
+            font-family: 'Varela Round', sans-serif!important;
+            font-size: 13px !important;;
+        }
+    */
+        .table-responsive {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .table-wrapper {
+            background: #fff;
+            padding: 20px 25px;
+            border-radius: 3px;
+           max-width: 515px;           
+            box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        }
+        .table-title {        
+            padding-bottom: 15px;
+            background: #e60e06;
+            color: #fff;
+            padding: 16px 30px;
+            min-width: 100%;
+            margin: -20px -25px 10px;
+            border-radius: 3px 3px 0 0;
+            border-radius: 10px 10px 0 0;
+        }
+        .table-title h2 {
+            margin: 5px 0 0;
+            font-size: 18px;
+        }
+        .table-title .btn-group {
+            float: right;
+        }
+        .table-title .btn {
+            color: #fff;
+            float: right;
+            font-size: 13px;
+            border: none;
+            min-width: 30px;
+            border-radius: 2px;
+            border: none;
+            outline: none !important;
+            margin-left: 6px;
+        }
+
+
+        @media only screen and (max-width: 500px) {
+    .table-title h2 {
+           margin-left: -20px;
+            font-size: 16px;
+            margin-right: 6px;
+           /*border: 1px solid blue;*/
+        } 
+
+        .table-title .btn {
+          
+        
+            font-size: 9px;
+            margin-top: -26px;
+           
+           
+        }
+        .table-title .btn i {
+           
+            font-size: 8px;
+          
+        }
+}
+
+        .table-title .btn i {
+            float: left;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        .table-title .btn span {
+            float: left;
+            margin-top: 2px;
+        }
+        table.table tr th, table.table tr td {
+            border-color: #e9e9e9;
+            padding: 12px 15px;
+            vertical-align: middle;
+        }
+        table.table tr th:first-child {
+            width: 260px;
+        }
+        table.table tr th:last-child {
+            width: 100px;
+        }
+        table.table-striped tbody tr:nth-of-type(odd) {
+            background-color: #fcfcfc;
+        }
+        table.table-striped.table-hover tbody tr:hover {
+            background: #f5f5f5;
+        }
+        table.table th i {
+            font-size: 13px;
+            margin: 0 5px;
+            cursor: pointer;
+        }	
+        table.table td:last-child i {
+            opacity: 0.9;
+            font-size: 22px;
+            margin: 0 5px;
+        }
+        table.table td a {
+            font-weight: bold;
+            color: #566787;
+            display: inline-block;
+            text-decoration: none;
+            outline: none !important;
+        }
+        table.table td a:hover {
+            color: #2196F3;
+        }
+        table.table td a.edit {
+            color: #FFC107;
+        }
+        table.table td a.delete {
+            color: #F44336;
+        }
+        table.table td i {
+            font-size: 19px;
+        }
+        table.table .avatar {
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+        
+        .hint-text {
+            float: left;
+            margin-top: 10px;
+            font-size: 13px;
+        }    
+        /* Custom checkbox */
+        
+        /* Modal styles */
+        .modal .modal-dialog {
+            max-width: 400px;
+        }
+        .modal .modal-header, .modal .modal-body, .modal .modal-footer {
+            padding: 20px 30px;
+        }
+        .modal .modal-content {
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        .modal .modal-footer {
+            background: #ecf0f1;
+            border-radius: 0 0 3px 3px;
+        }
+        .modal .modal-title {
+            display: inline-block;
+        }
+        .modal .form-control {
+            border-radius: 2px;
+            box-shadow: none;
+            border-color: #dddddd;
+        }
+        .modal textarea.form-control {
+            resize: vertical;
+        }
+        .modal .btn {
+            border-radius: 2px;
+            min-width: 100px;
+        }	
+        .modal form label {
+            font-weight: normal;
+        }	
+
+
+        /*CSS Para esconder o id da tabela de categorias*/
+        .hidden{
+          display: none;  
+        }
+
+        .error{
+            color:red;
+        }
+
+        .borda{
+            border: 1px solid blue;
+        }
+
+        .btn-color{
+            background-color: #706A6A;
+            border-radius: 20px;
+        }
+
+        .btn-color:hover{
+            background-color: #817f7f;
+           
+        }
+
+        /*Tabela de Dependentes*/
+        .table-title-dep {        
+            padding-bottom: 15px;
+           
+            color: rgb(21, 20, 20);
+            padding: 16px 30px;
+            min-width: 100%;
+            margin: -20px -25px 10px;          
+            border-radius: 10px 10px 0 0;
+         
+        }
+
+       
+
+        @font-face {
+  font-family: 'MyWebFont';
+  src: url('fontes/FredokaOne-Regular.ttf'); /* IE9 Compat Modes */
+ 
+}
+
+/*Para evitar conflito com a tela modal de delatar*/
+.fonte_menu{
+    font-family: 'MyWebFont', Fallback, sans-serif;
+    font-size: 16px;
+}
+
+ /*Mostrar Tarefas*/
+ .mostrar_tarefas{
+     /*
+     color: #2815FD;
+     background-color: #817f7f;
+     */
+ }
+
+        </style>
+
+<script>
+  
+    </script>
+
+</head>
+
+
+<body>
+
+    <!-------------------------------------Menu---------------------------------------------------------->
+        <body class="bodyHome" >
+            <header>
+                <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light" id="menu_header">
+        
+                    <a class="navbar-brand" href="#"><img class="img-fluid" src="./images/home_logo_santander.png" alt="logo" id="logo"></a>
+                    <button class="navbar-toggler" id="outline" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon" ></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                        <ul class="navbar-nav mt-3">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html" name="ir_para_inicio_pagina"><span id="home">Home</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobre.html"><span id="sobre_nos">Sobre</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="continhas.html"><span id="minhas_continhas">Continhas</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="investimentos.html"><span id="investimentos">Investimentos</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tarefas.html"><span id="minhas_tarefas">Tarefas</span></a>
+                            </li>
+                        </ul>
+                        
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <div class="d-none d-md-block" id="separador"></div>
+                            </li>
+                            <li class="nav-item active" id="esconder_abrir_entrar">
+                                <button class="" id="btn_abrir_conta" ><a href="telaCadastro.html" class="home_abrir_conta" id="abrir_continha">Abrir Continha</a></button>
+                            </li>
+                            <li class="nav-item" id="esconder_abrir_entrar">
+                                <a class="nav-link mt-1 ml-2"><span id="entrar" onclick ="chamar_modal()">Entrar</span></a>
+                            </li>
+                            <li class="nav-item"  id="esconder_usuario_logado">
+                                <div class="nav-link mt-1 ml-2" id="mostrar_nome_usuario"></div>
+                            </li>
+                            <li class="nav-item"  id="esconder_usuario_logado">
+                                <div class="nav-link mt-1 ml-2"><div id="rotate" class="fas fa-angle-down" onclick="chamar_modal_usuario_logado()"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        
+    <!--------------------------------------------------------------------------------------------------------->
+
+
+    <!-----------------------------------------Seção Cards Objetivos e Categorias------------------------------>
+    <section style="margin-bottom: 120px; margin-top: 40px;">
+        <div class="container-fluid" style="color: black;">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 d-flex justify-content-center">
+                    <a class="nav-link mostrar_tarefas">
+                        <div class="lu_card">
+                            <div class="lu_div_cards_objetivo_categoria">
+                                <div>
+                                    <span class="lu_span_objetivos">Objetivos</span>
+                                </div>
+                                <span class="lu_span_sub_titulo_objetivo">Crie e delegue objetivos e missões.</span>
+                            </div>
+                            <img class="lu_card_amarelo" src="images/card_amarelo.png" alt="">
+                        </div>
+                    </a>
+
+
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 d-flex justify-content-center">
+                    <a class="mostrar_categoria nav-link" id="categoria">
+                        <div class="lu_card">
+                            <div class="lu_div_cards_objetivo_categoria">
+                                <div>
+                                    <span class="lu_span_objetivos">Categorias</span>
+                                </div>
+                                <span class="lu_span_sub_titulo_objetivo" style="color:rgb(94, 221, 94);">Crie categorias para organizar objetivos.</span>
+                            </div>
+                            <img class="lu_card_amarelo" src="images/card_rosa.png" alt="">
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------------------------------------------------------->
+
+
+   
+
+<!-------------------------Table Curso------------------------------------------------------------->
+
+<!--
+
+     <button type="button" class="btn btn-primary mt-4" data-toggle="modal" data-target="#modalFormulario" id="novaCategoria">
+        Launch demo modal
+      </button>
+<div class="container">
+    <div class="row text-center mt-4">
+        <class class="col">
+    <table class="table table-striped table-hover" id="categorias">
+        <thead>
+          <tr>   
+            <th class="d-none">Id</th>         
+         
+            <th >Nome</th>    
+            <th>Actions</th>       
+          </tr>
+        </thead>
+        <tbody>
+             
+            <tr>
+              
+                <td>1</td>
+                <td>Lazer</td>
+                <td>
+                    <button class="btn td_edit"><img src="images/editar.png" width="25" height="25"></i></button>
+                    <button class="btn td_excluir"><img src="images/delete.png" width="25" height="25"></button>
+                </td>
+              
+            </tr>
+         
+        </tbody>
+    </table>
+  
+  </div>
+</div>
+
+
+-->
+
+<!-------------------------Fim Curso------------------------------------------------------------->
+
+<div class="container body">
+    <div class="table-wrapper ml-auto mr-auto" id="categorias" class="div_table_categoria">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2><b>Categorias</b></h2>
+                </div>
+               
+                   <div class="col-sm-6">
+                  
+                     
+                    <button class="btn btn-outline-secondary btn-sm ocultar_categoria" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Sair</span></button>	
+                    <button class="btn btn-color btn-sm" data-toggle="modal" data-target="#modalFormulario" id="novaCategoria"><i class="material-icons">&#xE147;</i> <span>Criar Categoria</span></button>			
+                </div>
+                
+              
+            </div>
+        </div>
+        <table class="table table-striped table-hover justify-content-center">
+            <thead>
+                <tr>                    
+                    <th>Nome</th>                        
+                    <th class="text-center">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+              
+               
+              
+            </tbody>
+        </table>
+       </div>
+</div>
+  
+  <!-- Modal -->
+  <div class="modal fade  body" id="modalFormulario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Categorias</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form id="formUsuario">
+                <input type="hidden" id="inputId" name="inputId">
+                <div class="form-group">
+                    <label for="inputNome">Nome da Categoria</label>
+                    <input type="text" placeholder="nome" class="form-control" id="inputNome" name="inputNome">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="btnSubmit">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!-- Edit Modal HTML -->
+<div id="addEmployeeModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form>
+				<div class="modal-header">						
+					<h4 class="modal-title">Adicionar una nova Categoria</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">					
+					<div class="form-group">
+						<label>Nome da Categoria</label>
+						<input type="text" class="form-control" required>
+					</div>
+							
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+					<input type="submit" class="btn btn-success" value="Add">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Edit Modal HTML -->
+<div id="editEmployeeModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form>
+				<div class="modal-header">						
+					<h4 class="modal-title">Editar Categoria</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">					
+					<div class="form-group">
+						<label>Nome</label>
+						<input type="text" class="form-control" required>
+					</div>						
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+					<input type="submit" class="btn btn-info" value="Salvar">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>  
+<!-- Delete Modal HTML -->
+<div id="deleteEmployeeModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form name="deletar_categoria">
+				<div class="modal-header">						
+					<h4 class="modal-title">Deletar Categoria</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">					
+					<p>Você está certo que deseja deletar essa categoria?</p>
+					<p class="text-warning"><small>A operação não pode ser desfeita!</small></p>
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+					<input type="button" class="btn btn-danger" value="Deletar">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>  
+
+
+    <div class="d-flex justify-content-center mb-5">
+        <div class="form__group field" id="campo_categoria">
+            <input type="input" class="form__field" placeholder="Cadastre uma nova categoria" name="name" id='name' required />
+            <label for="name" class="form__label">Categoria</label>
+            <div class="d-flex justify-content-end mt-4">
+                <button type="button" class="btn ocultar_categoria btn-secondary mr-2 p-1" style="border-radius:20px;">&nbsp;&nbsp;Salvar&nbsp;&nbsp;</button>
+                <button type="button" class="btn ocultar_categoria btn-secondary p-1" style="border-radius:20px;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!---------------------------------------Seção Nome do Dependende------------------------------------------>
+    <section>
+
+        <div class="d-flex justify-content-center">
+            <h1 id="texto_dependentes">Meus Dependentes</h1>
+        </div>
+
+    </section>
+    <!--------------------------------------------------------------------------------------------------------->
+
+
+    <!-------------------------------Seção Cards Dependentes--------------------------------------------------->
+    <section>
+        <div class="container mt-4">
+            <div class="row" id="card-dependente">
+          <!---
+                
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+
+                    <div class="card_dependentes cards_query mt-4">
+                        <div class="mostrar_tarefas">
+                            <img class="img-flui card_footer_dependentes" src="images/footer_card.png" alt="">
+                            <a href="#"><img id="icon_editar" src="images/editar.png" alt=""></a>
+                            <a href="#"><img id="icon_deletar" src="images/delete.png" alt=""></a>
+                            <img id="img_dependente" src="images/img_dependente.png" alt="">
+                            <span class="lu_span" id="nome_dependente">Juninho</span>
+                            <span class="lu_span" id="total_tarefas_dependente">2&nbsp;Tarefas</span>
+                            <span class="lu_span" id="pontos_acomulados">Pontos Acomulados</span>
+                            <span class="lu_span" id="total_pontos_acomulados">25</span>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+
+                    <div class="card_dependentes mt-4">
+                        <div class="mostrar_tarefas">
+                            <img class="img-flui card_footer_dependentes" src="images/footer_card.png" alt="">
+                            <a href="#"><img id="icon_editar" src="images/editar.png" alt=""></a>
+                            <a href="#"><img id="icon_deletar" src="images/delete.png" alt=""></a>
+                            <img id="img_dependente" src="images/img_dependente.png" alt="">
+                            <span class="lu_span" id="nome_dependente">Joaozinho</span>
+                            <span class="lu_span" id="total_tarefas_dependente">4&nbsp;Tarefas</span>
+                            <span class="lu_span" id="pontos_acomulados">Pontos Acomulados</span>
+                            <span class="lu_span" id="total_pontos_acomulados">25</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+
+                    <div class="card_dependentes mt-4">
+                        <div class="mostrar_tarefas">
+                            <img class="img-flui card_footer_dependentes" src="images/footer_card.png" alt="">
+                            <a href="#"><img id="icon_editar" src="images/editar.png" alt=""></a>
+                            <a href="#"><img id="icon_deletar" src="images/delete.png" alt=""></a>
+                            <img id="img_dependente" src="images/img_dependente.png" alt="">
+                            <span class="lu_span" id="nome_dependente">Pedrinho</span>
+                            <span class="lu_span" id="total_tarefas_dependente">4&nbsp;Tarefas</span>
+                            <span class="lu_span" id="pontos_acomulados">Pontos Acomulados</span>
+                            <span class="lu_span" id="total_pontos_acomulados">25</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+               
+                    <div class="card_dependentes mt-4">
+                        <div class="mostrar_tarefas">
+                            <img class="img-flui card_footer_dependentes" src="images/footer_card.png" alt="">
+                            <a href="#"><img id="icon_editar" src="images/editar.png" alt=""></a>
+                            <a href="#"><img id="icon_deletar" src="images/delete.png" alt=""></a>
+                            <img id="img_dependente" src="images/img_dependente.png" alt="">
+                            <span class="lu_span" id="nome_dependente">Julhinha</span>
+                            <span class="lu_span" id="total_tarefas_dependente">4&nbsp;Tarefas</span>
+                            <span class="lu_span" id="pontos_acomulados">Pontos Acomulados</span>
+                            <span class="lu_span" id="total_pontos_acomulados">25</span>
+                        </div>
+                    </div>
+                -->
+
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------------------------------------------------------->
+
+
+
+
+<!------------------------------------Add Dependente-------------------------------------------------->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modalDependente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="" style="color: #706A6A;">Novo Dependente</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="box box-success">
+                <div class="box-header with-border">
+                
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                <form id="formDependente">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <input type="hidden" id="inputIdDep" name="inputIdDep">
+                      <label for="exampleInputName">Nome</label>
+                      <input type="text" class="form-control" placeholder="Digite o nome do usuário" id="inputNomeDep" name="inputNomeDep">
+                    </div>
+                    <!--
+ <div class="form-group">
+                      <label>Gênero</label>
+                      <div class="radio">
+                        <label for="exampleInputGenderM">
+                          <input type="radio" id="exampleInputGenderM" name="gender">
+                          Masculino</label>
+                      </div>
+                      <div class="radio">
+                        <label for="exampleInputGenderF">
+                          <input type="radio" id="exampleInputGenderF" name="gender">
+                          Feminino</label>
+                      </div>
+                    </div>
+                    -->
+                   
+                    <div class="form-group">
+                      <label for="exampleInputBirth">Data de Nascimento</label>
+                      <input type="date" class="form-control" id="inputDate" name="inputDate">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputCountry">Gênero</label>
+                      <select class="form-control" id="inputGenero" name="inputGenero">
+                        <option value="" selected="selected">Selecione um gênero</option>
+                        <option value="Masculino">Masculino</option>     
+                        <option value="Feminino">Feminino</option>     
+                        <option value="Outros">Outros</option>               
+                     
+                        
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Usuário</label>
+                        <input type="text" class="form-control" placeholder="Crie um login" id="inputUsuario" name="inputUsuario">
+                      </div>
+                 
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Senha</label>
+                      <input type="password" class="form-control" placeholder="Crie uma senha" id="inputSenha" name="inputSenha">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputFile">Foto</label>
+                      <input type="file" id="inputFoto"  name="inputFoto"  style="border: 1px solid#dfdfe1;"> 
+                    </div>
+                  
+                  </div>
+                  <!-- /.box-body -->          
+                  <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary btn-sm mr-3" data-dismiss="modal">Cancelar</button>
+                     <button type="button" class="btn btn-primary btn-sm" id="btnSubmitDep">Salvar</button>
+                  </div>
+                </form>
+              </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+
+ 
+  <!-- Modal -->
+  <div class="modal fade  body" id="modalFormulario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Categorias</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form id="formUsuario">
+                <div class="box box-success">
+        <div class="box-header with-border">
+          <h3 class="box-title">Novo Usuário</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form" id="form-user-create">
+          <div class="box-body">
+            <div class="form-group">
+              <label for="exampleInputName">Nome</label>
+              <input type="text" class="form-control" id="exampleInputName" placeholder="Digite o nome do usuário" name="name">
+            </div>
+            <div class="form-group">
+              <label>Gênero</label>
+              <div class="radio">
+                <label for="exampleInputGenderM">
+                  <input type="radio" id="exampleInputGenderM" name="gender">
+                  Masculino</label>
+              </div>
+              <div class="radio">
+                <label for="exampleInputGenderF">
+                  <input type="radio" id="exampleInputGenderF" name="gender">
+                  Feminino</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputBirth">Nascimento</label>
+              <input type="date" class="form-control" id="exampleInputBirth" name="birth">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputCountry">País</label>
+              <select class="form-control" id="exampleInputCountry" name="country">
+                <option value="" selected="selected">Selecione um país</option>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kingdom</option>              
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">E-mail</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite o e-mail" name="email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Senha</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Crie uma senha" name="password">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputFile">Foto</label>
+              <input type="file" id="exampleInputFile" name="photo">
+            </div>
+           
+          </div>
+          <!-- /.box-body -->          
+          <div class="box-footer">
+            <button type="submit" class="btn btn-success">Salvar</button>
+          </div>
+        </form>
+      </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="btnSubmit">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-----------------------------------------Editar Dependetes - Table------------------------------------------------------------>
+ 
+ <div class="container" style="margin-top: 100px;">
+     <div class="row">
+<div class="col d-flex justify-content-between" style="background-color: #e60e06; margin-bottom: -3px; color: white; padding: 0px; border-radius: 10px 10px 0 0;">
+<h4 class="mt-3 ml-4">Dependentes</h4>
+<div class="mt-3 mr-4">
+    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalDependente" id="novoDependente">Adicionar Dependente</button>
+    <button class="btn btn-primary btn-sm ocultar_table_dependente">Sair</button>
+</div>
+
+</div>
+ <table class="table table-hover" id="table-dependente">
+    <thead class="table-title-dep">
+        
+      <tr>
+        <th scope="col">Foto</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Senha</th>
+        <th scope="col">Usuário</th>
+        <th scope="col">Data de Nascimento</th>
+        <th scope="col">Gênero</th>
+        <th scope="col">Ações</th>        
+      </tr>
+    </thead>
+    <tbody>
+    
+
+     
+     
+    </tbody>
+  </table>
+  
+</div>
+</div>
+<!-----------------------------------------Fim Editar Dependetes - Table------------------------------------------------------------>
+
+
+    <div class="container-fluid msg_confirmacao_edicao" id="div_msg_sucesso" style="margin-top: 140px;">
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-success text-center" role="alert">
+                    <h1>Alterações Realizadas com Sucesso.</h1>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="lu_div_editar">
+        <!------------------------------------Editar Usuário------------------------------------------------------->
+        <div id="div_editar_tarefas" class="formulario_edicao">
+            <div class="container">
+
+                <select class="browser-default custom-select">
+                    <option selected>Escolha o Dependente</option>
+                    <option value="1">Juninho</option>
+                    <option value="2">Joãozinho</option>
+                    <option value="3">Maria</option>
+                  </select>
+                <!--
+                      <div class="col-12 form__group field mt-4 d-flex justify-content-center" id="campo_categoria">
+                        <div style="width: 60%;">
+                            <input type="input" class="form__field" placeholder="Cadastre uma nova categoria" name="name" id='name' required value="Juninho Filho" />
+                            <label for="name" class="form__label">Nome</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 form__group field mt-4 d-flex justify-content-center" id="campo_categoria">
+                        <div style="width: 60%;">
+                            <input type="input" class="form__field" placeholder="Cadastre uma nova categoria" name="name" id='name' required value="juninho@papai" />
+                            <label for="name" class="form__label">Usuário</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 form__group field mt-4 d-flex justify-content-center" id="campo_categoria">
+                        <div style="width: 60%;">
+                            <input type="input" class="form__field" placeholder="Cadastre uma nova categoria" name="name" id='name' required value="********" />
+                            <label for="name" class="form__label">Senha</label>
+                        </div>
+
+                    </div>
+
+                     <div class="row" style="margin-top: 50px;">
+                    <div class="col-12 form__group field mt-4 d-flex justify-content-center" id="campo_categoria">
+                        <div style="width: 60%;">
+                            <input type="input" class="form__field" placeholder="Cadastre uma nova categoria" name="name" id='name' required value="Juninho Filho" />
+                            <label for="name" class="form__label">Nome</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 form__group field mt-4 d-flex justify-content-center" id="campo_categoria">
+                        <div style="width: 60%;">
+                            <input type="input" class="form__field" placeholder="Cadastre uma nova categoria" name="name" id='name' required value="juninho@papai" />
+                            <label for="name" class="form__label">Usuário</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 form__group field mt-4 d-flex justify-content-center" id="campo_categoria">
+                        <div style="width: 60%;">
+                            <input type="input" class="form__field" placeholder="Cadastre uma nova categoria" name="name" id='name' required value="********" />
+                            <label for="name" class="form__label">Senha</label>
+                        </div>
+
+                    </div>
+                </div>
+                -->
+
+
+               
+            </div>
+            <!--------------------------------------------------------------------------------------------------------->
+
+
+
+            <!--------------------------------------------------------------------------------------------------------->
+
+
+
+            <section class="mt-5 d-flex justify-content-center">
+                <div class="text-center text-light p-5 lu_tamanho_fundo_tarefas" id="background_tarefas">
+                    <div class="">
+                        <h1 class="texto">Tarefas</h1>
+
+                    </div>
+                </div>
+            </section>
+
+            <form action="" id="myForm" class="lu">
+
+                <div class="container-fluid" style="color: black;">
+                    <div class="row justify-content-center">
+                        <form action="" id="myForm">
+                            <div class="card lu_card_editar_tarefas">
+                                <h6 class="lu_card_editar_tarefas_titulo">Titulo</h6>
+                                <img class="card-img" src="images/ban_nome_tarefa.png" alt="Card image cap">
+                                <input type="text" class="text-center lu_card_editar_tarefas_campo_texto input_form_editar_tarefa" disabled="true" placeholder="Brinquedos" name="titulo"></input>
+                            </div>
+
+
+                            <div class="card lu_card_editar_tarefas">
+                                <h6 class="lu_card_editar_tarefas_titulo">Categoria</h6>
+                                <img class="card-img" src="images/ban_categoria.png" alt="Card image cap">
+                                <input type="text" class="text-center lu_card_editar_tarefas_campo_texto input_form_editar_tarefa" disabled="true" placeholder="Organização" name="categoria"></input>
+
+                            </div>
+
+
+                            <div class="card lu_card_editar_tarefas">
+                                <h6 class="lu_card_editar_tarefas_titulo">Descrição</h6>
+                                <img class="card-img" src="images/ban_descricao.png" alt="Card image cap">
+                                <input type="text" class="text-center lu_card_editar_tarefas_campo_texto input_form_editar_tarefa" disabled="true" placeholder="Guardar Car..." name="descricao"></input>
+                            </div>
+
+
+                            <div class="card lu_card_editar_tarefas">
+                                <h6 class="lu_card_editar_tarefas_titulo">Início</h6>
+                                <img class="card-img" src="images/ban_inicio.png" alt="Card image cap">
+                                <input type="text" class="text-center lu_card_editar_tarefas_campo_texto input_form_editar_tarefa" disabled="true" placeholder="06-10-2020" name="inicio"></input>
+                            </div>
+
+
+                            <div class="card lu_card_editar_tarefas ">
+                                <h6 class="lu_card_editar_tarefas_titulo ">Fim</h6>
+                                <img class="card-img " src="images/ban_fim.png " alt="Card image cap ">
+                                <input type="text" class="text-center lu_card_editar_tarefas_campo_texto input_form_editar_tarefa input_form_editar_tarefa" disabled="true" placeholder="15-10-2020" name="fim"></input>
+                            </div>
+
+
+                            <div class="card lu_card_editar_tarefas ">
+                                <h6 class="lu_card_editar_tarefas_titulo ">Status</h6>
+                                <img class="card-img " src="images/ban_status.png " alt="Card image cap ">
+                                <input type="text" class="text-center lu_card_editar_tarefas_campo_texto input_form_editar_tarefa" disabled="true" placeholder="Iniciada" name="status"></input>
+                            </div>
+
+
+
+                            <div class="card lu_card_editar_tarefas ">
+                                <h6 class="lu_card_editar_tarefas_titulo ">Objetivo</h6>
+                                <img class="card-img " src="images/ban_objetivo.png " alt="Card image cap ">
+                                <input type="text" class="text-center lu_card_editar_tarefas_campo_texto input_form_editar_tarefa" disabled="true" placeholder="Carrinho Novo" name="objetivo"></input>
+                            </div>
+
+
+                            <div class="card lu_card_editar_tarefas ">
+                                <h6 class="lu_card_editar_tarefas_titulo ">Pontos</h6>
+                                <img class="card-img " src="images/ban_pontos.png " alt="Card image cap ">
+                                <input type="text" class="text-center lu_card_editar_tarefas_campo_texto input_form_editar_tarefa" disabled="true" placeholder="20" name="pontos"></input>
+                            </div>
+
+                            <div class="card lu_card_editar_tarefas ">
+                                <h6 class="lu_card_editar_tarefas_titulo ">Dias</h6>
+                                <img class="card-img " src="images/ban_dias.png " alt="Card image cap ">
+                                <input type="text" class="text-center lu_card_editar_tarefas_campo_texto input_form_editar_tarefa" disabled="true" placeholder="Seg, ter, qua" name="dias"></input>
+
+                            </div>
+
+
+                            <div class="card lu_card_editar_tarefas ">
+                                <h6 class="lu_card_editar_tarefas_titulo " style="color:white; ">Controles</h6>
+                                <img class="card-img " src="images/ban_controles.png " alt="Card image cap ">
+                                <div class="d-flex justify-content-around align-items-center " style=" margin-top:5px;height: 36px; ">
+
+                                    <div id="editar_tarefa" class="d-flex justify-content-around align-items-center lu_div_controles" style="background-color: rgb(178, 175, 180); width: 60px; height: 32px; ">
+                                        <img class="lu_img_controles " src="images/editar.png " alt="Card image cap ">
+                                    </div>
+
+                                    <div class="d-flex justify-content-around align-items-center lu_div_controles" style="background-color: rgb(178, 175, 180); width: 60px; height: 32px; ">
+
+                                        <img class="lu_img_controles " src="images/delete.png " alt="Card image cap ">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-5 pb-4">
+                        <button type="submit" class="btn btn-secondary mr-4 p-1 ocultar_tarefas" style="border-radius:20px;">&nbsp;&nbsp;Salvar&nbsp;&nbsp;</button>
+                        <button type="button" class="btn btn-secondary p-1 ocultar_tarefas_btn_cancelar" style="border-radius:20px;">Cancelar</button>
+                    </div>
+                </div>
+
+                </form>
+        </div>
+    </div>
+    <!-------------------------------------------Conteúdo Principal-------------------------------------------->
+    <main>
+        <div class=" container-fluid mt-2 ">
+            <!--------------------------------Background Imagem (Números, criança e grágicos)------------------->
+            <div class="row mb-5 ">
+                <div class="col d-flex justify-content-center mt-5 ">
+                    <img class="img-fluid " src="images/fundo_tarefas.png " alt=" ">
+                </div>
+            </div>
+
+        </div>
+        <!----------------------------------------------------------------------------------------------------->
+    </main>
+    <!-----------------------------------------Fim Conteúdo Principal------------------------------------------->
+
+    <!--
+ </section>
+    -->
+
+    <!-------------------------------Footer - codificado por Felipe e Anderson---------------------------------->
+     <!--IMAGEM SPLASH  E FOOTER INICIAM AQUI-->
+  <section class="splash"> <!-- Imagem do splash-->
+    <a onclick ="irParaInicioPagina()"><img class="setinha_subir" src="./images/footer/setinha_subir.png"></a> 
+        <img class = "splash_image" src="./images/footer/footer_splash_extemidades_.png">
+    </section>
+
+    <footer class="footer"> 
+        <section class="footer_superior" > 
+            <div class="footer_lista">
+                <ul class="footer_lista">
+                    <li id="home" ><a href="index.html" style="color: #2815FD;">Home</a></li> 
+                    <li id="sobre_nos" ><a href="sobre.html" style="color:#FF8717">Sobre</a></li>
+                    <li id="minhas_continhas"><a href="continhas.html" style="color:#C427D1">Continhas</a></li>
+                    <li id="investimentos" ><a href="investimentos.html"style="color:white">Investimentos</a></li>
+                    <li id="investimentos" ><a href="investimentos.html"style="color:#C427D1">Tarefas</a></li>
+                </ul>
+            </div>
+            <div class="footer_superior_conteiner_esquerdo"> <!--Logo e texto -->
+                <img class="footer_esquerdo_santander_logo" src="./images/footer/santander_logo.png">
+                <p class="footer_esquerdo_texto">Cuidando dos seus bens<br> mais preciosos</p>
+            </div>
+            <div class="footer_superior_meio"> <!--Dados de Contato, Rua, Telefone, Menu-->
+                
+                <h2 class="footer_contato">Contato</h2>
+                <div class="footer_meio_rua_telefone_email">
+                    <div class="footer_meio_dados">
+                        <img id="footer_meio_localizacao_imagem" class="footer_meio_dados_imagem" src="./images/footer/footer_meio_rua_imagem.png">
+                        <p class="footer_meio_dados_texto">Rua da Prosperidade, Nº 01</p>
+                    </div>
+
+                    <div class="footer_meio_dados">
+                        <img class="footer_meio_dados_imagem" src="./images/footer/footer_meio_telefone_imagem.png">
+                        <p class="footer_meio_dados_texto">(91) 9 99999-9999</p>
+                    </div>
+
+                    <div class="footer_meio_dados">
+                        <img id="email_img" class="footer_meio_dados_imagem" src="./images/footer/footer_meio_email_imagem.png">
+                        <p class="footer_meio_dados_texto">(91) 9 99999-9999</p>
+                    </div>
+                </div> 
+            </div> <!--fim do footer superior meio-->
+            <div class="footer_superior_direito">
+                <h2>NOSSAS REDES<br>SOCIAIS</h2>
+                <div class="footer_direito_redes_sociais">
+                <a href="#"><img src="./images/footer/logo_facebook.png"></a> 
+                <a href="#"><img src="./images/footer/logo_instagram.png"></a>
+                <a href="#"><img src="./images/footer/logo_twitter.png"></a>
+                <a href="#"><img src="./images/footer/logo_linkdln.png"></a>
+                <a href="#"><img src="./images/footer/logo_youtube.png"></a>
+                </div>
+                <h3 id="baixe_apps">Baixe nossos apps</h3>
+                <div class=footer_superior_direito_image_apps>
+                    <a href="#"><img class="footer_superior_direito_imagens" src="./images/footer/footer_direito_imag_app_store.png"></a>
+                    <a href="#"><img class="footer_superior_direito_imagens" src="./images/footer/footer_direito_image_google_play.png"></a>
+                </div>
+            </div>
+        </section> <!--fim da class "footer_superior-->
+
+        <section class="footer_inferior">
+            <p>2020 © Copyright - Todos os direitos reservados.</p>
+        </section>
+    </footer> 
+<!-- ----------------------------------------------- MODAL PARA LOGIN------------------------------------------------>
+    <div id="home_modal_conteiner" class="home_modal_conteiner">
+        <div class="home_modal_loguin" id="modal_logar">
+            <button onclick ="fechar_modal()" class="home_loguin_fechar">X</button>
+            <div class="modal_loguin_logo"></div>
+            <form id="formulario_loguin" method="POST">
+                <div class="selecao_de_usuario">
+                    <div class="modal_usuarios">
+                        <input type="radio" id="crianca_radio" value="crianca" name="radio" />
+                        <div class="selecao_imagem" style="background-image:url('./images/modal/loguin_imagem_filhos.png')"></div>
+                        <label class="label_usuario">Sou<br>Criança</label>
+                    </div>
+                    <div class="modal_usuarios">
+                        <input type="radio" id="responsavel_radio" value="responsavel"  checked="true" name="radio" />
+                        <div class="selecao_imagem" style="background-image:url('./images/modal/loguin_imagem_responsaveis.png')"></div>
+                        <label class="label_usuario">Sou<br>Responsável</label>
+                    </div>
+                </div>
+                <div class="dados_loguin" style="background-image:url('./images/modal/splash_modal.png')">
+                    <input type="email" id="email" onBlur="verificarEmail()" placeholder="Digite seu e-mail" required>
+                    <div id="mensagemValidacao">
+                        <p id="error-validation-template">Email ou senha incorretos!</p>
+                    </div>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                    <button id = "btn_submit" type="submit" onclick="enviarDados()" >Entrar</button>
+                    <a class="esqueci_senha" id="esquecerSenha" >Esqueci a senha</a>
+                </div>
+            </form>
+        </div>
+        <!------- MODAL RECUPERAÇÃO DE SENHA-->
+        <div class="home_modal_loguin" id="home_modal_esqueci_senha">
+            <button onclick ="fechar_modal()" class="home_loguin_fechar" id="fechar_recuperar_senha">X</button>
+            <div class="modal_loguin_logo"></div>
+            <div id="modal_esqueci_senha_imagem_e_texto">
+                <div id="recuperar_senha_porquinho_duvida"></div>
+                <div id="modal_esqueci_senha_texto">
+                    <h4 id="esqueci_senha_h4">Esqueceu a sua senha?!</h4>
+                    <p>Não se preocupe. Digite o seu e-mail e vamos recuperar<br>
+                    para você!
+                    </p>
+                </div>
+            </div>
+            <form id="formulario_loguin" method="POST">
+                <div class="dados_loguin" style="background-image:url('./images/modal/splash_modal.png')">
+                    <input type="email" id="email_recuperar_senha" onBlur="verificarEmail()" placeholder="Digite seu e-mail" required>
+                    <div id="mensagemValidacao">
+                        <p id="error-validation-template" >Email não encontrado!</p>
+                    </div>
+                    <button id ="btn_submit_esqueci_senha"  onclick="recuperar_senha()">Recuperar Senha</button>
+                
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ---------------------------------- MODAL PARA O USUÁRIO LOGADO ---------------------------->
+    <div id="modal_usuario_logado">
+        <div id="modal_usuario_logado_logo"></div>
+        <div id="modal_usuario_logado_foto"></div>
+        <div id="modal_usuario_logado_lista">
+            <ul id="usuario_logado_lista">
+                <li id="lista-logado-item"><a href="telaEdicaoDados.html">Minha Conta</a></li>
+                <li id="lista-logado-item"><a href="dependentes.html">Conta Kids</a></li>
+                <li id="lista-logado-item" ><a id="deslogar" href="index.html">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+  
+    <!----------------------------------------------------------------------------------------------------->
+    <script type="text/javascript" src="js/geral.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="js/efeitos.js"></script>   
+    <script src="js/dist/jquery.validate.min.js"></script>   
+    <script src="js/dist/localization/messages_pt_BR.js"></script> 
+    <script src="js/js_confirm/dist/jquery-confirm.min.js"></script>  
+    <script src="js/crud_categoria/crud_categoria.js"></script>
+    <script src="js/crud_dependentes.js"></script>   
+    <script src="js/moment.js"></script>
+
+<script>
+
+$("#categoria").click(function(){
+        let cat = {
+
+"cat_nome" : "Natação"
+}
+
+//alert("teste");
+fetch('http://localhost:8085/api/v1/categoria/', {
+    method: 'GET',
+    mode: 'cors',
+    headers: { 
+        'Accept': 'application/json',
+        'Content-Type': 'application/json' ,
+        'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYW1hZUB5YWhvby5jb20uYnIiLCJpYXQiOjE2MDYyNzMwNTMsImV4cCI6MTYwNjI3ODQ1M30.2JcJ0BpfUr07DSqE0dCyMT6q9SN6e_zCTnhZMee8uQEZilCHwuyPYiQxIoDA9GlBo8A9p37irhcXmEU4oy18GQ'       
+    },
+  // body: JSON.stringify(cat),
+})
+.then((response) => response.json())
+.then((response) => {
+  // console.log('Loguin Efetuado com sucesso' + response);
+    variavel = response;
+    console.log(response);
+    //tabela = document.querySelector();
+    $("#tabela_categoria").empty();
+    for(let cont = 0; cont < variavel.length; cont++){
+    $("#tabela_categoria").append("<tr><td>" + response[cont].cat_nome+ "</td><td><a href='"+ response[cont].cat_codigo+ "' class='edit' data-toggle='modal'><img src='images/editar.png'/></a><a id='deletar_categoria' href='"+ response[cont].cat_codigo+ "' class='delete' data-toggle='modal'><img src='images/delete.png'/></a></td></tr>");
+    }
+   
+    
+})
+.catch((error) => {
+    
+    console.error('Error:', "Erro ao logar");
+    // mensagem de erro de loguin ; senha incorreta
+});
+
+});
+
+
+$("#deletar_categoria").click(function(id){
+       
+alert(id);
+
+fetch('http://localhost:8085/api/v1/categoria/'+id, {
+    method: 'DELETAR',
+    mode: 'cors',
+    headers: { 
+        'Accept': 'application/json',
+        'Content-Type': 'application/json' ,
+        'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYW1hZUB5YWhvby5jb20uYnIiLCJpYXQiOjE2MDYyNzMwNTMsImV4cCI6MTYwNjI3ODQ1M30.2JcJ0BpfUr07DSqE0dCyMT6q9SN6e_zCTnhZMee8uQEZilCHwuyPYiQxIoDA9GlBo8A9p37irhcXmEU4oy18GQ'       
+    },
+  // body: JSON.stringify(cat),
+})
+.then((response) => response.json())
+.then((response) => {
+  // console.log('Loguin Efetuado com sucesso' + response);
+    variavel = response;
+    console.log(response); 
+   
+    
+})
+.catch((error) => {
+    
+    console.error('Error:', "Erro ao logar");
+    // mensagem de erro de loguin ; senha incorreta
+});
+
+});
+    
+/*
+$(document).ready( function () {
+    fetch('http://localhost:8085/api/v1/categoria/', {
+            method: 'GET',
+            mode: 'cors',
+            headers: { 
+                'Accept': 'application/json',
+                'Content-Type': 'application/json' ,
+                'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYW1hZUB5YWhvby5jb20uYnIiLCJpYXQiOjE2MDYyNjc0NjgsImV4cCI6MTYwNjI3Mjg2OH0.scf5GE_nNfDFulbEAoI9euK1X_ZA8yE19cj9MKN-zs7_eiUN5Lg8yLEqVtble7Tt5qetGIjLYJWBadzPBJTalg'       
+            },
+          // body: JSON.stringify(cat),
+        })
+        .then((response) => response.json())
+        .then((response) => {
+          // console.log('Loguin Efetuado com sucesso' + response);
+            variavel = response;
+            console.log(variavel);
+            
+        })
+        .catch((error) => {
+            
+            console.error('Error:', "Erro ao logar");
+            // mensagem de erro de loguin ; senha incorreta
+        });
+});
+
+*/
+
+      
+        
+        
+        
+</script>
+
+</body>
+
+</html>

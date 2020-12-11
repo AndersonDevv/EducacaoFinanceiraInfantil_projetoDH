@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estiloContinha.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- sem esse codigo a seta buga-->
+    
+    <title>Minha Continha</title>
+    <a name="topo"></a>
+</head>
+<style>
+        
+    .container {
+        max-width: 80%;
+    }
+    
+    .col-sm-2 {
+        max-width: 15%;
+    }
+
+    .table{
+        margin-left: 10%;
+        width: 70%;
+    }
+
+    #registroVermelho{
+        color:red;
+    }
+
+    #registroVerde{
+        color: green;
+    }
+
+
+
+    
+    .table td:first-child{
+        width: 100px;
+        height: 100px;
+        
+        background-image: url("js/data.png");
+        background-position: left;
+        background-repeat: no-repeat;
+        font-size: 10px;
+        padding-top: 5%;
+       
+    }
+
+    .table td:first-child + td{
+        width: 50px;
+        height: 100px;
+        padding-top: 5%;
+        font-size: 25px;
+        
+
+       
+    }
+
+    .table td:first-child + td + td{
+        width: 150px;
+        height: 100px;
+        padding-top: 5%;
+        font-size: 25px;
+        
+       
+    }
+    .table td:first-child + td + td +td{
+        width: 300px;
+        height: 100px;
+        padding-top: 5%;
+        font-size: 25px;
+       
+       
+    }
+    
+    
+    @media(min-width:768px) and (max-width:1000px) {
+        .container {
+            max-width: 100%;
+        }
+        
+    }
+    
+    @media only screen and (min-width: 576px) and (max-width:768px) {
+        .container {
+            max-width: 100%;
+        }
+        
+        .col-sm-2 {
+            max-width: 52%;
+            width: 20px;
+        }
+    }
+    
+    @media only screen and (max-width: 576px) {
+        .container {
+            max-width: 100%;
+        }
+        
+        .col-sm-2 {
+            max-width: 52%;
+            width: 20px;
+        }
+    }
+</style>
+
+
+<body class="bodyHome">
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light" id="menu_header">
+
+            <a class="navbar-brand" href="#"><img class="img-fluid" src="./images/home_logo_santander.png" alt="logo" id="logo"></a>
+            <button class="navbar-toggler" id="outline" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon" ></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav mt-3">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html" name="ir_para_inicio_pagina"><span id="home">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html"><span id="sobre_nos">Sobre</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="continhas.html"><span id="minhas_continhas">Continhas</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="investimentos.html"><span id="investimentos">Investimentos</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tarefas.html"><span id="minhas_tarefas">Tarefas</span></a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="d-none d-md-block" id="separador"></div>
+                    </li>
+                    <li class="nav-item active" id="esconder_abrir_entrar">
+                        <button class="" id="btn_abrir_conta" ><a href="telaCadastro.html" class="home_abrir_conta" id="abrir_continha">Abrir Continha</a></button>
+                    </li>
+                    <li class="nav-item" id="esconder_abrir_entrar">
+                        <a class="nav-link mt-1 ml-2"><span id="entrar" onclick ="chamar_modal()">Entrar</span></a>
+                    </li>
+                    <li class="nav-item"  id="esconder_usuario_logado">
+                        <div class="nav-link mt-1 ml-2" id="mostrar_nome_usuario"></div>
+                    </li>
+                    <li class="nav-item"  id="esconder_usuario_logado">
+                        <div class="nav-link mt-1 ml-2"><div id="rotate" class="fas fa-angle-down" onclick="chamar_modal_usuario_logado()"></div></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <section>
+        <h1 class="h1" id="Tat_minhaContinha">Minha Continha</h1>
+        <div id="Tat_faixaTopo">
+            <img id="Tat_imagemTopo" src="images/Ta_faixaTopo.png" >
+        </div>
+    </section>
+
+   
+    <section>    
+        <div class="container">
+            <div class="row" id="Tat_minhaContinha2">
+                <div class="col-12 col-sm-12 col-md-6 d-flex justify-content-center" >
+                    <div id="Tat_DadosMinhaContinha justify-content-center"> 
+                        <div class="row" id="Tat_cabecalhoContinha">
+                            <h2 class="h2" >Dados da minha Conta Corrente</h2>
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4 d-flex " >
+                                <h3 class="h3">Tipo: </h3>
+                            </div>
+                            <div class="col-12 col-sm-8 col-md-8 d-flex " >
+                                
+                                <h3 class="h3">Conta Corrente</h3>
+                                
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4 d-flex justify-content-left" >
+                                <h3 class="h3" >Agência: </h3>
+                            </div>
+                            <div class="col-12 col-sm-8 col-md-8 d-flex justify-content-left" >
+                                <input type="text" class="Tat_form-front1" id="cc_num_agencia" readonly>
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4 d-flex justify-content-left" >
+                                <h3 class="h3">Conta: </h3>
+                            </div>
+                            <div class="col-12 col-sm-8 col-md-8 d-flex justify-content-left" >
+                                <input type="text" class="Tat_form-front1" id="cc_num_conta" readonly>
+                                
+                            </div>
+
+                        </div>
+                        <div class="row Tat_saldoConta">
+                            <div class="col-12 col-sm-8 col-md-12 d-flex justify-content-left" >
+                                <button type="button" id="Tat_botaoRoxo1" onclick="mostraMsg()">Saiba mais... </button>
+                                <div >
+                                    <img id="Tat_informacoesConta1" src="images/Ta_Informacoes1.png" onclick="retiraMsg()">
+                                </div>
+                            </div>
+                            <div class="row Tat_saldoConta2">
+                                <h3 class="h3">Saldo em conta Corrente</h3>
+                            </div>
+                        </div>  
+                        <div class="row" id="Tat_saldoEmConta1" >
+                            <h2 class="h2">R$<input type="text" class="Tat_form-front" size = "7" id="cc_saldo" readonly ></h2>
+                            
+                            <img id="Tat_carinha" src="images/emoticon.png" >
+                        </div>
+                        
+                        
+                    </div>
+                </div>  
+                
+                <div class="col-12 col-sm-12 col-md-6 d-flex justify-content-center" >
+                    <div id="Tat_DadosMinhaContinha justify-content-center"> 
+                        <div class="row" id="Tat_cabecalhoContinha">
+                            <h2 class="h2" >Dados da minha Conta Poupança</h2>
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4 d-flex " >
+                                <h3 class="h3">Tipo: </h3>
+                            </div>
+                            <div class="col-12 col-sm-8 col-md-8 d-flex " >
+                                <h3 class="h3">Conta Poupança</h3>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4 d-flex justify-content-left" >
+                                <h3 class="h3">Agência: </h3>
+                            </div>
+                            <div class="col-12 col-sm-8 col-md-8 d-flex justify-content-left" >
+                                <input type="text" class="Tat_form-front1" id="cp_num_agencia" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4 d-flex justify-content-left" >
+                                <h3 class="h3">Conta: </h3>
+                            </div>
+                            <div class="col-12 col-sm-8 col-md-8 d-flex justify-content-left" >
+                                <input type="text" class="Tat_form-front1" id="cp_num_conta" readonly>
+                            </div>
+                        </div>
+                        
+                        <div class="row Tat_saldoConta">
+
+
+                            <div class="col-12 col-sm-8 col-md-12 d-flex justify-content-left" >
+                                <button type="button" id="Tat_botaoRoxo12" onclick="mostraMsg2()">Saiba mais... </button>
+                                <div >
+                                    <img id="Tat_informacoesConta2" src="images/Ta_Informacoes2.png" onclick="retiraMsg2()">
+                                </div>
+                            </div>
+                            
+                            <div class="row Tat_saldoConta2" >
+                                <h3 class="h3">Saldo em Poupança</h3>
+                            </div>
+                        </div>  
+                        <div class="row" id="Tat_saldoEmPoupanca" >
+                            <h2 class="h2">R$<input type="text" class="Tat_form-front" id="cp_saldo" size = "7" readonly></h2>
+                            <img id="Tat_carinha" src="images/emoticon.png" >
+                            <br>
+                        </div>
+                        
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>    
+    <section>
+        <div class="container">
+            <div class="row Tat_faixaRoxa">
+                <div class="col-12 col-sm-12 col-md-12 d-flex " >
+                   <h3 class="h3"> Meu cartão de crédito</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-5 col-md-5 d-flex justify-content-center " id="Tat_divDesenhoCartao" >
+                    <div id="Tat_infoCartao">
+                        <div class="col-12 col-sm-12 col-md-12 d-flex justify-content-center "id="Tat_numeroCartao">
+                            <h4 class="h4" id="car_numero">1232 5463  8900</h4>
+                        </div>
+                        <div class="row" id="Tat_validadeCartao">
+                            <div class="col-12 col-sm-3 col-md-7 d-flex justify-content-center " id="Tat_dataCartao">
+                                <h4 class="h4"></h4>
+                            </div>
+                            <div class="col-12 col-sm-2 col-md-5 d-flex justify-content-left " id="Tat_valCartao">
+                                <h4 class="h4" id="car_data_vencimento">10/22</h4>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 d-flex justify-content-center "id="Tat_nomeCartao">
+                            <input type="text" class="Tat_form-frontCartao" id="dep_nome" readonly>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-12 col-sm-6 col-md-6 d-flex " id="Tat_ContaSemCartao">
+                    <h4 class="h4" id="Tat_fraseCartao">Se sua conta ainda não possui cartão, peça para o papai ou mamãe ativar um cartão para você!</h4>
+              </div>
+                <button type="button" id="Tat_botaoRoxo13" onclick="mostraAtivaCartao()">Ative aqui.</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row Tat_alinhamento">
+                <div id="Tat_operacaoCartao" >
+                    <div class="row" id="Tat_acao">
+                        <div class="col-12 col-sm-12 col-md-12 d-flex justify-content-center">
+                            <h5 class="h5">Meu cartão de Crédito</h5>
+                        </div>
+                    </div>
+                    <div class="row" id="Tat_area">    
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center">
+                            <img id="Tat_porquinho" src="images/Cofrinho.png" >
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 d-flex justify-content-left">
+                            
+                            <h3 class="h3"><label for="valor_deposito">Data de Vencimento:
+                            <input type="text" class="Tat_form-frontInsersao" id="car_data_vencimento" ></h3>
+
+                            <h3 class="h3"><label for="descricao_deposito">Limite:
+                                <input type="text" class="Tat_form-frontInsersao" id="car_limite" ></h3>
+                        </div>   
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center Tat_botoes">
+                            <button type="button" class="Tat_botaoRoxo2" onclick="cancelarAtivaCartao()">Cancelar</button>
+                            <button type="button" class="Tat_botaoRoxo2" onclick="enviarAtivaCartao()">Confirmar</button>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row" id="Tat_ContaQueRende">
+                <div class="col-12 col-sm-12 col-md-1 d-flex justify-content-center"  >
+                    <div id="Tat_vaso"> 
+                        <img src="images/VasoFlor.png" >
+                    </div>
+                </div>
+                
+                <div class="col-12 col-sm-12 col-md-11 d-flex justify-content-center"  >
+                    <div class="Tat_dadosContaQueRende">
+                        <div>
+                            <h4 class="h4">Conta que rende</h4>
+                        </div>
+                        <div class="row" id="Tat_acessoInvestimentos">
+                            <h4 class="h4">Acesse a seção de Investimentos e faça seu dinheirinho render muito mais!</h4>
+                        </div>
+                        <div id="Tat_botaInvestimento" class="row">
+                            <button type="button" class="Tat_botaoVermeho2" onclick="window.location.href='investimentos.html'">Investimentos</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row Tat_alinhamento">
+                <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center" onclick="paraDepositar()">
+                    <div class="Tat_card">
+                        <div class="Tat_fundo_red ">
+                            Depositar
+                        </div>
+                        <div class="Tat_card-img ">
+                            <img src="images/CofrinhoMenor.png " alt=" ">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center" onclick="paraTransferir()">
+                    <div class="Tat_card">
+                        <div class="Tat_fundo_red ">
+                            Transferir
+                        </div>
+                        <div class="Tat_card-img ">
+                            <img src="images/transferir.png " alt=" ">
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center" onclick="paraSacar()">
+                    <div class="Tat_card">
+                        <div class="Tat_fundo_red ">
+                                Sacar
+                        </div>
+                        <div class="Tat_card-img ">
+                            <img src="images/sacar.png " alt=" ">
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center">
+                    <div class="Tat_card">
+                        <div class="Tat_fundo_red ">
+                            Investir
+                        </div>
+                        <div class="Tat_card-img ">
+                            <img src="images/investimento.png " alt=" "onclick="window.location.href='investimentos.html'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row Tat_alinhamento">
+                <div id="Tat_operacao1" >
+                    <div class="row" id="Tat_acao">
+                        <div class="col-12 col-sm-12 col-md-12 d-flex justify-content-center">
+                            <h5 class="h5">Depositar</h5>
+                        </div>
+                    </div>
+                    <div class="row" id="Tat_area">    
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center">
+                            <img id="Tat_porquinho" src="images/Cofrinho.png" >
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 d-flex justify-content-left">
+                            
+                            <h3 class="h3"><label for="valor_deposito">Valor a depositar:
+                            <input type="text" class="Tat_form-frontInsersao" id="valor_deposito" ></h3>
+
+                            <h3 class="h3"><label for="descricao_deposito">Descrição:
+                                <input type="text" class="Tat_form-frontInsersao" id="descricao_deposito" ></h3>
+                        </div>   
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center Tat_botoes">
+                            <button type="button" class="Tat_botaoRoxo2" onclick="cancelarDeposito()">Cancelar</button>
+                            <button type="button" class="Tat_botaoRoxo2" onclick="enviarDeposito()">Confirmar</button>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row Tat_alinhamento">
+                <div id="Tat_operacao2" >
+                    <div class="row" id="Tat_acao">
+                        <div class="col-12 col-sm-12 col-md-12 d-flex justify-content-center">
+                            <h5 class="h5">Transferir</h5>
+                        </div>
+                    </div>
+                    <div class="row" id="Tat_areaTransf">    
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center">
+                            <img id="Tat_transferirImg" src="images/transferir.png" >
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 d-flex justify-content-left">
+                                <input type="radio" name="tipoTransferencia" class="Tat_radio" id="cc_p"/>
+                                <label class="Tat_radioBox">Conta Corrente - Poupança</label> 
+                                <input type="radio" name="tipoTransferencia" class="Tat_radio" id="p_cc"/>
+                                <label class="Tat_radioBox">Poupança - Conta Corrente </label>
+                        </div> 
+                        <div id="Tat_valorATransferir">  
+                            <h3 class="h3">Valor a transferir:
+                            <input type="text" class="Tat_form-front1" id="transf_valor"></h3>
+                            
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center Tat_botoes">
+                                <button type="button" class="Tat_botaoRoxo2">Cancelar</button>
+                                <button type="button" class="Tat_botaoRoxo2" onclick="enviarTransferencia()">Confirmar</button>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row Tat_alinhamento">
+                <div id="Tat_operacao3" >
+                    <div class="row" id="Tat_acao">
+                        <div class="col-12 col-sm-12 col-md-12 d-flex justify-content-center">
+                            <h5 class="h5">Sacar</h5>
+                        </div>
+                    </div>
+                    <div class="row" id="Tat_area">    
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center">
+                            <img id="Tat_porquinho" src="images/Cofrinho.png" >
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 d-flex justify-content-left">
+                            <h3 class="h3">Valor a sacar:
+                            <input type="text" class="Tat_form-frontInsersao" id="valor_saque" ></h3>
+
+                            <h3 class="h3"><label for="descricao_deposito">Descrição:
+                                <input type="text" class="Tat_form-frontInsersao" id="descricao_saque" ></h3>
+                        </div>   
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center Tat_botoes">
+                            <button type="button" class="Tat_botaoRoxo2" onclick="cancelarSaque()">Cancelar</button>
+                            <button type="button" class="Tat_botaoRoxo2" onclick="enviarSaque()">Confirmar</button>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <section>
+        <div class="container">
+            <div class="row Tat_faixaRoxa">
+                <div class="col-12 col-sm-12 col-md-12 d-flex " >
+                   <h3 class="h3"> Extrato</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row" id="Tat_alinhamentoExtrato">
+                <div class="col-12 col-sm-1 col-md-1 d-flex justify-content-center">
+                    <div class="Tat_dataExtrato">
+                        <h4 class="h4">De:  </h4>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-3 col-md-3 d-flex justify-content-left " id="Tat_testeData"> 
+                    <div class="Tat_dataExtrato">
+                        <input name="fDataIni" id="Tat_data1" type="date" >
+                    </div>
+                </div>
+        
+                <div class="col-12 col-sm-1 col-md-1 d-flex justify-content-center " id= "Tat_testeA">
+                    <div class="Tat_dataExtrato">
+                        <h4 class="h4"> à:  </h4>
+                         
+                    </div>
+                </div>
+        
+                <div class="col-12 col-sm-3 col-md-3 d-flex justify-content-left " id= "Tat_testeData2">
+                    <div class="Tat_dataExtrato">
+                        <input name="fDataFinal" id="Tat_data2" type="date"  onclick="mostraData()" ondblclick="mostraConta()">
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-sm-2 col-md-2 d-flex justify-content-center " id= "Tat_testeData2">
+                    <div class="Tat_dataExtrato">
+                        <button type="submit" onclick="mostraConta()" class="Tat_botaoRoxo2">Mostrar</button>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+    <section>
+        <table class="table">
+            <tr>
+                <th>Data</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+
+            <tbody id="tableExtrato">
+
+
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row Tat_faixaRoxa">
+                <div class="col-12 col-sm-12 col-md-12 d-flex " >
+                   <h3 class="h3"> * C (Crédito) - valor que foi acrescido na sua conta </h3> 
+                   <hr>
+                    <h3 class="h3">* D (Débito) - valor que foi retirado da sua conta</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--IMAGEM SPLASH  E FOOTER INICIAM AQUI-->
+  <section class="splash"> <!-- Imagem do splash-->
+    <a onclick ="irParaInicioPagina()"><img class="setinha_subir" src="./images/footer/setinha_subir.png"></a> 
+        <img class = "splash_image" src="./images/footer/footer_splash_extemidades_.png">
+    </section>
+
+    <footer class="footer"> 
+        <section class="footer_superior" > 
+            <div class="footer_lista">
+                <ul class="footer_lista">
+                    <li id="home" ><a href="index.html" style="color: #2815FD;">Home</a></li> 
+                    <li id="sobre_nos" ><a href="sobre.html" style="color:#FF8717">Sobre</a></li>
+                    <li id="minhas_continhas"><a href="continhas.html" style="color:#C427D1">Continhas</a></li>
+                    <li id="investimentos" ><a href="investimentos.html"style="color:white">Investimentos</a></li>
+                    <li id="investimentos" ><a href="investimentos.html"style="color:#C427D1">Tarefas</a></li>
+                </ul>
+            </div>
+            <div class="footer_superior_conteiner_esquerdo"> <!--Logo e texto -->
+                <img class="footer_esquerdo_santander_logo" src="./images/footer/santander_logo.png">
+                <p class="footer_esquerdo_texto">Cuidando dos seus bens<br> mais preciosos</p>
+            </div>
+            <div class="footer_superior_meio"> <!--Dados de Contato, Rua, Telefone, Menu-->
+                
+                <h2 class="footer_contato">Contato</h2>
+                <div class="footer_meio_rua_telefone_email">
+                    <div class="footer_meio_dados">
+                        <img id="footer_meio_localizacao_imagem" class="footer_meio_dados_imagem" src="./images/footer/footer_meio_rua_imagem.png">
+                        <p class="footer_meio_dados_texto">Rua da Prosperidade, Nº 01</p>
+                    </div>
+
+                    <div class="footer_meio_dados">
+                        <img class="footer_meio_dados_imagem" src="./images/footer/footer_meio_telefone_imagem.png">
+                        <p class="footer_meio_dados_texto">(91) 9 99999-9999</p>
+                    </div>
+
+                    <div class="footer_meio_dados">
+                        <img id="email_img" class="footer_meio_dados_imagem" src="./images/footer/footer_meio_email_imagem.png">
+                        <p class="footer_meio_dados_texto">(91) 9 99999-9999</p>
+                    </div>
+                </div> 
+            </div> <!--fim do footer superior meio-->
+            <div class="footer_superior_direito">
+                <h2>NOSSAS REDES<br>SOCIAIS</h2>
+                <div class="footer_direito_redes_sociais">
+                <a href="#"><img src="./images/footer/logo_facebook.png"></a> 
+                <a href="#"><img src="./images/footer/logo_instagram.png"></a>
+                <a href="#"><img src="./images/footer/logo_twitter.png"></a>
+                <a href="#"><img src="./images/footer/logo_linkdln.png"></a>
+                <a href="#"><img src="./images/footer/logo_youtube.png"></a>
+                </div>
+                <h3 id="baixe_apps">Baixe nossos apps</h3>
+                <div class=footer_superior_direito_image_apps>
+                    <a href="#"><img class="footer_superior_direito_imagens" src="./images/footer/footer_direito_imag_app_store.png"></a>
+                    <a href="#"><img class="footer_superior_direito_imagens" src="./images/footer/footer_direito_image_google_play.png"></a>
+                </div>
+            </div>
+        </section> <!--fim da class "footer_superior-->
+
+        <section class="footer_inferior">
+            <p>2020 © Copyright - Todos os direitos reservados.</p>
+        </section>
+    </footer> 
+<!-- ----------------------------------------------- MODAL PARA LOGIN------------------------------------------------>
+    <div id="home_modal_conteiner" class="home_modal_conteiner">
+        <div class="home_modal_loguin" id="modal_logar">
+            <button onclick ="fechar_modal()" class="home_loguin_fechar">X</button>
+            <div class="modal_loguin_logo"></div>
+            <form id="formulario_loguin" method="POST">
+                <div class="selecao_de_usuario">
+                    <div class="modal_usuarios">
+                        <input type="radio" id="crianca_radio" value="crianca" name="radio" />
+                        <div class="selecao_imagem" style="background-image:url('./images/modal/loguin_imagem_filhos.png')"></div>
+                        <label class="label_usuario">Sou<br>Criança</label>
+                    </div>
+                    <div class="modal_usuarios">
+                        <input type="radio" id="responsavel_radio" value="responsavel"  checked="true" name="radio" />
+                        <div class="selecao_imagem" style="background-image:url('./images/modal/loguin_imagem_responsaveis.png')"></div>
+                        <label class="label_usuario">Sou<br>Responsável</label>
+                    </div>
+                </div>
+                <div class="dados_loguin" style="background-image:url('./images/modal/splash_modal.png')">
+                    <input type="email" id="email" onBlur="verificarEmail()" placeholder="Digite seu e-mail" required>
+                    <div id="mensagemValidacao">
+                        <p id="error-validation-template">Email ou senha incorretos!</p>
+                    </div>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                    <button id = "btn_submit" type="submit" onclick="enviarDados()" >Entrar</button>
+                    <a class="esqueci_senha" id="esquecerSenha" >Esqueci a senha</a>
+                </div>
+            </form>
+        </div>
+        <!------- MODAL RECUPERAÇÃO DE SENHA-->
+        <div class="home_modal_loguin" id="home_modal_esqueci_senha">
+            <button onclick ="fechar_modal()" class="home_loguin_fechar" id="fechar_recuperar_senha">X</button>
+            <div class="modal_loguin_logo"></div>
+            <div id="modal_esqueci_senha_imagem_e_texto">
+                <div id="recuperar_senha_porquinho_duvida"></div>
+                <div id="modal_esqueci_senha_texto">
+                    <h4 id="esqueci_senha_h4">Esqueceu a sua senha?!</h4>
+                    <p>Não se preocupe. Digite o seu e-mail e vamos recuperar<br>
+                    para você!
+                    </p>
+                </div>
+            </div>
+            <form id="formulario_loguin" method="POST">
+                <div class="dados_loguin" style="background-image:url('./images/modal/splash_modal.png')">
+                    <input type="email" id="email_recuperar_senha" onBlur="verificarEmail()" placeholder="Digite seu e-mail" required>
+                    <div id="mensagemValidacao">
+                        <p id="error-validation-template" >Email não encontrado!</p>
+                    </div>
+                    <button id ="btn_submit_esqueci_senha"  onclick="recuperar_senha()">Recuperar Senha</button>
+                
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ---------------------------------- MODAL PARA O USUÁRIO LOGADO ---------------------------->
+    <div id="modal_usuario_logado">
+        <div id="modal_usuario_logado_logo"></div>
+        <div id="modal_usuario_logado_foto"></div>
+        <div id="modal_usuario_logado_lista">
+            <ul id="usuario_logado_lista">
+                <li id="lista-logado-item"><a href="telaEdicaoDados.html">Minha Conta</a></li>
+                <li id="lista-logado-item"><a href="dependentes.html">Conta Kids</a></li>
+                <li id="lista-logado-item" ><a id="deslogar" href="index.html">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+  
+    <script type="text/javascript" src="js/geral.js"></script>
+    <script type="text/javascript" src="js/ContinhaJs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+    
+</body>
+
+
+</html>

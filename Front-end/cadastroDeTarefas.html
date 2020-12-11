@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/estilos.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/css_bootstrap_4.5.2/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+        <script src="js/js_bootstrap_4.5.2/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/home_style.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        
+        <title>Cadastro de tarefas</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light" id="menu_header">
+    
+                <a class="navbar-brand" href="#"><img class="img-fluid" src="./images/home_logo_santander.png" alt="logo" id="logo"></a>
+                <button class="navbar-toggler" id="outline" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon" ></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav mt-3">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html" name="ir_para_inicio_pagina"><span id="home">Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html"><span id="sobre_nos">Sobre</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="continhas.html"><span id="minhas_continhas">Continhas</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="investimentos.html"><span id="investimentos">Investimentos</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tarefas.html"><span id="minhas_tarefas">Tarefas</span></a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <div class="d-none d-md-block" id="separador"></div>
+                        </li>
+                        <li class="nav-item active" id="esconder_abrir_entrar">
+                            <button class="" id="btn_abrir_conta" ><a href="telaCadastro.html" class="home_abrir_conta" id="abrir_continha">Abrir Continha</a></button>
+                        </li>
+                        <li class="nav-item" id="esconder_abrir_entrar">
+                            <a class="nav-link mt-1 ml-2"><span id="entrar" onclick ="chamar_modal()">Entrar</span></a>
+                        </li>
+                        <li class="nav-item"  id="esconder_usuario_logado">
+                            <div class="nav-link mt-1 ml-2" id="mostrar_nome_usuario"></div>
+                        </li>
+                        <li class="nav-item"  id="esconder_usuario_logado">
+                            <div class="nav-link mt-1 ml-2"><div id="rotate" class="fas fa-angle-down" onclick="chamar_modal_usuario_logado()"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    
+        <section class="tcTarefas">
+            
+            <div class="tcFundoTarefas">
+                
+                <div class="tcCamposCadastroTarefas">
+    
+                    <h1 class="tcDadosTarefas">Cadastro de Tarefas</h1>
+    
+                    <div class="tcFormularioTarefas">
+                        <form class="tcCamposFormulariosTarefas" action="">
+                           
+                            <select name="categoria" class="tcCategoriaTarefas">
+                               
+                                <optgroup label="Categoria">
+                                    <option value="a">Lição de casa</option>
+                                </optgroup>
+                                
+                            </select>
+                            <input id="dataInicio" class="tcCamposTarefas" type="date" placeholder="Data de ínicio">
+                            <input id="tituloTarefas" class="tcCamposTarefas" type="text"> 
+                            <input id="dataFim" class="tcCamposTarefas" type="date" placeholder="Data de fim">
+                            <input id="objetivosTarefas" class="tcCamposTarefas" type="text" placeholder="">
+                            <label value="Pontos ao cumprir:" id="tcPontos" class="tcCamposTarefas" for="pontosTarefas">Pontos ao cumprir:<br><input id="pontosTarefas" class="tcCamposTarefas" type="range" value="10" min="0" max="100" placeholder="pontos" onload="updateTextInput(this.value);" onchange="updateTextInput(this.value);"><input type="text" id="tcTextInput" value=""></label>
+                            <input id="descricaoTarefas" class="tcCamposTarefas" type="text" placeholder="">
+                            <label id="tcDias" class="tcCamposTarefas" value="Dias da semana" for="diasSemana">
+                                Dias da semana<br>
+                                <input class="diasSemana" value="D" type="button">
+                                <input class="diasSemana" value="S" type="button">
+                                <input class="diasSemana" value="T" type="button">
+                                <input class="diasSemana" value="Q" type="button">
+                                <input class="diasSemana" value="Q" type="button">
+                                <input class="diasSemana" value="S" type="button">
+                                <input class="diasSemana" value="S" type="button">
+                            </label>    
+                        </form>
+                        <a href=""><button class="tcIncluirTarefas">Criar tarefa</button></a>
+                        <a href="tarefas.html"><button class="tcCancelarTarefas">Cancelar</button></a>
+                    </div> 
+    
+     
+                </div>
+            </div>
+            
+        </section>
+     <!--IMAGEM SPLASH  E FOOTER INICIAM AQUI-->
+  <section class="splash"> <!-- Imagem do splash-->
+    <a onclick ="irParaInicioPagina()"><img class="setinha_subir" src="./images/footer/setinha_subir.png"></a> 
+        <img class = "splash_image" src="./images/footer/footer_splash_extemidades_.png">
+    </section>
+
+    <footer class="footer"> 
+        <section class="footer_superior" > 
+            <div class="footer_lista">
+                <ul class="footer_lista">
+                    <li id="home" ><a href="index.html" style="color: #2815FD;">Home</a></li> 
+                    <li id="sobre_nos" ><a href="sobre.html" style="color:#FF8717">Sobre</a></li>
+                    <li id="minhas_continhas"><a href="continhas.html" style="color:#C427D1">Continhas</a></li>
+                    <li id="investimentos" ><a href="investimentos.html"style="color:white">Investimentos</a></li>
+                    <li id="investimentos" ><a href="investimentos.html"style="color:#C427D1">Tarefas</a></li>
+                </ul>
+            </div>
+            <div class="footer_superior_conteiner_esquerdo"> <!--Logo e texto -->
+                <img class="footer_esquerdo_santander_logo" src="./images/footer/santander_logo.png">
+                <p class="footer_esquerdo_texto">Cuidando dos seus bens<br> mais preciosos</p>
+            </div>
+            <div class="footer_superior_meio"> <!--Dados de Contato, Rua, Telefone, Menu-->
+                
+                <h2 class="footer_contato">Contato</h2>
+                <div class="footer_meio_rua_telefone_email">
+                    <div class="footer_meio_dados">
+                        <img id="footer_meio_localizacao_imagem" class="footer_meio_dados_imagem" src="./images/footer/footer_meio_rua_imagem.png">
+                        <p class="footer_meio_dados_texto">Rua da Prosperidade, Nº 01</p>
+                    </div>
+
+                    <div class="footer_meio_dados">
+                        <img class="footer_meio_dados_imagem" src="./images/footer/footer_meio_telefone_imagem.png">
+                        <p class="footer_meio_dados_texto">(91) 9 99999-9999</p>
+                    </div>
+
+                    <div class="footer_meio_dados">
+                        <img id="email_img" class="footer_meio_dados_imagem" src="./images/footer/footer_meio_email_imagem.png">
+                        <p class="footer_meio_dados_texto">(91) 9 99999-9999</p>
+                    </div>
+                </div> 
+            </div> <!--fim do footer superior meio-->
+            <div class="footer_superior_direito">
+                <h2>NOSSAS REDES<br>SOCIAIS</h2>
+                <div class="footer_direito_redes_sociais">
+                <a href="#"><img src="./images/footer/logo_facebook.png"></a> 
+                <a href="#"><img src="./images/footer/logo_instagram.png"></a>
+                <a href="#"><img src="./images/footer/logo_twitter.png"></a>
+                <a href="#"><img src="./images/footer/logo_linkdln.png"></a>
+                <a href="#"><img src="./images/footer/logo_youtube.png"></a>
+                </div>
+                <h3 id="baixe_apps">Baixe nossos apps</h3>
+                <div class=footer_superior_direito_image_apps>
+                    <a href="#"><img class="footer_superior_direito_imagens" src="./images/footer/footer_direito_imag_app_store.png"></a>
+                    <a href="#"><img class="footer_superior_direito_imagens" src="./images/footer/footer_direito_image_google_play.png"></a>
+                </div>
+            </div>
+        </section> <!--fim da class "footer_superior-->
+
+        <section class="footer_inferior">
+            <p>2020 © Copyright - Todos os direitos reservados.</p>
+        </section>
+    </footer> 
+<!-- ----------------------------------------------- MODAL PARA LOGIN------------------------------------------------>
+    <div id="home_modal_conteiner" class="home_modal_conteiner">
+        <div class="home_modal_loguin" id="modal_logar">
+            <button onclick ="fechar_modal()" class="home_loguin_fechar">X</button>
+            <div class="modal_loguin_logo"></div>
+            <form id="formulario_loguin" method="POST">
+                <div class="selecao_de_usuario">
+                    <div class="modal_usuarios">
+                        <input type="radio" id="crianca_radio" value="crianca" name="radio" />
+                        <div class="selecao_imagem" style="background-image:url('./images/modal/loguin_imagem_filhos.png')"></div>
+                        <label class="label_usuario">Sou<br>Criança</label>
+                    </div>
+                    <div class="modal_usuarios">
+                        <input type="radio" id="responsavel_radio" value="responsavel"  checked="true" name="radio" />
+                        <div class="selecao_imagem" style="background-image:url('./images/modal/loguin_imagem_responsaveis.png')"></div>
+                        <label class="label_usuario">Sou<br>Responsável</label>
+                    </div>
+                </div>
+                <div class="dados_loguin" style="background-image:url('./images/modal/splash_modal.png')">
+                    <input type="email" id="email" onBlur="verificarEmail()" placeholder="Digite seu e-mail" required>
+                    <div id="mensagemValidacao">
+                        <p id="error-validation-template">Email ou senha incorretos!</p>
+                    </div>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                    <button id = "btn_submit" type="submit" onclick="enviarDados()" >Entrar</button>
+                    <a class="esqueci_senha" id="esquecerSenha" >Esqueci a senha</a>
+                </div>
+            </form>
+        </div>
+        <!------- MODAL RECUPERAÇÃO DE SENHA-->
+        <div class="home_modal_loguin" id="home_modal_esqueci_senha">
+            <button onclick ="fechar_modal()" class="home_loguin_fechar" id="fechar_recuperar_senha">X</button>
+            <div class="modal_loguin_logo"></div>
+            <div id="modal_esqueci_senha_imagem_e_texto">
+                <div id="recuperar_senha_porquinho_duvida"></div>
+                <div id="modal_esqueci_senha_texto">
+                    <h4 id="esqueci_senha_h4">Esqueceu a sua senha?!</h4>
+                    <p>Não se preocupe. Digite o seu e-mail e vamos recuperar<br>
+                    para você!
+                    </p>
+                </div>
+            </div>
+            <form id="formulario_loguin" method="POST">
+                <div class="dados_loguin" style="background-image:url('./images/modal/splash_modal.png')">
+                    <input type="email" id="email_recuperar_senha" onBlur="verificarEmail()" placeholder="Digite seu e-mail" required>
+                    <div id="mensagemValidacao">
+                        <p id="error-validation-template" >Email não encontrado!</p>
+                    </div>
+                    <button id ="btn_submit_esqueci_senha"  onclick="recuperar_senha()">Recuperar Senha</button>
+                
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ---------------------------------- MODAL PARA O USUÁRIO LOGADO ---------------------------->
+    <div id="modal_usuario_logado">
+        <div id="modal_usuario_logado_logo"></div>
+        <div id="modal_usuario_logado_foto"></div>
+        <div id="modal_usuario_logado_lista">
+            <ul id="usuario_logado_lista">
+                <li id="lista-logado-item"><a href="telaEdicaoDados.html">Minha Conta</a></li>
+                <li id="lista-logado-item"><a href="dependentes.html">Conta Kids</a></li>
+                <li id="lista-logado-item" ><a id="deslogar" href="index.html">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+  
+    <script type="text/javascript" src="js/geral.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/js_bootstrap_4.5.2/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/js_bootstrap_4.5.2/bootstrap.bundle.min.js"></script>
+    <script src="../js/cadastro.js"></script>
+    </body>
+    
+</html>

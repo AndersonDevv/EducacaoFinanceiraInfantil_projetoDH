@@ -1,0 +1,3814 @@
+
+                            /* CSS HOME  */
+/*-------------------------Reset body-------------------------*/
+.bodyHome,.bodyHome>ul,.bodyHome>li,.bodyHome>a{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Fredoka One'; /* fonte escolhida pelo grupo*/   
+    font-size: 18px;
+}
+#modal_logar{
+    display:block;
+}
+
+
+/* ---------------------------USUÁRIO LOGADO NO SISTEMA ---------- */
+
+#modal_logado{
+    display: none;
+    z-index:1000;
+    border-radius: 4%;
+   }
+#esconder_usuario_logado{
+    display:none;
+}
+#deslogar{
+    cursor: pointer;
+    color:red;
+}
+#modal_usuario_logado{
+    position:fixed;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    
+    
+    top: 15%;
+    right: 1%;
+    height: 15vw;
+    width: 15vw;
+    border: 1px solid red;
+    display:none;
+}
+#modal_usuario_logado_logo{
+    margin-bottom: 10px;
+    width:100%;
+    height: 20%;
+    background-image: url('../images/home_logo_santander.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#modal_usuario_logado_foto{
+    height: 10vw;
+    width: 10vw;
+    background-image: url('../images/modal/loguin_imagem_responsaveis.png');
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#modal_usuario_logado_lista{
+    
+    width: 100%;
+    font-size: 1vw;
+}
+#usuario_logado_lista{
+    height: 100%;
+    list-style: none;
+    color:black;
+    width: 100%;
+    
+}
+
+/*------------------------- CABEÇALHO-------------------------*/
+.bodyHome {
+    padding-top: 65px;
+   
+  }
+.navbar-toggler-icon {
+    font-family: FredokaOne;
+    font-family: 'Fredoka One', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+}
+#minhas_tarefas{
+    color:#37B617;
+}
+
+.menu {
+    border: 2px solid blue;
+}
+
+#logo {
+    width: 200px;
+    height: 35px;
+}
+
+#home {
+    color: #2815FD;
+    
+}
+
+#sobre_nos {
+    color: #FF8717;
+}
+#tarefas{
+    color: #37B617;
+}
+#minhas_continhas {
+    color: #C427D1;
+}
+
+#investimentos {
+    color: #EF1616;
+}
+
+#entrar {
+    color: #37B617;
+}
+#entrar:hover{
+    cursor: pointer;
+    text-shadow: 0 0 1px black;
+}
+#home:hover,#minhas_tarefas:hover, #sobre_nos:hover, #minhas_continhas:hover, #investimentos:hover,#abrir_continha:hover, #entrar:hover {
+    text-shadow: 0 0 2px black;
+    cursor: pointer;
+}
+
+#jogos {
+    color: black;
+}
+
+#separador {
+    width: 1px;
+    height: 40px;
+    background: #C4C4C4;
+    margin-right: 40px;
+    margin-top: 6px;
+}
+
+#btn_abrir_conta {
+    font-family: 'Fredoka One', cursive;
+    width: 186px;
+    height: 49px;
+    background: #37B617;
+    border: 3px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#btn_abrir_conta a{
+text-decoration: none;
+color: white;
+}
+/* -------------------------CARROSSEL-------------------------*/
+
+.carrossel{
+    position: relative;
+    width:100%;
+    height: 35vw;
+   
+}
+.carrossel_imagens{
+    height: 100%;
+    width:100%  /*altura das imagens do carrossel*/
+}
+.conteiner_carrossel_mensagem{
+    position: absolute;
+    z-index:4;
+    bottom: 7%;
+    left:  5%;
+    text-align: center;
+    /* posiciona o conteiner que possui o texto + botão "comece agora" em cima do carrossel*/
+}
+/*comece agora*/
+.carrossel_texto{
+    color: white;
+    font-size: 2vw;
+    text-shadow: 1px 1px black;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+.carrossel_botao{
+    
+    width: 13vw;
+    color: red;
+    border-radius: 20px;
+    padding: 0 10px 0 10px;
+    margin-top: -10000px;
+    box-sizing: border-box;
+    border-color: #BFB5B5;
+    font-size: 0.9vw;
+    top: - 1000px
+}
+
+/* ------------------------- Conteudo ------------------------- */
+.conteudo{
+    display: flex;
+    flex-direction: column; /*itens dentro da class="conteudo"ficarão alinhados ao centro e abaixo um do outro*/
+    align-content: center;
+}
+.logo{
+    width: 40vw;
+    margin: auto;
+    display:flex;
+    justify-content: center;
+}
+/*conteudo dos cards*/
+.conteudo_cards{
+    display:flex;
+    flex-direction: row; /*os  3 cards ficarão em linha*/
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 30px;
+    margin: 10px;
+    box-sizing: border-box;
+    height:50vh;
+    align-content: center;
+}
+
+.conteudo_cards a{
+    
+    text-decoration: none;
+    color: white; /*Retirando decoração dos links e setando cor branca*/
+}
+.card_midia{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 20vw;
+    height: 20vw;
+    border-radius:20px;
+
+}
+.card_midia:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    cursor: pointer;
+}
+.card_conta{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 28%;
+    height: 100%;
+    border-radius: 5px 5px 5px 5px;
+    border-style: solid;
+    border-width: 1px ;
+    border-color: #c4c4c4;
+    box-shadow: 2px 2px 7px #c4c4c4; 
+    
+}
+.card_conta:hover{
+    cursor:pointer;
+}
+.card_conta:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    
+}
+.card_texto{
+    font-size: 24px;
+    color:white;
+    background-color: #ffffff;
+    text-align: center;
+    height: 20%;
+    font-size: 30px;
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(163, 159, 159);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    text-align: center;
+}
+
+
+.card_texto_conta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: 24px;
+    color:white;
+    background-color: #FD0000;
+    text-align: center;
+    height: 40%;
+    font-size: 30px;
+    border-radius: 0px 0px 5px 5px;
+    border: 2px #c4c4c4;
+}
+
+.card_texto>a{
+    font-size: 3vh;
+    color:#2f2f2f;
+    text-decoration: none;
+}
+.card_texto_conta>a{
+    font-size: 3vh;
+    color:#ffffff;
+}
+.card_imagem{
+    height: 80%;
+}
+.card_imagem_conta{
+    height: 60%;
+    border-radius: 5px 5px 0px 0px;
+    background-size:contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#imagem_pontinhos{
+    border-radius: 5px 5px 0px 0px;
+    
+}
+
+#imagem_conta{
+    margin-left: 9%;
+}
+
+.img_cards{
+    border-radius: 20px 20px 0px 0px;
+}
+
+/*  -------- APRENDA SE DIVERTINDO  ------ */
+.aprenda_se_divertindo{
+   height: 50vh;
+}
+.criancas_separadas{
+    width: 100%;
+ }
+ .aprenda_se_divertindo{
+width: 100%;
+height: 300px;
+ }
+ .aprenda_se_divertindo_texto{
+position: absolute;
+left: 35%;
+top: 30%;
+color: white;
+text-align: center;
+font-size: 3vw;
+width: 40%;
+ }
+ .conteiner_aprenda_se_divertindo{
+position: relative;
+ }
+ /* div com preenchimento gradiente (background-image) e área MÍDIA*/
+ .preenchimento_grandiente{
+ background-image: url('../images/secao_aprenda_divertindo/gradiente.png'); 
+ background-size: cover;
+ width: 100%;
+ 
+ }
+ .conteudo_cards_midia{
+     height: 100%;
+     display:flex;
+     flex-direction: row; /*os  3 cards ficarão em linha*/
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     padding: 50px;
+     box-sizing: border-box;
+     align-content: center;
+ }
+
+ /*-------------------------ÁREA DOWNLOAD DE APP-------------------------*/
+
+/*ÁREA DE DOWNLOAD DOS APPS*/
+
+.download_apps{
+    
+    width:100%;
+    height: 30vw;
+    display:flex;
+}
+.conteiner_esquerdo_download_app{
+    width:50%;
+    height: 100%;
+    margin-top: 15px;
+}
+
+.conteiner_direito_download_app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.conteiner_direito_download_app_texto{
+    text-align: center;
+    font-size: 1.7vw;
+}
+.conteiner_direito_download_app_texto>h2{
+    color: #C427D1;
+    font-size: 2vw;
+}
+.conteiner_direito_download_app_conteiner{
+    display:flex;
+    width:40%; /* possibilita as imagens google play e app store ficarem próximas*/
+    justify-content: space-evenly;
+}
+.conteiner_direito_download_app_play_store{
+width: 50%;
+height: 10vh;
+}
+.conteiner_direito_download_app_store{
+width: 50%;
+height: 10vh;
+}
+/*imagems da área de download d apps*/
+.imagem_play_store{
+    width:100%;
+    max-width: 10vw;
+}
+.imagem_app_store{
+    width:100%;
+    max-width: 11vw;
+}
+/* ------------------------CÓDIGO DO FOOTER E SPLASH------------------------*/
+
+.setinha_subir{
+    position: relative;
+    left: 48vw;
+    top: 13vw;
+    width: 4%;
+    min-width: 50px;
+}
+.setinha_subir:hover{
+    cursor: pointer;
+}
+.splash_image{
+    width:100%;
+    height: 100%;
+}
+.footer_superior{
+    
+    width:100%;
+    height: 45vh;
+    background-color: #FD0000;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.footer_lista{
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 0;
+    font-size: 0.9em;
+    list-style: none;
+}
+/*------- FOOTER - CONTEINER SUPERIOR ESQUERDO-----------*/ 
+.footer_superior_conteiner_esquerdo{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center; /*coloca os itens no meio do conteiner, mas não no centro*/
+    align-items: center; /*complementa o justify-content e deixa os elementos no centro*/
+    color: white;
+    width:30%;
+    height: 90%;
+    text-align: center;
+}
+.footer_esquerdo_santander_logo{
+
+    height: 30%;
+}
+/*------- FOOTER - CONTEINER SUPERIOR DO MEIO-----------*/ 
+.footer_superior_meio{
+    width: 40%;
+    height: 90%;
+}
+
+.footer_lista{
+    display:flex;
+    justify-content: space-evenly;
+    text-shadow: 1px 1px black;
+  
+}
+.footer_lista a {
+    text-decoration: none;
+}
+
+/* -------- FOOTER - CONTEINER SUPERIOR DIREITO------- */
+.footer_superior_direito{
+    width: 30%;
+    height: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+#baixe_apps{
+color: white;
+}
+
+.footer_superior_direito_imagens{
+    width: 30%;
+}
+.footer_superior_direito>h2,h3{
+    color: white;
+  
+}
+
+/*footer inferior*/
+.footer_inferior{
+    background-color: #CC0000;
+    width: 100%;
+    height: 3vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer_inferior p{ /*determina branco como a cor da mensagem "[...]direitos autorais" */
+color:white;
+display:flex;
+flex-direction: row;
+justify-content: center;
+align-content: center;
+font-size: 1.2vw;
+margin-bottom: 0;
+}
+
+/*---------- footer --> conteiner superior do meio -------------*/ 
+.footer_superior_meio{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.footer_meio_dados{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5vh;
+    
+}
+.footer_meio_dados_texto{
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    width: 80%;
+    margin-top: 5%;
+    letter-spacing: 1px;       
+    word-spacing: 1px;
+    text-shadow: 1px 1px black;
+}
+
+#email_img{
+    margin-top: 3%;
+}
+.footer_meio_dados_imagem{ /*Imagens do GPS, Telefone e e-mail*/
+height: 8%;
+width: 8%;
+margin-top:2%;
+}
+.footer_contato{ /*efeito de sublinhado superior e inferior na palavra CONTATO:*/
+display:block;
+color:white;
+
+border: 1px solid #FFFFFF;
+border-left: none;
+border-right: none;
+text-align: center;
+}
+
+/*  PÁGINA ESQUECI MINHA SENHA ----------*/
+
+#recuperar_senha_preenchimento_gradiente{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/secao_aprenda_divertindo/gradiente.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+#recuperar_senha_conteudo{
+    display:flex;
+    background-color:white;
+    width: 50vw;
+    height: 20vw;
+}
+#recuperar_senha_conteiner_esquerdo{
+    width: 50vw;
+    height: 100%;
+    
+}
+#recuperar_senha_conteiner_direito{
+    width: 80%;
+    height: 100%;
+    background-image: url(./images/Esqueci_senha/esqueci_senha_porquinho_duvida.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+}
+#recuperar_senha_logo{
+    height: 20%;
+    width: 100%;
+    background-image: url(./images/Esqueci_senha/LogoSite.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size:80%;
+    background-position-x: center;
+}
+#recuperar_senha_formulario{
+  height: 80%;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1vw;
+}
+/* ------------------------------------MODAL TELA HOME------------------------------------*/ 
+/* --------------------------------MODAL ESQUECI MINHA SENHA ----------------------------*/
+#home_modal_esqueci_senha{
+    display:none;
+}
+#modal_esqueci_senha_imagem_e_texto{
+    display:flex;
+    height: 13vw;
+    width:100%;
+    text-align: justify;
+}
+#recuperar_senha_porquinho_duvida{
+    height: 13vw;
+    width:50%;
+    background-image: url(../images/Esqueci_senha/esqueci_senha_porquinho_duvida.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position-x: center;
+}
+#modal_esqueci_senha_texto{
+padding-top: 4%;
+padding-right: 5%;
+height: 13vw;
+width:50%;
+
+}
+#esqueci_senha_h4{
+color: red;
+font-size: 1.2vw;
+text-align: center;
+}
+#modal_esqueci_senha_texto p, h4{
+color: black;
+font-size: 1vw ;
+}
+
+/*  ---------------------- MODAL PARA LOGAR NO SISTEMA ---------------------------- */
+#mensagemValidacao{
+   height: 9%;
+   
+}
+#error-validation-template{
+    font-size: 0.8vw;
+    color: red;
+    display: none;
+    
+    margin-left: 3%;
+    /*Posiciona a mensagem "Usuário ou senha incorretos"*/
+}
+
+.home_modal_conteiner{ /*Tela escura*/
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display:none;
+    
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5); /*cor escura*/
+    z-index: 2000;  /*permite que a área escura fique acima de todos os itens da página home*/
+    }
+.home_modal_loguin {
+    position: absolute;
+    width: 25vw;
+    height: 30vw;
+    box-sizing: border-box;
+    background-color:white;  
+    top: 10%;  /* posiciona tela loguin abaixo de continha */ 
+    right:2%;
+    border-radius: 4%;
+    border: 1px solid #EF1616;
+}
+.modal_loguin_logo{
+    width:100%;
+    height: 20%;
+    background-image: url('../images/modal/LogoSite.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+.selecao_de_usuario{
+display:flex;
+flex-direction: row;
+justify-content: space-evenly;
+width: 100%;
+height: 13vw;
+
+font-size: 1.2vw;
+text-align: center;
+color:rgb(109, 109, 109);
+}
+.modal_usuarios{
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+align-items: center;
+
+height: 100%;
+width: 50%;
+}
+.selecao_imagem{
+    box-sizing: border-box;
+    height: 60%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;  
+    background-position: center;
+}
+.dados_loguin{
+    width:100%;
+    height: 10.8vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display:flex;
+    flex-direction: column;
+    font-size: 1vw;
+
+    padding: 2vw 1vw 0vw 4vw;
+}
+.dados_loguin>input{
+    position: relative;
+    width: 90%;
+    margin: 1%;
+
+    background-color: #E5E5E5;
+    margin-top: 3%;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.dados_loguin>input:focus{
+    color:rgb(23, 24, 22);
+    background-color:white;
+}
+#crianca_radio, #responsavel_radio{
+    border: 0px;
+    height: 1em;
+}
+
+.dados_loguin >input::-webkit-input-placeholder{
+    text-align: center;
+}
+.dados_loguin >button{
+    width: 20%;
+    text-align: center;
+    
+    margin-top: 3%;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    color: rgb(247, 247, 247) ;
+    text-shadow: 2px 2px black;
+}
+.dados_loguin >button:hover{
+    color: blue;
+}
+.esqueci_senha{
+    position: absolute;
+    bottom: 7%;
+    left: 57%;
+    color:black;
+    font-size: 0.8vw;
+}
+.esqueci_senha:hover{
+    color:red;
+    font-size: 0.9vw;
+}
+.home_loguin_fechar{
+    position: absolute;
+    right: -10px;
+    margin-right: 10px;
+    border: 0px;
+    font-size: 2vw;
+    background-color: transparent;
+    color:red;
+}
+#esquecerSenha:hover{
+    cursor:pointer;
+}
+
+     /* -------------------------------------midia query----------------------------------*/
+    /*BOTAO ENTRAR - TELA  HOME */
+    @media screen and (max-width: 750px){
+        .modal_loguin_esqueciSenha{
+            position: absolute;
+             color:#C4C4C4;
+             font-size: 0.7vw;
+             left: 50%;
+             top: 72%;
+         }
+    }
+    @media screen and (max-width: 991px){
+        .home_modal_loguin {
+            position: absolute;
+            width: 25vw;
+            height: 30vw;
+            box-sizing: border-box;
+            background-color:white;  
+            top: 10%;  /* posiciona tela loguin abaixo de continha */ 
+            right:35%;
+            border-radius: 4%;
+            border: 1px solid #EF1616;
+        }
+    }
+    @media screen and (max-width: 600px){
+        .home_modal_loguin {
+            position: absolute;
+            width: 25vw;
+            height: 30vw;
+            box-sizing: border-box;
+            background-color:white;  
+            top: 15%;  /* posiciona tela loguin abaixo de continha */ 
+            right:15%;
+            border-radius: 4%;
+            border: 1px solid #EF1616;
+        }
+    }
+
+ /* -------------------------------------midia query----------------------------------*/
+
+@media screen and (min-width:1920px){
+    /*.carrossel_imagens{
+        height: 1200px; altura das imagens do carrossel
+    }*/
+    .footer_superior{
+        width:100%;
+        height: 51vh;
+        background-color: #FD0000;
+        display:flex;
+    }
+    .logo{
+        width: 20vw;
+        margin: auto;
+        display:flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:950px){
+    .carrossel{
+        position: relative;
+    }
+   
+    .card_conta, .card_midia{
+        width: 27vw;
+        height: 27vw;
+    }
+    .card_texto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card_texto>a,.card_texto_conta>a{
+        font-size: 55%;
+    }
+    #imagem_conta{
+        margin-left: 1vw;
+    }
+    .conteudo_cards, .conteudo_cards_midia{
+        width: 100%;
+        height: 40vw;
+        padding:10px;
+    }
+    .conteiner_direito_download_app{
+        margin-top: 7vh;
+    }
+    .conteiner_direito_download_app_texto{
+        font-size: 2.6vw;
+    }
+    
+    .conteiner_direito_download_app_conteiner{
+        width:40vw;
+    }
+    .conteiner_direito_download_app_play_store{
+        width: 50%;
+    }
+    .conteiner_direito_download_app_play_store>a{
+        width: 100%;
+    }
+    .imagem_play_store{
+        max-width: 18vw;
+    }
+    .imagem_app_store{
+        max-width: 20vw;
+    }
+
+    .setinha_subir{
+        left:48vw;
+    }
+
+    .footer_esquerdo_santander_logo{
+        max-width: 10vw;
+        max-height: 10vw;
+    }
+   
+    .footer_esquerdo_santander_logo{
+        max-width: 10vw;
+        max-height: 10vw;
+    }
+    .footer_superior_meio>h2{
+        font-size: 1.5em;
+    }
+    .footer_meio_dados_texto{
+        font-size: 1.1em;
+    }
+    .footer_superior_direito>h2, .footer_superior_direito>h3{
+        font-size: 1em;
+    }
+    .footer_esquerdo_texto{
+        font-size: 0.8em;
+    }
+    .footer_superior{
+        height: 38vh;
+    }
+    .footer_lista>li{
+        font-size: .6em;
+    }
+}
+
+@media screen and (max-width:500px){
+    .conteudo_cards, .conteudo_cards_midia{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 280vw;
+        align-items: center;
+    }
+    .card_conta, .card_midia{
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .logo{
+        margin-top: 20px;
+        width: 70%;
+    }
+
+    .card_texto_conta, .card_texto{
+        font-size: 2em;
+    }
+
+    .conteudo_cards_midia{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 280vw;
+        align-items: center;
+    }
+    .download_apps{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 105vw;
+    }
+
+    .conteiner_esquerdo_download_app{
+        width: 80vw;
+        height: 65vw;
+    }   
+    .conteiner_direito_download_app{
+        margin-top: 30px;
+    } 
+    .conteiner_direito_download_app_texto {
+        font-size: 3.5vw;
+    }
+    .conteiner_direito_download_app_texto>h2{
+        font-size: 4vw;
+    }
+    .setinha_subir {
+        position: relative;
+        left: 44vw;
+        top: 8vw;
+    }
+    .footer_lista{
+        width: 100%;
+        padding-left: 0%;
+        padding-right:0%;
+        margin: 0;
+    }   
+    .footer_superior{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 155vw;
+        align-items: center;
+    }
+    .footer_superior_conteiner_esquerdo, .footer_superior_meio, .footer_superior_direito{
+        width: 80vw;
+    }
+    .footer_superior_meio>h2{
+        font-size: 1.5em;
+    }
+    .footer_meio_dados_texto{
+        font-size: 1.4em;
+    }
+    .footer_superior_direito>h2, .footer_superior_direito>h3{
+        font-size: 1em;
+    }
+    .footer_esquerdo_texto{
+        font-size: 0.8em;
+    }
+    .footer_superior_conteiner_esquerdo{
+        height: 60%;
+    }
+    
+    .footer_superior_direito_imagens{
+        width: 45%;
+    }
+    .footer_lista>li{
+        font-size: .6em;
+    }
+    .footer_inferior{
+        height: 5vw;
+    }
+    .footer_inferior>p{
+        font-size: .6em;
+    }
+}
+@media screen and (max-width:500px){
+.setinha_subir{
+    left:45vw;
+    top: 5vh;
+}
+}
+     /*  fim CSS HOME  */
+
+     @charset "UTF-8";
+     @font-face{
+         font-family: 'fonteSite';
+         src: url("../fonts/FredokaOne-Regular.ttf");
+     }
+     
+     @font-face{
+         font-family: 'fonteSite2';
+         src: url("../fonts/Roboto-Black.ttf");
+     }
+     
+     
+     
+     
+     Ta_h1{
+         font-family: 'fonteSite', sans-serif;
+         font-size: 50px;;
+         color: #BA55D3;
+     } 
+     
+     Ta_h2{
+         font-family: 'fonteSite2', sans-serif;
+         color: #808080;
+         font-size: 25px;
+     }
+     
+     
+     Ta_h3{
+         font-family: 'fonteSite', sans-serif;
+         font-size: 20px;
+         color:  #808080;
+     }
+     
+     Ta_h4{
+         font-family: 'fonteSite2', sans-serif;
+         color: #808080;
+         font-size: 20px;
+     }
+     
+     Ta_h5{
+         font-family: 'fonteSite', sans-serif;
+         color: white;
+         font-size: 20px;
+     }
+     
+     Ta_h6{
+         font-family: 'fonteSite', sans-serif;
+         font-size: 50px;;
+         color: red;
+     } 
+     
+     
+     .Ta_linha{
+         height: 110%;
+         margin-left: 15%;
+         margin-right: 4%;
+         border-top: solid  #A9A9A9 1px;
+         margin-bottom: 10px;
+         margin-top: 5px;
+     }
+     
+     
+     #Ta_minhaContinha{
+         position: absolute;
+         margin-top:5%;
+         margin-left: 2%;
+         text-shadow: #4F4F4F 2px 3px 2px;
+         padding-top: 3%;
+         
+     }
+     
+     
+     #Ta_faixaTopo{
+        padding-top: 5%;
+     }
+     
+     #Ta_imagemTopo{
+         box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.4);
+     }
+     
+     #Ta_minhaContinha2{
+        
+         margin-left: 1.2%;
+         margin-right: 2.4%;
+        
+         padding-top: 3%;
+         padding-left: 5%;
+     }
+     
+     .Ta_botaoRoxo{
+        
+         border:1px solid #A9A9A9;
+         border-radius:4px;
+         cursor:pointer;
+         font-family: 'fonteSite';
+         color: white;
+         font-size:15px;
+         padding:2px 10px;
+         background-color:  #BA55D3;
+         margin-left: 35%;
+     }
+     
+     .Ta_botaoRoxo2{
+         display: inline;
+         border:1px solid #A9A9A9;
+         border-radius:4px;
+         cursor:pointer;
+         font-family: 'fonteSite';
+         color: white;
+         font-size:15px;
+         padding:2px 10px;
+         background-color:  #BA55D3;
+         margin-left: 5%;
+     }
+     #Ta_botRoxo1{
+         position: relative;
+         margin-right: 10%;
+     }
+     #Ta_botRoxo2{
+         position: relative;
+         margin-right: 0%;
+     }
+     #Ta_meuCartao{
+         padding-left: 10%;
+     }
+     
+     #Ta_informacoes1{
+         margin-left: 8%;
+     }
+     
+     
+     #Ta_DadosMinhaContinha{
+         padding-right: 3%;
+         margin-left: 5px;
+         padding-top: 2%;
+         height: 300px;
+         border-right: 1px solid #DCDCDC;
+     }
+     
+     .Ta_botaoVerde{
+         width: 230px;
+         height: 70px;
+         border:1px solid white;
+         border-radius:4px;
+         cursor:pointer;
+         font-family: 'fonteSite';
+         color: white;
+         font-size:45px;
+         background-color:  #228B22;
+         box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.5);
+         text-shadow: 0.1em 0.1em 0.1em #363636;
+     }
+     
+     
+     #Ta_ContaSemCartao{
+         display: none;
+         padding-top: 0.5%;
+         margin-top: 15px;
+         margin-left: 1%;
+         margin-right: 2.2%;
+         background-color: #D3D3D3;
+         height: 120px;
+     
+     }
+     #Ta_ContaSemCartao Ta_h4{
+         margin-left: 1%;
+         
+     }
+     
+     #Ta_ContaQueRende{
+         padding-top: 0.5%;
+         margin-top: 25px;
+         margin-left: 1%;
+         margin-right: 2.2%;
+         background-color: #D3D3D3;
+         height: 140px
+     }
+     #Ta_ContaQueRende Ta_h2{
+         margin-top: 20px;
+         margin-left: 5%;
+     }
+     #Ta_ContaQueRende Ta_h4{
+         margin-top: 15px;
+         margin-left: 5%;
+     }
+     
+     .Ta_botaoVermeho{
+         margin-top: -95px;
+         margin-left: 99%;
+         width: 180px;
+         height: 50px;
+         border:1px solid #DCDCDC;
+         border-radius:8px;
+         cursor:pointer;
+         font-family: 'fonteSite';
+         color: white;
+         font-size:20px;
+         background-color:  #FF0000;
+         box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.5);
+         text-shadow: 0.1em 0.1em 0.1em #363636;
+     }
+     .Ta_botaoVermeho2{
+         margin-top: -95px;
+         margin-left: 99%;
+         width: 180px;
+         height: 50px;
+         border:1px solid #DCDCDC;
+         border-radius:8px;
+         cursor:pointer;
+         font-family: 'fonteSite';
+         color: white;
+         font-size:20px;
+         background-color:  #FF0000;
+         box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.5);
+         text-shadow: 0.1em 0.1em 0.1em #363636;
+     }
+     
+     #Ta_vaso{
+         margin-top: 2%;
+         padding-left: 2%;
+     }
+     
+     .Ta_cards{
+         margin-top: 20px;
+         width: 210px;
+         height: 200px;    
+     
+     }
+     
+     .Ta_cards:hover{
+         box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.5);
+     }
+     
+     #Ta_CardPoupanca{
+         border:none;
+     }
+     
+     #Ta_CardPoupanca:hover{
+         box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.5);
+     }
+     #Ta_opcoesConta{
+         margin-left: 15%;
+     }
+     
+     #Ta_operacao1{
+         display: none;
+     }
+     #Ta_operacao2{
+         display: none;
+     }
+     #Ta_operacao3{
+         display: none;
+     }
+     
+     #Ta_acao{
+         border:none;
+         margin-top: 2%;
+         background-color: red;
+         height: 50px;
+         color:white;
+         margin-left: 0.7%;
+         margin-right: 3.8%;
+         padding-top: -0.5%;
+         border-radius:8px;
+     }
+     
+     
+     
+     #Ta_area{
+         height: 130px; 
+         padding-top: 0.5%;
+         margin-right: 3.8%;
+         margin-left: 0.7%;
+         padding-top: 0.5%;
+         border: solid  #A9A9A9 1px;  
+         box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.5);
+         border-radius:8px;
+     }
+     
+     #Ta_acao h5{
+         margin-top:1%;
+         margin-left: 1%;
+     }
+     
+     #Ta_area2{
+         height: 240px; 
+         padding-top: 0.5%;
+         margin-right: 3.8%;
+         margin-left: 0.7%;
+         padding-top: 0.5%;
+         border: solid  #A9A9A9 1px;  
+         box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.5);
+         border-radius:8px;
+     }
+     
+     #Ta_transferir{
+         margin-left: 8%;
+     }
+     
+     .Ta_radio{
+         margin-left: 30px;   
+     }
+     
+     #Ta_faixa_extrato{
+         background-color: #BA55D3;
+         height: 40px;
+         width: 1300px;
+         color:white;
+         margin-left: 0.7%;
+         margin-right: 3.8%;
+         padding-top: 0.5%;
+         text-align: center;
+         box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.5);
+         text-shadow: 0.1em 0.1em 0.1em #363636;
+     }
+     #Ta_datasEscolhidas{
+         width: 1300px; 
+         margin-left: 6%;
+     }
+     
+     #Ta_conta{
+         width: 200px;
+         margin-left: 4%;
+         margin-right: 0%;
+         padding-right: -3px;
+         box-shadow: 0 0 0 0;
+         border: 0 none;
+         outline: 0;
+         color: #A9A9A9;
+     }
+     
+     #Ta_numeroCartao{
+         position: absolute;
+         box-shadow: 0 0 0 0;
+         border: 0 none;
+         margin-right: 35%;
+         margin-top: 35%;
+     }
+     
+     #Ta_grafico{
+         position: absolute;
+         margin-left: 25px;
+         margin-top: 5px;
+     }
+     
+     #Ta_dadosMeusInvestimentos{
+         padding-left: 8%;
+         padding-top: 2%;
+         height: 400px;
+     }
+     
+     #Ta_valorTotalBruto{
+         width: 120px;
+         margin-left: 4%;
+         margin-right: 0%;
+         padding-right: -3px;
+         box-shadow: 0 0 0 0;
+         border: 0 none;
+         outline: 0;
+         color: #A9A9A9;
+     }
+     
+     #Ta_faixaInvestimentos{
+         height: 20px;
+         background-color: red;
+         margin-left: 2%;
+         margin-right: 20%;
+         margin-top: 10px;
+     
+     }
+     
+     #Ta_poupanca{
+         width:94%;
+         height: 200px;
+         padding-left: 5%;
+         border: solid  #A9A9A9 1px;
+         margin-left: 1%;
+         margin-top: 12px;
+         margin-right: 3px;
+         padding-bottom: 20px;
+         padding-top: 15px;
+     }
+     
+     #Ta_cofrinhoMenor{
+         position: absolute;
+         margin-left: 35px;
+         margin-top: 20px;
+     }
+     
+     #Ta_dataNiver{
+         width: 150px;
+         margin-left: 2%;
+         box-shadow: 0 0 0 0;
+         border: 0 none;
+         outline: 0;
+         color: #A9A9A9;
+     }
+     
+     #Ta_qtoRende{
+         width: 200px;
+         margin-left: 2%;
+         box-shadow: 0 0 0 0;
+         border: 0 none;
+         outline: 0;
+         color: #A9A9A9;
+     }
+     #Ta_dadosMinhaPoupanca{
+         margin-left: 2%;
+         padding-top: 2%;
+         height: 100px;
+     }
+     
+     #Ta_valoresMinhaPoupanca{
+         padding-top: 4.8%;
+     }
+     
+     #Ta_faixaRoxa{
+         margin-top: 30px;
+         margin-left: 0.01%;
+     }
+     #Ta_cardsInvestimento{
+         margin-top: 45px;
+         padding-left: 13%;
+         margin-bottom: 45px;
+     }
+     #Ta_quadroCinza{
+         padding-top: 45px;
+         background-color:  #DCDCDC;
+         padding-left: 2%;
+         padding-bottom: 70px;
+         margin-bottom: 20px;
+     }
+     #Ta_outros{
+         margin-left: 8%;
+         padding-bottom: 12px;
+         color: #1C1C1C;
+     }
+     #Ta_cardsInvestimento2{
+         margin-left: 2.5%;
+     }
+     
+     #Ta_bolsaDeValores{
+         position: relative;
+         margin-left: 15%;
+         margin-top: -85px;
+     }
+     #Ta_totalInvestido{
+         margin-top: 5%;
+     }
+     
+     #Ta_carinha2{
+         position: relative;
+          right: 6%;
+         margin-top: -30%;
+     }
+     
+     #Ta_carinha3{
+         position: relative;
+         right: 6%;
+         margin-top: -25%;
+         
+     }
+     
+     #Ta_carinha{
+         position: relative;
+         right: 5%;
+         margin-top: -25%;
+         
+     }
+     
+     #Ta_carinha3{
+         position: relative;
+         right: 6%;
+         margin-top: -25%;
+         
+     }
+     
+     .Ta_extrato{
+         margin-left: 5%;
+     }
+     
+     .Ta_botoes{
+        
+         margin-top: -1%;
+         margin-left: 80%;
+     }
+     
+     #Ta_dataEscolhida{
+         margin-left: 29%;
+         box-shadow: 0 0 0 0;
+         border: 0 none;
+         outline: 0;
+     }
+     #Ta_dataEscolhida2{
+         margin-left: 5%;
+         box-shadow: 0 0 0 0;
+         border: 0 none;
+         outline: 0;
+     }
+     
+     .Ta_de{
+         padding-top: 2%;
+         margin-left: 15%;
+     }
+     
+     .Ta_data{
+         padding-left: 2%;
+         margin-left: 5%;
+     }
+     
+     .Ta_valor{
+         padding-top: 2%;
+         text-align: center;
+     }
+     
+     .Ta_descricao{
+         padding-top: 2%;
+         text-align: center;
+     
+     }
+     
+     #Ta_calendarioImg{
+         margin-left: 90%;
+     }
+     
+     #Ta_valorMovimentacao{
+         margin-top: 8%;
+         margin-left: 90%;
+     }
+     #Ta_descricaoMovimento{
+         margin-top: 3.5%;
+         margin-left: 45%;
+         
+     }
+     #Ta_icone{
+         position: absolute;
+         margin-left: 20%;
+     }
+     
+     #Ta_cartao2{
+         margin-top: 10px;
+         margin-left: 2%;
+     }
+     
+     #Ta_Cartao{
+         margin-top: 25px;
+         margin-right: 10%;
+     }
+     #Ta_Cartao:hover{
+         box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.5);
+     }
+     
+     #Ta_Cartao{
+         margin-top: 25px;
+         margin-right: 10%;
+     }
+     
+     .Ta_radioBox{
+         margin-left: 2px;
+     }
+     
+     .Ta_cardsOutros{
+         margin-right: 3%;
+         margin-left: 4.5%;
+     }
+     
+     #Ta_logo {
+         width: 200px;
+         height: 35px;
+     }
+     
+     .Ta_setinha_subir{
+         position: relative;
+         left: 50vw;
+         top: 13vw;
+         width: 4%;
+     }
+     
+     /* Página sobre */
+     
+     #Ta_tituloSobre{
+         margin-top: 15%px;
+        
+     }
+     
+     #Ta_pessoas{
+         padding-top: 5%;
+     }
+     
+     /* ------ Estilo página SOBRE ---------*/
+     
+     #Ta_tituloSobre{
+         margin-top: 1%;
+         
+         text-align: center;
+     }
+     
+     .Ta_pessoas{
+        margin-top:1%;
+        text-align: left;
+     }
+     
+     Ta_ul Ta_li{
+         
+         font-size: 13px;
+         color: #696969;
+        
+     }
+     
+     Ta_ul Ta_h3{
+         
+         color: #BA55D3;
+         margin-top: 2%;
+     }
+     .Ta_fotosIntegrantes{
+         margin-left: 10%;
+         border-style: solid #A9A9A9;
+         box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.5);
+     }
+     
+     
+     /* ------ fim página SOBRE ---------*/
+     /*Código para reponsividade */
+     
+     @media screen and (max-width: 700px){
+         
+         #Ta_minhaContinha{
+             
+             font-size: 35px;
+             margin-top: 45px;
+             margin-left: 12px;
+             font-size: 30px;
+             
+         }
+         #Ta_imagemTopo{
+             margin-top: 10%;
+             width:99%;
+         }
+     
+         #Ta_dadosMeusInvestimentos{
+             text-align: center;
+         }
+     
+         #Ta_grafico{
+             margin-top: 65px;
+             width:20%; 
+         }
+     
+         #Ta_botaoRoxo2{
+             position: absolute;
+             align-items: center;
+             margin-right: 20px;
+         }
+     
+         #Ta_totalInvestido h2{
+             text-align: center;
+         }
+     
+         .Ta_botaoVerde{
+             margin-left: 20%;
+         }
+         #Ta_carinha2{
+             right: 6%;
+             margin-top: -15%;
+         }
+         #Ta_faixaInvestimentos{
+             margin-left: 2%;
+             margin-right: 2%;
+             margin-top: 30px;
+         }
+         #Ta_poupanca h2{
+             text-align: center;
+            
+         }
+         #Ta_poupanca{
+             border: 0 none;
+            
+         }
+         
+         #Ta_dadosMinhaPoupanca{
+             text-align: left;
+         }
+     
+         #Ta_saldoPoupanca{
+             margin-top: 24%;
+         }
+         #Ta_carinha3{
+             position: relative;
+             margin-left: 90%;
+             margin-top: -45%;
+         }
+         #Ta_faixaRoxaImg{
+             width:99%;
+             margin-top: 25%;
+         }
+         #Ta_cardsInvestimento{
+             margin-left: 5%;
+            
+         }
+         #Ta_CardPoupanca{
+             width: 75%;
+             margin-bottom: 4%;
+         }
+         #Ta_cardRendaFixa{
+             width: 75%;
+         }
+     
+         #Ta_cardsInvestimento2{
+             margin-left: 10%;
+            
+         }
+         #Ta_porquinho{
+             width: 15%;
+         }
+         #Ta_card1{
+             width: 85%; 
+             margin-bottom: 4%;
+         }
+         #Ta_card2{
+             width: 85%; 
+             margin-bottom: 4%;
+         }
+         #Ta_card3{
+             width: 85%; 
+             margin-bottom: 4%;
+         }
+         #Ta_bolsaDeValores{
+             width:99%;
+             margin-left: 1%;
+             margin-top: -30%;
+         }
+         #Ta_minhaContinha2{
+             border: 0 none;
+         }
+     
+         #Ta_meuCartao{
+             margin-top: 20%;
+         }
+     
+         #Ta_meuCartao h2{
+             text-align: center;
+         }
+     
+         #Cartao{
+             margin-left: 15%;
+         }
+         #Ta_ContaSemCartao h4{
+             margin-left: 30%;
+             margin-top: -10%;
+         }
+         #Ta_ContaQueRende{
+             background-color: #D3D3D3;
+             height: 200px;
+             padding-bottom: 10%;
+             padding-top: 5%;
+         }
+         #Ta_ContaQueRende h2{
+             margin-left: 30%;
+             margin-top: -20%;
+         }
+         #Ta_ContaQueRende h4{
+             margin-left: 25%;
+             margin-top: 1%;
+         }
+         .Ta_botaoVermeho{
+             margin-top: -5%;
+             margin-left: 35%;
+         }
+         #Ta_opcoesConta{
+             margin-left: 30%;
+         }
+         #Ta_operacao1 h2{
+             font-size: 20px;
+             margin-left: 30%;
+             margin-top: -20%;
+         }
+         .Ta_botoes{
+             margin-left: 30%;
+         }
+         
+         #Ta_operacao2 h2{
+             font-size: 15px;
+             margin-left: 30%;
+             margin-top: -15%;
+         }
+         #Ta_operacao2 h3{
+             margin-left: 1%;
+             margin-top: 0%;
+         }
+         #Ta_operacao3 h2{
+             font-size: 20px;
+             margin-left: 30%;
+             margin-top: -20%;
+         }
+         #Ta_periodo h3{
+             margin-left: 5%;
+             font-size: 20px;
+         }
+         #data1, #data2{
+             margin-left: -8%;
+         }
+         #Ta_dataEscolhida2{
+             font-size: 15px;
+             margin-left: 5%;
+             
+         }
+         #Ta_dataEscolhida{
+             font-size: 15px;
+             margin-left: 10%;
+             margin-right: 5%;
+         }
+         
+         #Ta_calendarioImg{
+             width: 90%;
+         }
+         
+         #Ta_informacoes1{
+             margin-left: -1%;
+         }
+         #Ta_carinha{
+             position: absolute;
+             right: 10%;
+             margin-top: -25%;
+         }
+         #Ta_meuCartao h2{
+             margin-left: 25%;
+         }
+         .Ta_botaoVermeho2{
+             margin-top: 1%;
+             margin-left: 30%;
+         }
+         #Ta_Cartao{
+             margin-top: 25px;
+             margin-left: 1%;
+         }
+         #Ta_transferirImg{
+             width: 20%;
+             margin-top:5%
+         }
+         #Ta_card1Img{
+             width: 50%;
+             margin-left: -25%;
+         }
+          #Ta_card2Img{
+             width: 50%;
+             margin-left: 35%;
+             margin-top: -69%;
+         }
+         #Ta_card3Img{
+             width: 50%;
+             margin-left: -25%;
+         }
+          #Ta_card4Img{
+             width: 50%;
+             margin-left: 35%;
+             margin-top: -69%;
+         }
+         #Ta_faixa_extrato{
+             width: 450px;
+         }
+         #Ta_de{
+             margin-left: 1%;
+         }
+         #Ta_mostrar{
+             margin-left: 80%;
+         }
+         #Ta_valorMovimentacao{
+             margin-top: -10;
+             margin-left: 40%;
+         }
+         #Ta_descricaoMovimento{
+             margin-left: 5%;
+             size: "20";
+         }
+         
+     }
+     /*---------- fim css Tati -------------*/
+     
+
+/*inicio Primeira Pagina de cadastro*/
+
+.tcCadastroPagina1{
+    width: 100%;
+    height: 80vh;
+    min-height: 780px;
+   
+}
+
+.tcfundoCadastroPagina1{
+    background-image: url('../images/secao_aprenda_divertindo/gradiente.png');
+    background-size: cover;
+    height: 100%;
+    min-height: 710px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.tcCamposCadastroPagina1{
+    background-color: #ffffff;
+    width: 60%;
+    max-width: 960px;
+    height: 80%;
+    min-height: 580px;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tcPaginacaoPagina1{
+    width: 20%;
+    min-width: 170px;
+}
+
+.tcPaginacaoPagina1>ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 170px ;
+    padding: 0;
+}
+
+.tcPagPagina1{
+    margin-left: auto;
+    margin-right: auto;
+    color: #bfbfbf;
+    border: none;   
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    outline: none;
+}
+
+.tcActivePagina1{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffd628;
+    border: none;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    outline: none;
+}
+
+.tcDadosPessoaisPagina1{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 2em;
+    padding-bottom: 3vh;
+}
+
+.tcFormularioPagina1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 70%;
+    align-content: center;
+    justify-content: space-between;
+
+}
+
+.tcCamposFormulariosPagina1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 350px;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 5vh;
+}
+
+
+
+.tcCamposPagina1{
+    width: 100%;
+    height: 15%;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    outline: none;
+    box-shadow: none;
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+
+}
+
+#tcTelefonePagina1{
+    width: 47.5%;
+}
+
+#tcCelularPagina1{
+    width: 47.5%;
+}
+
+.tcCamposPagina1:focus, .tcCamposPagina1:focus + label {
+    /* estilo */
+}
+
+.tcCamposPagina1:hover:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.tcProximoPagina1{
+    border-radius: 50px;
+    border: none;
+    height: 4vh;
+    width: 16vw;
+    max-width: 200px;
+    font-size: 1.3em;
+    background-color: #bfbfbf;
+    outline: none;
+    box-shadow: none;
+    font-family: 'Open Sans';
+}
+
+.tcProximoPagina1:hover{
+    font-size: 1.4em;
+    transition: 1s;
+    height: 4.1vh;
+    width: 16.1vw;
+    border: none !important;
+}
+
+.tcEntreAquiPagina1{
+    font-family: 'Open Sans';
+    
+}
+.tcEntreAquiTextoPagina1{
+    color: #C427D1;
+    font-family: 'Open Sans';
+}
+
+
+/*fim primeira pagina de cadastro*/
+
+
+
+
+
+/*inicio segunda pagina de cadastro*/
+
+.tcCadastroPagina2{
+    width: 100%;
+    height: 80vh;
+    display: none;
+    min-height: 780px;
+}
+
+.tcfundoCadastroPagina2{
+    background-image: url('../images/secao_aprenda_divertindo/gradiente.png');
+    background-size: cover;
+    height: 100%;
+    min-height: 710px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.tcCamposCadastroPagina2{
+    background-color: #ffffff;
+    width: 60%;
+    max-width: 960px;
+    height: 80%;
+    min-height: 580px;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tcPaginacaoPagina2{
+    width: 20%;
+    min-width: 170px;
+    
+}
+
+.tcPaginacaoPagina2>ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 170px ;
+    padding: 0;
+}
+
+.tcPagPagina2{
+    margin-left: auto;
+    margin-right: auto;
+    color: #bfbfbf;
+    border: none;   
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    outline: none;
+}
+
+.tcActivePagina2{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffd628;
+    border: none;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    outline: none;
+}
+
+.tcDadosDeEnderecoPagina2{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 2em;
+    padding-bottom: 3vh;
+}
+
+.tcFormularioPagina2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 70%;
+    align-content: center;
+    justify-content: space-between;
+
+}
+
+.tcCamposFormulariosPagina2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 350px;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 5vh;
+}
+
+.tcCamposPagina2{
+    width: 97%;
+    height: 10%;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    outline: none;
+    box-shadow: none;
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+    
+}
+
+.tcCamposPagina2:focus, .tcCamposPagina2:focus + label {
+    /* estilo */
+}
+
+.tcCamposPagina2:hover:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+#tcTipoEnderecoPagina2, #uf{
+    font-size: 1em;
+    outline: none;
+    box-shadow: none;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color:#757575;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-color: #757575 ;
+    border-width: 2px;
+    margin-bottom: 4px;
+}
+
+
+#cep{
+    width: 40%;
+}
+
+#logradouro, #bairro{
+    width: 45%;
+}
+
+#tcNumeroPagina2, #localidade{
+    width: 43%;
+}
+
+#tcComplementoPagina2{
+    width: 70%;
+}
+
+.tcProximoPagina2{
+    border-radius: 50px;
+    border: none;
+    height: 4vh;
+    width: 16vw;
+    margin-bottom: 5vh;
+    max-width: 200px;
+    font-size: 1.3em;
+    background-color: #bfbfbf;
+    outline: none;
+    box-shadow: none;
+    font-family: 'Open Sans';
+}
+
+.tcProximoPagina2:hover{
+    font-size: 1.4em;
+    transition: 1s;
+    height: 4.1vh;
+    width: 16.1vw;
+}
+
+/*fim segunda pagina de cadastro*/
+
+
+
+
+/*inicio terceira pagina de cadastro*/
+
+.tcCadastroPagina3{
+    width: 100%;
+    height: 80vh;
+    display: none;
+    min-height: 780px;
+}
+
+.tcFundoCadastroPagina3{
+    background-image: url('../images/secao_aprenda_divertindo/gradiente.png');
+    background-size: cover;
+    height: 100%;
+    min-height: 710px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.tcCamposCadastroPagina3{
+    background-color: #ffffff;
+    width: 60%;
+    max-width: 960px;
+    height: 80%;
+    min-height: 580px;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tcPaginacaoPagina3{
+    width: 20%;
+    min-width: 170px;
+}
+
+.tcPaginacaoPagina3>ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 170px ;
+    padding: 0;
+}
+
+.tcPagPagina3{
+    margin-left: auto;
+    margin-right: auto;
+    color: #bfbfbf;
+    border: none;   
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    outline: none;
+}
+
+.tcActivePagina3{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffd628;
+    border: none;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    outline: none;
+}
+
+.tcDadosFilhoPagina3{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 2em;
+    padding-bottom: 3vh;
+}
+
+.tcFormularioPagina3{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%;
+    height: 70%;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.tcCamposFormularios3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 350px;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 5vh;
+}
+
+.tcCamposPagina3{
+    width: 97%;
+    height: 10%;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    outline: none;
+    box-shadow: none;
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+    
+}
+
+.tcCamposPagina3:focus, .tcCamposPagina3:focus + label {
+    /* estilo */
+}
+
+.tcCamposPagina3:hover:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+
+#tcSexoPagina3, #tcDataPagina3{
+    font-size: 1em;
+    outline: none;
+    box-shadow: none;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color:#757575;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-color: #757575 ;
+    border-width: 2px;
+    margin-bottom: 4px;
+}
+
+#tcDataPagina3{
+    width: 50%;
+    margin-right: 13px;
+}
+
+
+
+.tcIncluirNovoPagina3{
+    border-radius: 50px;
+    border: none;
+    height: 4vh;
+    width: 16vw;
+    margin-bottom: 5vh;
+    max-width: 200px;
+    font-size: 1.3em;
+    background-color: #bfbfbf;
+    outline: none;
+    box-shadow: none;
+    font-family: 'Open Sans';
+    margin-left: 5vw;
+    margin-right: 1vw;
+}
+
+.tcIncluirNovoPagina3:hover{
+    font-size: 1.4em;
+    transition: 1s;
+    height: 4.1vh;
+    width: 16.1vw;
+}
+.tcFinalizarPagina3{
+    border-radius: 50px;
+    border: none;
+    height: 4vh;
+    width: 16vw;
+    margin-bottom: 5vh;
+    max-width: 200px;
+    font-size: 1.3em;
+    background-color: #bfbfbf;
+    outline: none;
+    box-shadow: none;
+    font-family: 'Open Sans';
+    margin-right: 5vw ;
+    margin-left: 1vw;
+}
+
+.tcFinalizarPagina3:hover{
+    font-size: 1.4em;
+    transition: 1s;
+    height: 4.1vh;
+    width: 16.1vw;
+}
+
+/*fim terceira pagina de cadastro*/
+
+/*Inicio Edição de Dados cadastrais*/
+
+.tcEdicaoPagina2{
+    width: 100%;
+    height: 200vh;
+}
+
+.tcfundoEdicaoPagina2{
+    background-image: url('../images/secao_aprenda_divertindo/gradiente.png');
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tcResponcavelEdicao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    height: 10%;
+    color: #ffffff;
+}
+
+#euSouEdicao{
+    font-family: 'Open sans';
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+#responsavel{
+    font-family: 'Open sans';
+    font-weight: normal;
+}
+
+.tcCamposEdicaoPagina2{
+    background-color: #ffffff;
+    width: 60%;
+    max-width: 960px;
+    max-height: 450px;
+    height: 100%;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tcPaginacaoPagina2{
+    width: 20%;
+    min-width: 170px;
+    
+}
+
+.tcPaginacaoPagina2>ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 170px ;
+    padding: 0;
+}
+
+.tcPagPagina2{
+    margin-left: auto;
+    margin-right: auto;
+    color: #bfbfbf;
+    border: none;   
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    outline: none;
+}
+
+.tcActivePagina2{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffd628;
+    border: none;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    outline: none;
+}
+
+.tcDadosEdicao{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 0;
+}
+
+.tcFormularioEdicao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    align-content: center;
+    justify-content: space-between;
+
+}
+
+.tcFormularioContaEdicao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 70%;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.tcCamposFormulariosPagina2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 350px;
+    align-items: center;
+    width: 90%;
+    padding-bottom: 5vh;
+}
+.tcCamposFormularioEdicao{
+    background-color: #ffffff;
+    width: 60%;
+    max-width: 960px;
+    max-height: 450px;
+    height: 80%;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.tcCamposEmailEdicao {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.tcCamposSenhaEdicao {
+    width: 35%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.tcCamposEdicao{
+    width: 97%;
+    height: 10%;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    outline: none;
+    box-shadow: none;
+    font: 'Open Sans';
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.tcCamposPagina2:focus, .tcCamposPagina2:focus + label {
+    /* estilo */
+}
+
+.tcCamposPagina2:hover:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+#tcCPFedicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">CPF:</text></svg>') no-repeat;
+    padding-left:60px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 35%;
+}
+#tcEnderecoEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Endereço:</text></svg>') no-repeat;
+    padding-left:115px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 50%;
+}
+#tcNumeroEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Número:</text></svg>') no-repeat;
+    padding-left:97px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 40%;
+}
+#tcBairroEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Bairro:</text></svg>') no-repeat;
+    padding-left:76px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 50%;
+}
+#tcCidadeEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Cidade:</text></svg>') no-repeat;
+    padding-left:87px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 40%;
+}
+#tcUfEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">UF:</text></svg>') no-repeat;
+    padding-left:70px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 10%;
+}
+
+#tcComplementoEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Complemento:</text></svg>') no-repeat;
+    padding-left:160px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 80%;
+}
+#tcTipoEnderecoEdicao, #tcUfEdicao{
+    font-size: 1em;
+    outline: none;
+    box-shadow: none;
+    font-size: 1.em;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color:#757575;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-color: #757575 ;
+    border-width: 2px;
+    margin-bottom: 4px;
+}
+#tcTipoEnderecoEdicao{
+    width: 50%;
+}
+
+#tcEmailAtualEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">E-mail Atual:</text></svg>') no-repeat;
+    padding-left:123px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 100%;
+}
+
+
+#tcNovoEmailEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Novo e-mail:</text></svg>') no-repeat;
+    padding-left:123px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 100%;
+}
+
+#tcConfirmarEmailEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="186" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Confirmar e-mail:</text></svg>') no-repeat;
+    padding-left:165px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 100%;
+}
+
+#tcSenhaAtualEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Senha atual:</text></svg>') no-repeat;
+    padding-left:123px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 100%;
+}
+
+
+#tcNovaSenhaEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Nova senha:</text></svg>') no-repeat;
+    padding-left:123px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 100%;
+}
+
+#tcConfirmarSenha{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="186" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Confirmar senha:</text></svg>') no-repeat;
+    padding-left:165px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 100%;
+}
+
+.tcDivBotaoEdicao{
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.tcBotaoAlterarEdicao{
+    background: none ;
+    border: none;
+    color: #FF0202;
+    font-size: 1em;
+    transition: 1s;
+    margin-bottom: .1em;
+    margin-top: .1em;
+}
+.tcBotaoAlterarEdicao:hover{
+    background: none ;
+    border: none;
+    color: #FF0202;
+    font-size: 1.1em;
+    transition: 1s;
+    margin-bottom: .0em;
+    margin-top: .0em;
+}
+
+.tcMensagemAlterarEdicao{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    display: ;
+}
+
+.tcContaEdicao,.tcInvestimentosEdicao, .tcCartaoEdicao{
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#tcTarifaEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="186" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Tarifa:</text></svg>') no-repeat;
+    padding-left:62px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 45%;
+    height: 45%;
+}
+#tcStatusEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="186" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Status:</text></svg>') no-repeat;
+    padding-left:70px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 45%;
+    height: 45%;
+}
+#tcRendaEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="230" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Renda Fixa ao Mês - %:</text></svg>') no-repeat;
+    padding-left:230px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 45%;
+    height: 45%;
+}
+#tcPoupancaEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="230" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Poupança ao Mês - %:</text></svg>') no-repeat;
+    padding-left:218px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 45%;
+    height: 45%;
+}
+#tcLimiteEdicao{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="186" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Limite:</text></svg>') no-repeat;
+    padding-left:68px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 45%;
+    height: 45%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 28px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .switchInputEdicao:checked + .slider {
+    background-color: #4cd864;
+  }
+  
+  .switchInputEdicao:focus + .slider {
+    box-shadow: 0 0 1px #4cd864;
+  }
+  .switchInputEdicao:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+#cep{
+    width: 40%;
+}
+
+#logradouro, #bairro{
+    width: 45%;
+}
+
+#tcNumeroPagina2, #localidade{
+    width: 44%;
+}
+
+#tcComplementoPagina2{
+    width: 70%;
+}
+
+.tcProximoPagina2{
+    border-radius: 50px;
+    border: none;
+    height: 4vh;
+    width: 16vw;
+    margin-bottom: 5vh;
+    max-width: 200px;
+    font-size: 1.3em;
+    background-color: #bfbfbf;
+    outline: none;
+    box-shadow: none;
+    font-family: 'Open Sans';
+}
+
+.tcProximoPagina2:hover{
+    font-size: 1.4em;
+    transition: 1s;
+    height: 4.1vh;
+    width: 16.1vw;
+}
+
+/*fim segunda pagina de edicao de dados*/
+
+
+
+/*inicio Cadastro de tarefas*/
+
+.tcTarefas{
+    width: 100%;
+    height: 80vh;
+    display: block;
+}
+
+.tcFundoTarefas{
+    background-image: url('../images/secao_aprenda_divertindo/gradiente.png');
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tcCamposCadastroTarefas{
+    background-color: #ffffff;
+    width: 60%;
+    max-width: 960px;
+    height: 80%;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.tcDadosTarefas{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 2em;
+    margin-top: 10%;
+}
+
+.tcFormularioTarefas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%;
+    height: 70%;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.tcCamposFormulariosTarefas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 350px;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 5vh;
+}
+
+.tcCamposTarefas{
+    width: 45%;
+    height: 10%;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    outline: none;
+    box-shadow: none;
+    font: 'Open Sans';
+    color: #757575;
+    font-size: 1.5em;
+}
+
+.tcCamposTarefas:focus, .tcCamposTarefas:focus + label {
+    /* estilo */
+}
+
+.tcCamposTarefas:hover:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+#tcPontos{
+    margin-bottom: 8%;
+    font-family: 'Open Sans';
+    font-size: 1.1em;
+}
+#tcDias{
+    margin-bottom: 8%;
+    font-family: 'Open Sans';
+    font-size: 1.1em;
+}
+
+.diasSemana{
+    font-size: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px ;
+    border: none;
+}
+
+
+.tcCategoriaTarefas{
+    width: 45%;
+    font-size: 1em;
+    outline: none;
+    box-shadow: none;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color:#757575;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-color: #757575 ;
+    border-width: 2px;
+    margin-bottom: 4px;
+}
+
+#tituloTarefas{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Titulo:</text></svg>') no-repeat;
+    padding-left:70px;
+    font-family: 'Open Sans';
+    color: #757575;
+    width: 45%;
+}
+#objetivosTarefas{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Objetivo:</text></svg>') no-repeat;
+    padding-left:118px;
+    font-family: 'Open Sans';
+    color: #757575; 
+    width: 45%;
+}
+
+#descricaoTarefas{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1.3em Sans-serif;">Descrição:</text></svg>') no-repeat;
+    padding-left:118px;
+    font-family: 'Open Sans';
+    color: #757575; 
+    width: 45%;
+}
+
+#dataInicio{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="22" fill="gray" style="font: 1.4em Sans-serif;">Inicio:</text></svg>') no-repeat;
+    padding-left:70px;
+    font-size: 1em;
+    outline: none;
+    box-shadow: none;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color:#757575;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-color: #757575 ;
+    border-width: 2px;
+    margin-bottom: 4px;
+}
+#dataFim{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="22" fill="gray" style="font: 1.4em Sans-serif;">Fim:</text></svg>') no-repeat;
+    padding-left:70px;
+    font-size: 1em;
+    outline: none;
+    box-shadow: none;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color:#757575;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-color: #757575 ;
+    border-width: 2px;
+    margin-bottom: 4px;
+}
+
+.tcIncluirTarefas{
+    border-radius: 50px;
+    border: none;
+    height: 4vh;
+    width: 16vw;
+    margin-bottom: 5vh;
+    max-width: 200px;
+    font-size: 1.3em;
+    background-color: #bfbfbf;
+    outline: none;
+    box-shadow: none;
+    font-family: 'Open Sans';
+    margin-left: 5vw;
+    margin-right: 1vw;
+}
+
+.tcIncluirTarefas:hover{
+    font-size: 1.4em;
+    transition: 1s;
+    height: 4.1vh;
+    width: 16.1vw;
+}
+.tcCancelarTarefas{
+    border-radius: 50px;
+    border: none;
+    height: 4vh;
+    width: 16vw;
+    margin-bottom: 5vh;
+    max-width: 200px;
+    font-size: 1.3em;
+    background-color: #bfbfbf;
+    outline: none;
+    box-shadow: none;
+    font-family: 'Open Sans';
+    margin-right: 5vw ;
+    margin-left: 1vw;
+}
+
+.tcCancelarTarefas:hover{
+    font-size: 1.4em;
+    transition: 1s;
+    height: 4.1vh;
+    width: 16.1vw;
+}
+
+#pontosTarefas{
+    background-color: #c4c4c4;
+    -webkit-appearance: none;
+    width: 70%;
+    height: 10px;
+    border-radius: 50px;
+}
+#pontosTarefas[type=range]::-moz-range-progress{
+    background-color: #75EF16;
+}
+
+  
+#pontosTarefas[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px solid #FFC80A;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: #FFC80A;
+    cursor: pointer;
+    margin-top: 0px; 
+}
+
+#tcTextInput, #tcTextInput:hover{
+    width: 26%;
+    border:none;
+    outline: none;
+    box-shadow: none;
+    font: 'Open Sans';
+    color: #757575;
+    font-size: 0.9em;
+    user-select: none;
+}
+
+.salvarCancelar{
+    width: 40%;
+    max-width: 240px;
+    display: flex;
+    justify-content: space-between;
+    height: 2%;
+    max-height: 35px;
+}
+.salvarCancelar>button{
+    width: 30%;
+    height: 1%;
+    min-height: 30px ;
+    max-width: 120px;
+    min-width: 100px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    border: none;
+    font-family:'Open Sans';
+    font-weight: 500;
+    transition: 1s;
+}
+.salvarCancelar>button:hover{
+    width: 30%;
+    
+    min-height: 32px ;
+    max-width: 120px;
+    min-width: 102px;
+    transition: 1s;
+    border-radius: 100px;
+    background-color: #ffffff;
+    border: none;
+    font-family:'Open Sans';
+    font-weight: 500;
+}
+
+/*fim Cadastro de tarefas*/
+
+@media screen and (max-width:600px){
+
+    /*Inicio primeira pagina de cadastro*/
+    .tcCadastroPagina1{
+        width: 100%;
+        height: 110vh;
+        min-height:420px;
+    }
+
+    .tcfundoCadastroPagina1{
+        background-size: contain; 
+        min-height: 560px;
+      
+    }
+
+    .tcCamposCadastroPagina1 {
+        width: 90%;
+        min-height: 460px;
+    }
+
+    .tcDadosPessoaisPagina1{
+        font-size: 1.5em; 
+    }
+
+    .tcFormularioPagina1{
+        width: 90%;
+        min-height: 270px;
+    }
+
+    .tcCamposPagina1{
+        font-size: 1.3em;
+        width: 100%;   
+    }
+
+    .tcProximoPagina1, .proximo2{
+        width: 60vw;
+        height: 5vh;
+        font-size: 1.2em;
+    }
+
+    .tcEntreAquiPagina1{
+        font-size: 0.9em;
+    }
+    /*Fim primeira pagina de cadastro*/
+
+    /*Inicio segunda pagina de cadastro*/
+
+    .tcCadastroPagina2{
+        width: 100%;
+        height: 160vh;
+        min-height:420px;
+    }
+
+    .tcfundoCadastroPagina2{
+        background-size: contain; 
+        min-height: 790px;
+    }
+
+    .tcCamposCadastroPagina2 {
+        width: 90%;
+        min-height: 690px;
+    }
+
+    .tcDadosDeEnderecoPagina2{
+        font-size: 1.5em;
+        margin: 0;
+        padding:0;
+    }
+
+    .tcFormularioPagina2{
+        width: 90%;
+        padding-bottom: 10%;
+    }
+
+    .tcCamposFormulariosPagina2{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 400px;
+    }
+
+    .tcCamposPagina2{
+        width: 99% !important;
+    }
+
+    #tcTipoEnderecoPagina2{
+        margin-top: 6%;
+        width: 100%;
+    }
+    
+    #uf{
+        width: 100%;
+        margin-top: 6%;
+    }
+
+    .tcProximoPagina2{
+        width: 60vw;
+        height: 5vh;
+        font-size: 1.2em;
+    }
+
+    /*Fim segunda pagina de cadastro*/
+
+
+    /*Inicio terceira pagina de cadastro*/
+
+    .tcCadastroPagina3{
+        width: 100%;
+        height: 100vh;
+        min-height:750px;
+    }
+
+    .tcFundoCadastroPagina3{
+        background-size: contain; 
+        min-height: 750px;
+    }
+    
+    .tcCamposCadastroPagina3 {
+        width: 90%;
+        min-height: 400px;
+    }
+
+    .tcDadosFilhoPagina3{
+        font-size: 1.5em;
+        margin: 0;
+        padding:0;
+        margin-bottom: 10%;
+    }
+
+    .tcFormularioPagina3{
+        width: 90%;
+    }
+
+    .tcCamposFormulariosPagina3{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 400px;
+      
+    }
+
+    .tcCamposPagina3{
+        width: 99% !important;
+        font-size: 1.3em;
+
+    }
+
+    #tcDataPagina3{
+        margin:0;
+    }
+
+    #tcSexoPagina3{
+        width: 100%;
+    }
+
+    .tcIncluirNovoPagina3, .tcFinalizarPagina3{
+        width: 60vw;
+        height: 5vh;
+        font-size: 1.2em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #tcSexoPagina3, #tcDataPagina3{
+        font-size: 1.3em;
+    }
+
+    /*Fim terceira pagina de cadastro*/
+
+    /*inicio Cadastro de tarefas*/
+
+    .tcTarefas{
+        width: 100%;
+        height: 100vh;
+        min-height:760px;
+        max-height: 760px;
+        
+    }
+
+    .tcFundoTarefas{
+        height: 100%;
+        max-height: 760px;
+    }
+    .tcCamposCadastroTarefas{
+        width: 90%;
+        min-height: 640px;
+    }
+
+    .tcDadosTarefas{
+        font-size: 1.5em;
+        padding: 0;
+        
+    }
+    .tcFormularioTarefas{
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        min-height: 540px;
+    }
+
+    .tcCamposFormulariosTarefas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+    
+        max-height: 350px;
+    }
+    .tcCamposTarefas{
+        width: 99% !important;
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    .tcCategoriaTarefas{
+        width: 99% !important;
+    }
+
+    #tituloTarefas{
+        width: 100% !important;
+        
+    }
+    
+    #descricaoTarefas{
+        width: 100% !important;
+    }
+    #pontosTarefas{
+        width: 70% !important;
+    }
+
+    .tcIncluirTarefas{
+        width: 60vw;
+        height: 40px;
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+    .tcCancelarTarefas{
+        width: 60vw;
+        height: 40px;
+        font-size: 1.2em;
+        margin: 0;
+        margin-bottom: 15%;
+    }
+    /*fim Cadastro de tarefas*/
+
+    /*inicio Edição de dados*/
+    .tcCamposEdicaoPagina2{
+        width: 90%;
+        min-height: 600px;
+
+    }  
+    .tcCamposFormularioEdicao{
+        width: 90%;
+        min-height: 700px;
+    }
+    .tcCamposFormulariosPagina2{
+        width: 99%;
+        height: 100%;
+        min-height: 520px;
+    }
+    .tcResponcavelEdicao{
+        width: 100%;
+        max-height: 180px;
+    }
+    .tcResponcavelEdicao>img{
+        max-height: 100px;
+    }
+    #tcTipoEnderecoEdicao, #tcUfEdicao{
+        width: 99%;
+    }
+    .tcFormularioEdicao{
+        flex-direction: column;
+    }
+    .tcCamposEmailEdicao{
+        width: 99%;
+    }
+    .tcCamposSenhaEdicao{
+        width: 99%;
+    }
+    .tcCamposEdicao{
+        width: 99% !important;
+        height: 30px !important;
+    }
+    .tcInvestimentosEdicao{
+        flex-direction: column;
+    }
+    .tcContaEdicao{
+        flex-direction: column; 
+    }
+    .tcCartaoEdicao{
+        flex-direction: column;
+    }
+    .tcFormularioContaEdicao{
+        height: 100%;
+        justify-content: space-around;
+    }
+    .tcEdicaoPagina2{
+        min-height: 2400px;
+    }
+    .tcfundoEdicaoPagina2{
+        min-height: 2400px;
+    }
+    .tcDadosEdicao{
+        font-size: .9em;
+        margin-top: 20px;
+    }
+    #formularioEdicao{
+        height: 90%;
+        margin-top: 20px;
+    }
+
+    .salvarCancelar{
+        width: 80%;
+    }
+
+    /*fim Edição de dados*/
+    
+}
+
+
+@media screen and (max-width:1023px) and (min-width:600px){
+    /*Inicio segunda pagina de cadastro*/
+
+    .tcCamposCadastroPagina1{
+        width: 80%;
+        
+    }
+    .tcFormularioPagina1{
+        width: 100%;
+    }
+    .tcProximoPagina1{
+        width: 26vw;
+    }
+
+    /*Fim primeira pagina de cadastro*/
+
+
+    /*Inicio segunda pagina de cadastro*/
+
+    .tcCamposCadastroPagina2{
+        width: 80%;
+    }
+    .tcFormularioPagina2{
+        width: 100%;
+    }
+    .tcProximoPagina2{
+        width: 26vw;
+    }
+
+    /*Fim segunda pagina de cadastro*/
+
+    
+    /*Inicio terceira pagina de cadastro*/
+
+    .tcCamposCadastroPagina3{
+        width: 80%;
+    }
+    .tcFormularioPagina3{
+        width: 100%;
+    }
+    .tcFinalizarPagina3{
+        width: 26vw;
+    }
+    .tcIncluirNovoPagina3{
+        width: 26vw;
+    }
+
+    /*Fim terceira pagina de cadastro*/
+    
+    /*inicio Cadastro de tarefas*/
+
+    .tcCamposCadastroTarefas{
+        width: 80%;
+    }
+    .tcFormularioTarefas{
+        width: 90%;
+    }
+    .tcIncluirTarefas{
+        width: 26vw;
+    }
+    .tcCancelarTarefas{
+        width: 26vw;
+    }
+
+    /*fim Cadastro de tarefas*/
+
+    /*inicio Edição de dados*/
+    .tcCamposEdicaoPagina2{
+        width: 80%
+    }  
+    .tcCamposFormularioEdicao{
+        width: 80%;
+    }
+    .tcResponcavelEdicao{
+        width: 50%;
+    }
+    .tcEdicaoPagina2{
+        min-height: 1740px;
+    }
+
+    .tcfundoEdicaoPagina2{
+        min-height: 1740px;
+    }
+    #tcCPFedicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">CPF:</text></svg>') no-repeat;
+        padding-left:42px;
+        padding-top: 8px;
+    }
+    #tcEnderecoEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Endereço:</text></svg>') no-repeat;
+        padding-left:80px;
+        padding-top: 8px;
+    }
+    #tcNumeroEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Número:</text></svg>') no-repeat;
+        padding-left:67px;
+        padding-top: 8px;
+    }
+    #tcBairroEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Bairro:</text></svg>') no-repeat;
+        padding-left:52px;
+        padding-top: 8px;
+    }
+    #tcCidadeEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Cidade:</text></svg>') no-repeat;
+        padding-left:60px;
+        padding-top: 8px;
+    }
+    #tcUfEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="115" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">UF:</text></svg>') no-repeat;
+        padding-left:70px;
+        height: 31px;
+
+    }
+    
+    #tcComplementoEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Complemento:</text></svg>') no-repeat;
+        padding-left:110px;
+        padding-top: 8px;
+    }
+    #tcTipoEnderecoEdicao, #tcUfEdicao{
+        font-size: 1.3em;
+    }
+    .tcCamposEdicaoPagina2{
+        font-size: 0.7em;
+    }
+    .tcCamposEmailEdicao{
+        width: 47%;
+        font-size: 0.7em;
+    }
+    .tcCamposSenhaEdicao{
+        width: 47%;
+        font-size: 0.7em;
+    }
+    #tcEmailAtualEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">E-mail Atual:</text></svg>') no-repeat;
+        padding-top: 8px;
+        padding-left:95px;
+    }
+    
+    
+    #tcNovoEmailEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Novo e-mail:</text></svg>') no-repeat;
+        padding-left:95px;
+        padding-top: 8px;
+    }
+    
+    #tcConfirmarEmailEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="186" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Confirmar e-mail:</text></svg>') no-repeat;
+        padding-left:128px;
+        padding-top: 8px;
+    }
+    
+    #tcSenhaAtualEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Senha atual:</text></svg>') no-repeat;
+        padding-left:95px;
+        padding-top: 8px;
+    }
+    
+    
+    #tcNovaSenhaEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Nova senha:</text></svg>') no-repeat;
+        padding-left:95px;
+        padding-top: 8px;
+    }
+    
+    #tcConfirmarSenha{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="186" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Confirmar senha:</text></svg>') no-repeat;
+        padding-left:128px;
+        padding-top: 8px;
+    }
+    #tcTarifaEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="186" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Tarifa:</text></svg>') no-repeat;
+        padding-left:50px;
+        padding-top: 10px;
+    }
+    #tcStatusEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="186" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Status:</text></svg>') no-repeat;
+        padding-left:55px;
+        padding-top: 10px;
+    }
+    #tcRendaEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="230" height="30"><text x="4" y="23" fill="gray" style="font: .9em Sans-serif;">Renda Fixa ao Mês - %:</text></svg>') no-repeat;
+        padding-left:160px;
+        padding-top: 10px;
+    }
+    #tcPoupancaEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="230" height="30"><text x="4" y="23" fill="gray" style="font: .9em Sans-serif;">Poupança ao Mês - %:</text></svg>') no-repeat;
+        padding-left:150px;
+        padding-top: 10px;
+    }
+    #tcLimiteEdicao{
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="186" height="30"><text x="4" y="23" fill="gray" style="font: 1em Sans-serif;">Limite:</text></svg>') no-repeat;
+        padding-left:52px;
+        padding-top: 10px;
+    }
+    /*fim Edição de dados*/
+}
+
+@media screen and (max-width:991px){
+    .home_modal_conteiner{ /*Tela escura*/
+        width: 100vw;
+        height: 100vh;
+
+        justify-content: center;
+        flex-direction: row;
+        display:none;
+        
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.5); /*cor escura*/
+        z-index: 2000;  /*permite que a área escura fique acima de todos os itens da página home*/
+        }
+        
+        .home_modal_loguin {
+       
+            width: 35vw;
+            height: 40vw;
+            box-sizing: border-box;
+            background-color:white;
+            top: 10%;
+            right: 37vw;
+            border-radius: 4%;
+            border: 1px solid #EF1616;
+        }
+}
+@media screen and (max-width:600px){
+    .home_modal_loguin {
+        width: 60vw;
+        height: 70vw;
+        box-sizing: border-box;
+        background-color:white;
+        top: 10%;
+        right: 20vw;
+        border-radius: 4%;
+        border: 1px solid #EF1616;
+    }
+}

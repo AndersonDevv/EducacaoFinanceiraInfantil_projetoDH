@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estiloContinha.css" />
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+
+    <title>Meus Investimentos</title>
+    <a name="topo"></a>
+</head>
+
+<body class="bodyHome">
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light" id="menu_header">
+
+            <a class="navbar-brand" href="#"><img class="img-fluid" src="./images/home_logo_santander.png" alt="logo" id="logo"></a>
+            <button class="navbar-toggler" id="outline" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon" ></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav mt-3">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html" name="ir_para_inicio_pagina"><span id="home">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html"><span id="sobre_nos">Sobre</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="continhas.html"><span id="minhas_continhas">Continhas</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="investimentos.html"><span id="investimentos">Investimentos</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tarefas.html"><span id="minhas_tarefas">Tarefas</span></a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="d-none d-md-block" id="separador"></div>
+                    </li>
+                    <li class="nav-item active" id="esconder_abrir_entrar">
+                        <button class="" id="btn_abrir_conta" ><a href="telaCadastro.html" class="home_abrir_conta" id="abrir_continha">Abrir Continha</a></button>
+                    </li>
+                    <li class="nav-item" id="esconder_abrir_entrar">
+                        <a class="nav-link mt-1 ml-2"><span id="entrar" onclick ="chamar_modal()">Entrar</span></a>
+                    </li>
+                    <li class="nav-item"  id="esconder_usuario_logado">
+                        <div class="nav-link mt-1 ml-2" id="mostrar_nome_usuario"></div>
+                    </li>
+                    <li class="nav-item"  id="esconder_usuario_logado">
+                        <div class="nav-link mt-1 ml-2"><div id="rotate" class="fas fa-angle-down" onclick="chamar_modal_usuario_logado()"></div></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+     
+    <section>    
+        <h6 class="h6" id="Tat_minhaContinha">Meus Investimentos</h6>
+        <div id="Tat_faixaTopo">
+            <img id="Tat_imagemTopo" src="images/Ta_faixaTopo2.png" >
+        </div>
+    </section>   
+
+    
+    <section>
+        <div class="container">
+            <div class="row" >
+                <img id="Tat_grafico" src="images/grafico.png" >
+                <div class="col-12 col-sm-4 col-md-4 d-flex justify-content-center" >
+                    <div class="Tat_dadosMeusInvestimentos" > 
+                        
+                        <h2 class="h2">Renda Fixa<h2>
+                        <hr>
+                        
+                        <h4 class="h4">Valor Aplicado</h4>
+                        <h2 class="h2">R$<input type="text" class="Tat_form-frontInsersao"  size = "6" id="valorAplicado_rendaFixa" readonly><h2>    
+                        <p></p><h4 class="h4">Valor Bruto</h4>
+                        <h2 class="h2">R$<input type="text" class="Tat_form-frontInsersao" size = "6" id="total_rendaFixa" readonly></h2>  
+                        <p></p><h4 class="h4">Data Resgate</h4>
+                        <h2 class="h2"><input type="text" class="Tat_form-frontInsersao" size = "9" id="resgate_rendaFixa" readonly></h2>  
+                        <hr>
+                        <button type="button" class="Tat_botaoRoxo2">Resgate Total</button>
+                        <button type="button" class="Tat_botaoRoxo2" onclick="paraSacar()">Resgate Parcial</button>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-sm-4 col-md-4 d-flex justify-content-center">
+                    <div  class="Tat_dadosMeusInvestimentos"> 
+                        
+                        <h2 class="h2">Renda Variável</h2>
+                        <hr>
+                        <h4 class="h4">Valor Aplicado</h4>
+                        <h2 class="h2">R$<input type="text" class="Tat_form-frontInsersao" size = "7" id="valorAplicado_rendaVariavel" readonly></h2>    
+                        <p></p><h4 class="h4">Valor Bruto</h4>
+                        <h2 class="h2">R$<input type="text" class="Tat_form-frontInsersao" size = "7" id="total_rendaVariavel" readonly></h2>  
+                        <p></p><h4 class="h4">Data da Aplicação</h4>
+                        <h2 class="h2"><input type="text" class="Tat_form-frontInsersao" size = "10" id="dataInvestimento_rendaVariavel" readonly></h2>  
+                        <hr>
+                        <button type="button" class="Tat_botaoRoxo2">Resgate Total</button>
+                        <button type="button" class="Tat_botaoRoxo2" onclick="paraSacar()">Resgate Parcial</button>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-sm-4 col-md-4 d-flex justify-content-center" id="Tat_total">
+                    <div class="row">
+                        <div  id="Tat_totalInvestido" > 
+                            <h2 class="h2">Total em Renda Fixa</h2>
+                            <div class="Tat_fundoVerde">
+                                <h2 class="h2">R$<input type="text" class="Tat_form-front" id="rf_saldo" size = "5" readonly></h2>
+                               <img id="Tat_carinha2" src="images/emoticon.png" >
+                            </div>
+                           
+                        </div>
+                   
+                        <div class="row">
+                            <div id="Tat_totalInvestido2">
+                                <h2 class="h2">Total em Renda Variável</h2>
+                                <div class="Tat_fundoVerde">
+                                    <h2 class="h2">R$<input type="text" class="Tat_form-front" id="rv_saldo" size = "5" readonly></h2>
+                                    <img id="Tat_carinha2" src="images/emoticon.png" >
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div> 
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row Tat_alinhamento">
+                <div id="Tat_operacao3" >
+                    <div class="row" id="Tat_acao">
+                        <div class="col-12 col-sm-12 col-md-12 d-flex justify-content-center">
+                            <h5 class="h5">Resgate Parcial</h5>
+                        </div>
+                    </div>
+                    <div class="row" id="Tat_area">    
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center">
+                            <img id="Tat_porquinho" src="images/Cofrinho.png" >
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 d-flex justify-content-left">
+                            <h3 class="h3">Valor a resgatar:</h3>
+                        </div>   
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center Tat_botoes">
+                            <button type="button" class="Tat_botaoRoxo2">Cancelar</button>
+                            <button type="button" class="Tat_botaoRoxo2">Confirmar</button>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row Tat_faixaDegrade">
+                <div class="col-12 col-sm-12 col-md-12 d-flex " >
+                   <h3 class="h3"> Amplie seus investimentos</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <div class="row Tat_alinhamento">
+                <div class="col-12 col-sm-6 col-md-6 d-flex justify-content-center" >
+                    <div class="Tat_card1" onclick="cad_rendaFixa()">
+                        <div class="Tat_fundo_branco ">
+                            Renda Fixa
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4 d-flex justify-content-center">
+                                <img class="Tat_imgCardInvest" src="images/Tat-rendaFixa.png " alt=" ">
+                            </div>
+                            <div class="col-12 col-sm-8 col-md-8 d-flex justify-content-center Tat_rendas">
+                                <h4 class="h4">Através do Investimento do tipo Renda Fixa, você terá maiores rendimentos fixos acada mês.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+               
+                <div class="col-12 col-sm-6 col-md-6 d-flex justify-content-center">
+                    <div class="Tat_card1" onclick="cad_rendaVariavel()">
+                        <div class="Tat_fundo_branco ">
+                            Renda Variável
+                        </div>
+                        <div class=" row  ">
+                            <div class="col-12 col-sm-4 col-md-4 d-flex justify-content-center">
+                                <img class="Tat_imgCardInvest" src="images/Tat_rendaVariavel.png " alt=" ">
+                            </div>
+                            <div class="col-12 col-sm-8 col-md-8 d-flex justify-content-center Tat_rendas">
+                               
+                                <h4 class="h4">Através do Investimento do tipo Renda Variável, você terá maiores rendimentos variáveis.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row Tat_alinhamento" id="Tat_cadastroRF">
+                <div  >
+                    <div class="row" id="Tat_acao">
+                        <div class="col-12 col-sm-12 col-md-12 d-flex justify-content-center">
+                            <h5 class="h5">Cadastro conta de Renda Fixa</h5>
+                        </div>
+                    </div>
+                    <div class="row" id="Tat_area">    
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center" id="Tat_cadastroRendaFixa">
+                            <h3 class="h3"><label for="rf_valor_investido">Valor investido:
+                            <input type="text" class="Tat_form-frontInsersao" id="rf_valor_investido" ></h3>                      </div>
+                        <div class="col-12 col-sm-12 col-md-8 d-flex justify-content-left" id="Tat_cadastroRendaFixa">
+                            
+                            <h3 class="h3"><label for="rf_iof">Valor Iof:
+                            <input type="text" class="Tat_form-frontInsersao" id="rf_iof" ></h3>
+
+                            <h3 class="h3"><label for="rf_rendimento">Rendimento:
+                            <input type="text" class="Tat_form-frontInsersao" id="rf_rendimento" ></h3>
+
+                            <h3 class="h3"><label for="rf_data_resgate">Data do resgate:
+                            <input type="text" class="Tat_form-frontInsersao" id="rf_data_resgate" ></h3>
+                        </div>   
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center Tat_botoes" id="Tat_botões_renda_fixa">
+                            <button type="button" class="Tat_botaoRoxo2" onclick="cancelarCadastroRF()">Cancelar</button>
+                            <button type="button" class="Tat_botaoRoxo2" onclick="cadastroRendaFixa()">Confirmar</button>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <section>
+        <div class="container">
+            <div class="row Tat_alinhamento" id="Tat_cadastroRV">
+                <div>
+                    <div class="row" id="Tat_acao">
+                        <div class="col-12 col-sm-12 col-md-12 d-flex justify-content-center">
+                            <h5 class="h5">Cadastro de conta de Renda Variável</h5>
+                        </div>
+                    </div>
+                    <div class="row" id="Tat_area">    
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center">
+                            
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 d-flex justify-content-left">
+                            
+                            <h3 class="h3"><label for="rv_valor_investido">Valor a investir:
+                            <input type="text" class="Tat_form-frontInsersao" id="rv_valor_investido" ></h3>
+
+                            <h3 class="h3"><label for="rv_porcentagem">Rendimento:
+                                <input type="text" class="Tat_form-frontInsersao" id="rv_porcentagem" ></h3>
+                        </div>   
+                        <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center Tat_botoes" id="Tat_botões_renda_fixa">
+                            <button type="button" class="Tat_botaoRoxo2" onclick="cancelarCadastroRV()">Cancelar</button>
+                            <button type="button" class="Tat_botaoRoxo2" onclick="cadastroRendaVariavel()">Confirmar</button>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+        <section>
+            <div class="container">
+                <div class="row Tat_conhecaOutros">
+                    <div class="col-12 col-sm-12 col-md-12 d-flex " >
+                        <h3 class="h3">Conheça outros investimentos</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                
+                <div class="row Tat_alinhamento" id="Tat_quadroCinza">
+                    
+                    <div class="col-12 col-sm-12 col-md-4 d-flex justify-content-center" id="Tat_cardInvestimento1" >
+                        <div class="Tat_cardInvestimento"> 
+                            <div class="Tat_fundo_red2 ">
+                                Fundos Imobiliarios
+                            </div>
+                            <div class="Tat_card-frase ">
+                                É possível viver de renda, investindo em fundos imobiliários, ao invés de imóveis físicos
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 d-flex justify-content-center" id="Tat_cardInvestimento2" >
+                        <div class="Tat_cardInvestimento">
+                            <div class="Tat_fundo_red2 " >
+                                Bolsa de Valores
+                            </div>
+                            <div class="Tat_card-frase ">
+                                Você pode ter uma experiência inovadora e simples investindo na bolsa de valores
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-12 col-sm-12 col-md-4 d-flex justify-content-center"  id="Tat_cardInvestimento3">
+                        <div class="Tat_cardInvestimento">
+                            <div class="Tat_fundo_red2 ">
+                                Previdencia Privada
+                            </div>
+                            <div class="Tat_card-frase ">
+                                Investindo na Prividência Privada, você garante a sua tranquilidade no futuro
+                            </div>
+                        </div>
+                    </div>
+            
+                    
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 d-flex " >
+                        <img id="Tat_fundoImobiliario" src="images/fundoImobiliario.png" >
+                        <img id="Tat_bolsaDeValores" src="images/bolsaDeValores.png" >
+                        <img id="Tat_previdenciaPrivada" src="images/previdenciaPrivada.png" >
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+         <!--IMAGEM SPLASH  E FOOTER INICIAM AQUI-->
+  <section class="splash"> <!-- Imagem do splash-->
+    <a onclick ="irParaInicioPagina()"><img class="setinha_subir" src="./images/footer/setinha_subir.png"></a> 
+        <img class = "splash_image" src="./images/footer/footer_splash_extemidades_.png">
+    </section>
+
+    <footer class="footer"> 
+        <section class="footer_superior" > 
+            <div class="footer_lista">
+                <ul class="footer_lista">
+                    <li id="home" ><a href="index.html" style="color: #2815FD;">Home</a></li> 
+                    <li id="sobre_nos" ><a href="sobre.html" style="color:#FF8717">Sobre</a></li>
+                    <li id="minhas_continhas"><a href="continhas.html" style="color:#C427D1">Continhas</a></li>
+                    <li id="investimentos" ><a href="investimentos.html"style="color:white">Investimentos</a></li>
+                    <li id="investimentos" ><a href="investimentos.html"style="color:#C427D1">Tarefas</a></li>
+                </ul>
+            </div>
+            <div class="footer_superior_conteiner_esquerdo"> <!--Logo e texto -->
+                <img class="footer_esquerdo_santander_logo" src="./images/footer/santander_logo.png">
+                <p class="footer_esquerdo_texto">Cuidando dos seus bens<br> mais preciosos</p>
+            </div>
+            <div class="footer_superior_meio"> <!--Dados de Contato, Rua, Telefone, Menu-->
+                
+                <h2 class="footer_contato">Contato</h2>
+                <div class="footer_meio_rua_telefone_email">
+                    <div class="footer_meio_dados">
+                        <img id="footer_meio_localizacao_imagem" class="footer_meio_dados_imagem" src="./images/footer/footer_meio_rua_imagem.png">
+                        <p class="footer_meio_dados_texto">Rua da Prosperidade, Nº 01</p>
+                    </div>
+
+                    <div class="footer_meio_dados">
+                        <img class="footer_meio_dados_imagem" src="./images/footer/footer_meio_telefone_imagem.png">
+                        <p class="footer_meio_dados_texto">(91) 9 99999-9999</p>
+                    </div>
+
+                    <div class="footer_meio_dados">
+                        <img id="email_img" class="footer_meio_dados_imagem" src="./images/footer/footer_meio_email_imagem.png">
+                        <p class="footer_meio_dados_texto">(91) 9 99999-9999</p>
+                    </div>
+                </div> 
+            </div> <!--fim do footer superior meio-->
+            <div class="footer_superior_direito">
+                <h2>NOSSAS REDES<br>SOCIAIS</h2>
+                <div class="footer_direito_redes_sociais">
+                <a href="#"><img src="./images/footer/logo_facebook.png"></a> 
+                <a href="#"><img src="./images/footer/logo_instagram.png"></a>
+                <a href="#"><img src="./images/footer/logo_twitter.png"></a>
+                <a href="#"><img src="./images/footer/logo_linkdln.png"></a>
+                <a href="#"><img src="./images/footer/logo_youtube.png"></a>
+                </div>
+                <h3 id="baixe_apps">Baixe nossos apps</h3>
+                <div class=footer_superior_direito_image_apps>
+                    <a href="#"><img class="footer_superior_direito_imagens" src="./images/footer/footer_direito_imag_app_store.png"></a>
+                    <a href="#"><img class="footer_superior_direito_imagens" src="./images/footer/footer_direito_image_google_play.png"></a>
+                </div>
+            </div>
+        </section> <!--fim da class "footer_superior-->
+
+        <section class="footer_inferior">
+            <p>2020 © Copyright - Todos os direitos reservados.</p>
+        </section>
+    </footer> 
+<!-- ----------------------------------------------- MODAL PARA LOGIN------------------------------------------------>
+    <div id="home_modal_conteiner" class="home_modal_conteiner">
+        <div class="home_modal_loguin" id="modal_logar">
+            <button onclick ="fechar_modal()" class="home_loguin_fechar">X</button>
+            <div class="modal_loguin_logo"></div>
+            <form id="formulario_loguin" method="POST">
+                <div class="selecao_de_usuario">
+                    <div class="modal_usuarios">
+                        <input type="radio" id="crianca_radio" value="crianca" name="radio" />
+                        <div class="selecao_imagem" style="background-image:url('./images/modal/loguin_imagem_filhos.png')"></div>
+                        <label class="label_usuario">Sou<br>Criança</label>
+                    </div>
+                    <div class="modal_usuarios">
+                        <input type="radio" id="responsavel_radio" value="responsavel"  checked="true" name="radio" />
+                        <div class="selecao_imagem" style="background-image:url('./images/modal/loguin_imagem_responsaveis.png')"></div>
+                        <label class="label_usuario">Sou<br>Responsável</label>
+                    </div>
+                </div>
+                <div class="dados_loguin" style="background-image:url('./images/modal/splash_modal.png')">
+                    <input type="email" id="email" onBlur="verificarEmail()" placeholder="Digite seu e-mail" required>
+                    <div id="mensagemValidacao">
+                        <p id="error-validation-template">Email ou senha incorretos!</p>
+                    </div>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                    <button id = "btn_submit" type="submit" onclick="enviarDados()" >Entrar</button>
+                    <a class="esqueci_senha" id="esquecerSenha" >Esqueci a senha</a>
+                </div>
+            </form>
+        </div>
+        <!------- MODAL RECUPERAÇÃO DE SENHA-->
+        <div class="home_modal_loguin" id="home_modal_esqueci_senha">
+            <button onclick ="fechar_modal()" class="home_loguin_fechar" id="fechar_recuperar_senha">X</button>
+            <div class="modal_loguin_logo"></div>
+            <div id="modal_esqueci_senha_imagem_e_texto">
+                <div id="recuperar_senha_porquinho_duvida"></div>
+                <div id="modal_esqueci_senha_texto">
+                    <h4 id="esqueci_senha_h4">Esqueceu a sua senha?!</h4>
+                    <p>Não se preocupe. Digite o seu e-mail e vamos recuperar<br>
+                    para você!
+                    </p>
+                </div>
+            </div>
+            <form id="formulario_loguin" method="POST">
+                <div class="dados_loguin" style="background-image:url('./images/modal/splash_modal.png')">
+                    <input type="email" id="email_recuperar_senha" onBlur="verificarEmail()" placeholder="Digite seu e-mail" required>
+                    <div id="mensagemValidacao">
+                        <p id="error-validation-template" >Email não encontrado!</p>
+                    </div>
+                    <button id ="btn_submit_esqueci_senha"  onclick="recuperar_senha()">Recuperar Senha</button>
+                
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ---------------------------------- MODAL PARA O USUÁRIO LOGADO ---------------------------->
+    <div id="modal_usuario_logado">
+        <div id="modal_usuario_logado_logo"></div>
+        <div id="modal_usuario_logado_foto"></div>
+        <div id="modal_usuario_logado_lista">
+            <ul id="usuario_logado_lista">
+                <li id="lista-logado-item"><a href="telaEdicaoDados.html">Minha Conta</a></li>
+                <li id="lista-logado-item"><a href="dependentes.html">Conta Kids</a></li>
+                <li id="lista-logado-item" ><a id="deslogar" href="index.html">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+  
+    <script type="text/javascript" src="js/geral.js"></script>
+    <script type="text/javascript" src="js/ContinhaJs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>      
+    
+</body>
+</html>

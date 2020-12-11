@@ -1,0 +1,253 @@
+.footer{
+    background-color: red;
+   
+   
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);   
+}
+
+.footer a:hover{
+   font-size: 1.2rem;
+    
+}
+
+
+.investimento {
+    padding-left: 40px;
+     
+}
+
+.borda{
+    border: 1px solid white;
+}
+
+#minhas_tarefas{
+    color:#37B617;
+}
+
+.menu {
+    border: 2px solid blue;
+}
+
+#logo {
+    width: 200px;
+    height: 35px;
+}
+
+#footer-home {
+    color: #2815FD;
+    
+}
+
+#footer-sobre {
+    color: #FF8717;
+}
+#footer-tarefas{
+    color: #37B617;
+}
+#footer-continhas {
+    color: #C427D1;
+}
+
+#footer-investimentos {
+    color: #FFF;
+}
+
+.linha{
+    border-bottom: 1px solid white;
+}
+
+#linha-contato{
+   
+    border-bottom: 1px solid white;
+ 
+}
+
+.container-footer{
+
+    
+    
+
+}
+
+.logo-footer{
+    width: 100px;
+    height: 100px;
+}
+
+
+#contato-titulo{
+    font-size: 40px;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);   
+}
+  
+   
+
+
+#redes-sociais-titulo{
+    font-size: 2.5rem;
+    line-height: 30px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);   
+}
+   
+
+#texto-logo{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);   
+}
+
+
+.texto-contatos{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);   
+}
+
+
+
+.hr-contato{
+    background-color: #FFF;
+    margin-top: -4px;
+    margin-bottom: -4px;
+    
+}
+
+.footer-img-app img{
+    max-width: 90%;
+    border: 1px solid rgb(207, 205, 205);
+    border-radius: 6px;
+}
+
+.copyright{
+   background-color:#CC0000;  
+}
+
+.copyright h4{
+    color: white;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 500px) {
+    .copyright h4{        
+        font-size: .6rem;
+    }
+
+    .footer-img-app img{
+        max-width: 50%;
+       
+    }
+    
+}
+
+
+.degrade-animado{
+    animation: gradient 5s ease infinite;
+    background: linear-gradient(-45deg, #e73c7e,#b721ff,  #6713d2, #23a6d5 ) no-repeat;
+    background-size: 300% 300%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 50vh;
+    font-size: 300%;
+}
+
+.degrade-animado-home{
+    animation: gradient 4s ease infinite;
+    background: linear-gradient(-45deg, #e73c7e,#b721ff,  #6713d2, #23a6d5 ) no-repeat;
+    background-size: 300% 300%;   
+    color: white;
+    
+}
+
+
+@keyframes gradient{
+0% {
+background-position:  0 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+
+100%{
+    background-position:  0 50%;
+}
+}
+
+@media(max-width: 500px){
+    #home-line span{
+        display : inline-block;
+        }
+        #home-line span::after
+        {
+            content: '';
+            border-bottom: 1px solid #FFF;
+            width: 140px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        #sobre-line span{
+            display : inline-block;
+            }
+        
+            #sobre-line span::after
+            {
+                content: '';
+                border-bottom: 1px solid #FFF;
+                width: 140px;
+                display: block;
+                margin: 0 auto;
+            }
+        
+            #continhas-line span{
+                display : inline-block;
+                }
+            
+                #continhas-line span::after
+                {
+                    content: '';
+                    border-bottom: 1px solid #FFF;
+                    width: 140px;
+                    display: block;
+                    margin: 0 auto;
+                }
+        
+                #investimentos-line span{
+                    display : inline-block;
+                    }
+                
+                    #investimentos-line span::after
+                    {
+                        content: '';
+                        border-bottom: 1px solid #FFF;
+                        width: 140px;
+                        display: block;
+                        margin: 0 auto;
+                    }
+        
+                    #tarefas-line span{
+                        display : inline-block;
+                        }
+                    
+                        #tarefas-line span::after
+                        {
+                            content: '';
+                            border-bottom: 1px solid #FFF;
+                            width: 140px;
+                            display: block;
+                            margin: 0 auto;
+                        }
+
+                        .container-footer{
+margin-top:12px;
+                        }
+}
+
+
+    
+
+  

@@ -1,0 +1,1350 @@
+                                                                          /*Reset CSS*/
+                                                                          
+                                                                          * {
+                                                                              margin: 0;
+                                                                              padding: 0;
+                                                                          }
+                                                                          /*------------------------*/
+                                                                          
+                                                                          body {
+                                                                              font-family: 'Fredoka One', cursive;
+                                                                              color: white;
+                                                                          }
+                                                                          /*Inicio css menu*/
+                                                                          /*Ajusta os textos - Pontos Acumulados e os Pontos que estão na mesma linha*/
+                                                                          
+                                                                          .lu_span {
+                                                                              font-family: FredokaOne;
+                                                                              font-family: 'Fredoka One', cursive;
+                                                                              font-style: normal;
+                                                                              font-weight: normal;
+                                                                              font-size: 20px;
+                                                                              line-height: 24px;
+                                                                          }
+                                                                          /*
+                                                                          .menu {
+                                                                              border: 2px solid blue;
+                                                                          }
+                                                                          
+                                                                          #logo {
+                                                                              width: 200px;
+                                                                              height: 35px;
+                                                                          }
+                                                                          
+                                                                          #home {
+                                                                              color: #2815FD;
+                                                                          }
+                                                                          
+                                                                          #sobre_nos {
+                                                                              color: #FF8717;
+                                                                          }
+                                                                          
+                                                                          #minhas_continhas {
+                                                                              color: #C427D1;
+                                                                          }
+                                                                          
+                                                                          #investimentos {
+                                                                              color: #EF1616;
+                                                                          }
+                                                                          
+                                                                          #entrar {
+                                                                              color: #37B617;
+                                                                          }
+                                                                          
+                                                                          #jogos {
+                                                                              color: black;
+                                                                          }
+                                                                          
+                                                                          #separador {
+                                                                              width: 1px;
+                                                                              height: 40px;
+                                                                              background: #C4C4C4;
+                                                                              margin-right: 40px;
+                                                                              margin-top: 6px;
+                                                                          }
+                                                                          
+                                                                          #btn_abrir_conta {
+                                                                              font-family: 'Fredoka One', cursive;
+                                                                              width: 186px;
+                                                                              height: 49px;
+                                                                              background: #37B617;
+                                                                              border: 3px solid #E5E5E5;
+                                                                              box-sizing: border-box;
+                                                                              border-radius: 10px;
+                                                                              color: white;
+                                                                              text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                                          }
+                                                                          */
+                                                                          /*Fim css menu*/
+                                                                          #row_mb_5_width{
+                                                                            width: 100%;
+                                                                        }
+                                                                        
+                                                                          @font-face {
+                                                                              font-family: FredokaOne;
+                                                                              src: url(../fonts/FredokaOne-Regular.ttf);
+                                                                          }
+                                                                          /*Luciano - Backgrounds*/
+                                                                          
+                                                                          #background_tarefas {
+                                                                              background-image: url("../images/fundo.jpeg");
+                                                                              background-repeat: no-repeat;
+                                                                              background-size: 100% 100%;
+                                                                              width: 100%;
+                                                                          }
+                                                                          
+                                                                          @media only screen and (max-width: 576px) {
+                                                                              h1.texto {
+                                                                                  font-size: x-large!important;
+                                                                              }
+                                                                          }
+                                                                        
+                                                                          #background_dependente {
+                                                                              background-image: url("../images/brush.png");
+                                                                              background-repeat: no-repeat;
+                                                                              background-size: 100% 100%;
+                                                                              max-width: 100%;
+                                                                              height: 140px;
+                                                                              margin-top: 40px;
+                                                                          }
+                                                                          
+                                                                          #background_total_tarefas {
+                                                                              background-image: url("../images/total_tarefas.png");
+                                                                              background-repeat: no-repeat;
+                                                                              background-size: 100% 100%;
+                                                                              max-width: 100%;
+                                                                              width: 301px;
+                                                                              height: 106px;
+                                                                          }
+                                                                          
+                                                                          #background_tarefas_canceladas {
+                                                                              background-image: url("../images/tarefas_canceladas.png");
+                                                                              background-repeat: no-repeat;
+                                                                              background-size: 100% 100%;
+                                                                              max-width: 100%;
+                                                                              height: 110px;
+                                                                              width: 301px;
+                                                                          }
+                                                                          
+                                                                          #background_tarefas_concluidas {
+                                                                              background-image: url("../images/tarefas_concluidas.png");
+                                                                              background-repeat: no-repeat;
+                                                                              background-size: 100% 100%;
+                                                                              max-width: 100%;
+                                                                              height: 106px;
+                                                                              width: 301px;
+                                                                          }
+                                                                          
+                                                                          #background_bandeira {
+                                                                              background-image: url("../images/bandeira2.png");
+                                                                              background-repeat: no-repeat;
+                                                                              background-size: 100% 100%;
+                                                                          }
+                                                                          /*------------------------------------*/
+                                                                          /*Luciano - CSS para os cards de tarefas*/
+                                                                          
+                                                                          #total_tarefas {
+                                                                              position: relative;
+                                                                              top: 36px;
+                                                                              left: 45px;
+                                                                          }
+                                                                          
+                                                                          #total_tarefas_titulo {
+                                                                              position: relative;
+                                                                              left: 94px;
+                                                                          }
+                                                                          /*Inicio CSS Postites*/
+                                                                          
+                                                                          .h2 h2,
+                                                                          .p p {
+                                                                              font-size: 100%;
+                                                                              font-weight: normal;
+                                                                              color: #000;
+                                                                          }
+                                                                          
+                                                                          .ul ul,
+                                                                          li {
+                                                                              list-style: none;
+                                                                              color: #000;
+                                                                          }
+                                                                          
+                                                                          .ul ul {
+                                                                              overflow: hidden;
+                                                                              padding: 1em;
+                                                                          }
+                                                                          
+                                                                          .ul ul li a {
+                                                                              text-decoration: none;
+                                                                              color: #000;
+                                                                              background: #ffc;
+                                                                              display: block;
+                                                                              height: 16em;
+                                                                              width: 16em;
+                                                                              padding: 1em;
+                                                                              -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+                                                                              -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+                                                                              box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+                                                                              -moz-transition: -moz-transform .15s linear;
+                                                                              -o-transition: -o-transform .15s linear;
+                                                                              -webkit-transition: -webkit-transform .15s linear;
+                                                                          }
+                                                                          
+                                                                          .ul ul li {
+                                                                              margin: 1.5em;
+                                                                              float: left;
+                                                                          }
+                                                                          
+                                                                          .ul ul li h2 {
+                                                                              font-size: 140%;
+                                                                              font-weight: bold;
+                                                                              padding-bottom: 10px;
+                                                                          }
+                                                                          
+                                                                          .ul ul li p {
+                                                                              font-family: "Reenie Beanie", arial, sans-serif;
+                                                                              /*font-family: 'Fredoka One', cursive;*/
+                                                                              font-size: 180%;
+                                                                          }
+                                                                          
+                                                                          .ul ul li a {
+                                                                              -webkit-transform: rotate(-6deg);
+                                                                              -o-transform: rotate(-6deg);
+                                                                              -moz-transform: rotate(-6deg);
+                                                                          }
+                                                                          
+                                                                          .ul ul li:nth-child(even) a {
+                                                                              -o-transform: rotate(4deg);
+                                                                              -webkit-transform: rotate(4deg);
+                                                                              -moz-transform: rotate(4deg);
+                                                                              position: relative;
+                                                                              top: 5px;
+                                                                              background: #cfc;
+                                                                          }
+                                                                          
+                                                                          .ul ul li:nth-child(3n) a {
+                                                                              -o-transform: rotate(-3deg);
+                                                                              -webkit-transform: rotate(-3deg);
+                                                                              -moz-transform: rotate(-3deg);
+                                                                              position: relative;
+                                                                              top: -5px;
+                                                                              background: #ccf;
+                                                                          }
+                                                                          
+                                                                          .ul ul li:nth-child(5n) a {
+                                                                              -o-transform: rotate(5deg);
+                                                                              -webkit-transform: rotate(5deg);
+                                                                              -moz-transform: rotate(5deg);
+                                                                              position: relative;
+                                                                              top: -10px;
+                                                                          }
+                                                                          
+                                                                          .ul ul li a:hover,
+                                                                          .ul ul li a:focus {
+                                                                              box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+                                                                              -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+                                                                              -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+                                                                              -webkit-transform: scale(1.25);
+                                                                              -moz-transform: scale(1.25);
+                                                                              -o-transform: scale(1.25);
+                                                                              position: relative;
+                                                                              z-index: 5;
+                                                                          }
+                                                                          
+                                                                          .ol ol {
+                                                                              text-align: center;
+                                                                          }
+                                                                          
+                                                                          .ol ol li {
+                                                                              display: inline;
+                                                                              padding-right: 1em;
+                                                                          }
+                                                                          
+                                                                          .ol ol li a {
+                                                                              color: #fff;
+                                                                          }
+                                                                          
+                                                                          .numberCircle {
+                                                                              font-family: "OpenSans-Semibold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+                                                                              display: inline-block;
+                                                                              color: #fff;
+                                                                              text-align: center;
+                                                                              line-height: 0px;
+                                                                              border-radius: 50%;
+                                                                              font-size: 11px;
+                                                                              min-width: 28px;
+                                                                              min-height: 28px;
+                                                                              margin: 0;
+                                                                          }
+                                                                          
+                                                                          .numberCircle span {
+                                                                              display: inline-block;
+                                                                              padding-top: 50%;
+                                                                              padding-bottom: 50%;
+                                                                              margin-left: 1px;
+                                                                              margin-right: 1px;
+                                                                          }
+                                                                          /* Some Back Ground Colors */
+                                                                          
+                                                                          .clrGreen {
+                                                                              background: #51a529;
+                                                                          }
+                                                                          
+                                                                          .clrRose {
+                                                                              background: #e6568b;
+                                                                          }
+                                                                          
+                                                                          .clrOrange {
+                                                                              background: #ec8234;
+                                                                          }
+                                                                          
+                                                                          .clrBlueciel {
+                                                                              background: #21adfc;
+                                                                          }
+                                                                          
+                                                                          .clrMauve {
+                                                                              background: #7b5d99;
+                                                                          }
+                                                                          /*Estilo para span check*/
+                                                                          
+                                                                          .check {
+                                                                              font-size: 25px!important;
+                                                                              color: #37B617;
+                                                                          }
+                                                                          
+                                                                          .pontos {
+                                                                              background: #76288A;
+                                                                              border: 4px solid #FFFFFF;
+                                                                              box-sizing: border-box;
+                                                                              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                                              border-radius: 20px;
+                                                                              width: 60px;
+                                                                              margin-top: -8px;
+                                                                              color: white;
+                                                                          }
+                                                                          
+                                                                          #total_pontos {
+                                                                              background: #76288A;
+                                                                              border: 6px solid #FFFFFF;
+                                                                              box-sizing: border-box;
+                                                                              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                                              border-radius: 50px;
+                                                                              margin-left: 200px;
+                                                                              margin-right: 200px;
+                                                                          }
+                                                                          
+                                                                          @media only screen and (max-width:977px) {
+                                                                              #total_pontos {
+                                                                                  margin-left: 0px;
+                                                                                  margin-right: 0px;
+                                                                              }
+                                                                          }
+                                                                          
+                                                                          @media only screen and (max-width:588px) {
+                                                                              #total_pontos {
+                                                                                  margin-left: 0px;
+                                                                                  margin-right: 0px;
+                                                                              }
+                                                                          }
+                                                                          
+                                                                          .icon_editar {
+                                                                              position: relative;
+                                                                              width: 35px;
+                                                                              height: 35px;
+                                                                              left: 38px;
+                                                                              top: -14px;
+                                                                          }
+                                                                          
+                                                                          .icon_educacao {
+                                                                              position: relative;
+                                                                              left: -4px;
+                                                                              top: -14px;
+                                                                          }
+                                                                          
+                                                                          .img_mes {
+                                                                              position: relative;
+                                                                              top: -3px;
+                                                                              right: 35px;
+                                                                          }
+                                                                          
+                                                                          .titulo_mes {
+                                                                              position: relative;
+                                                                              top: 6px;
+                                                                              left: 35px;
+                                                                              color: white;
+                                                                              z-index: 1;
+                                                                              font-size: 13px;
+                                                                          }
+                                                                          
+                                                                          .card_titulo {
+                                                                              font-size: 20px;
+                                                                              margin-top: -10px;
+                                                                          }
+                                                                          
+                                                                          .card_categoria {
+                                                                              font-size: 18px;
+                                                                              margin-top: -18px;
+                                                                          }
+                                                                          
+                                                                          .card_descricao {
+                                                                              font-size: 14px;
+                                                                              color: #3E3AF9;
+                                                                          }
+                                                                          
+                                                                          .numero_total {
+                                                                              position: relative;
+                                                                              left: 42px;
+                                                                              top: 16px;
+                                                                              font-size: 50px;
+                                                                              color: white;
+                                                                          }
+                                                                          
+                                                                          .soma_tarefas {
+                                                                              position: relative;
+                                                                              left: 55px;
+                                                                              top: 6px;
+                                                                              font-size: 20px;
+                                                                              color: white;
+                                                                          }
+                                                                          
+                                                                          .img_total_tarefas {
+                                                                              position: relative;
+                                                                          }
+                                                                          /*-------------------------------------------*/
+                                                                          /*-------Luciano - CSS para o Assistente Porquinho e a Tela modal*/
+                                                                          
+                                                                          #lu_img_porquinho_assistente {
+                                                                              position: fixed;
+                                                                              top: 300px;
+                                                                              left: -25px;
+                                                                              width: 200px;
+                                                                              height: 200px;
+                                                                          }
+                                                                          
+                                                                          #lu_img_porquinho_balao {
+                                                                              position: fixed;
+                                                                              top: 380px;
+                                                                              left: 120px;
+                                                                              width: 400px;
+                                                                              height: 400px;
+                                                                              text-align: justify;
+                                                                          }
+                                                                          
+                                                                          #lu_texto_balao {
+                                                                              position: fixed;
+                                                                              top: 420px;
+                                                                              left: 225px;
+                                                                              text-align: center;
+                                                                              white-space: normal;
+                                                                              height: 90px;
+                                                                              width: 270px;
+                                                                              color: #000;
+                                                                          }
+                                                                          
+                                                                          #lu_btn_ocultar {
+                                                                              position: fixed;
+                                                                              top: 490px;
+                                                                              left: 328px;
+                                                                              font-size: 14px;
+                                                                              padding: 6px;
+                                                                              background: #37B617;
+                                                                              border: 1px solid #FFFFFF;
+                                                                              box-sizing: border-box;
+                                                                              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                                              border-radius: 50px;
+                                                                          }
+                                                                          
+                                                                          @media screen and (max-width: 576px) {
+                                                                              #lu_img_porquinho_assistente {
+                                                                                  position: fixed;
+                                                                                  top: 300px;
+                                                                                  left: -25px;
+                                                                                  width: 125px;
+                                                                                  height: 125px;
+                                                                              }
+                                                                              #lu_img_porquinho_balao {
+                                                                                  position: fixed;
+                                                                                  top: 340px;
+                                                                                  left: 55px;
+                                                                                  width: 300px;
+                                                                                  text-align: justify;
+                                                                              }
+                                                                          }
+                                                                          
+                                                                          @media screen and (max-width: 576px) {
+                                                                              #lu_texto_balao {
+                                                                                  position: fixed;
+                                                                                  top: 345px;
+                                                                                  left: 100px;
+                                                                                  height: 90px;
+                                                                                  width: 270px;
+                                                                                  color: #000;
+                                                                                  font-size: 16px;
+                                                                                  padding: 25px;
+                                                                              }
+                                                                              #lu_btn_ocultar {
+                                                                                  position: fixed;
+                                                                                  top: 420px;
+                                                                                  left: 208px;
+                                                                                  font-size: 12px;
+                                                                                  padding: 6px;
+                                                                              }
+                                                                          }
+                                                                          /*-------------------------------------------*/
+                                                                          /*Luciano - CSS Cards Objetiovs e Categoria*/
+                                                                          
+                                                                          #lu_card_objetivos {
+                                                                              width: 160px;
+                                                                              height: 206px;
+                                                                              background: #FFD628;
+                                                                              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                                              border-radius: 20px 0px 0px 20px;
+                                                                              margin-top: 40px;
+                                                                              margin-bottom: 40px;
+                                                                          }
+                                                                          
+                                                                          #lu_card_objetivos_white {
+                                                                              width: 288px;
+                                                                              height: 206px;
+                                                                              background: #FFFFFF;
+                                                                              box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                                              border-radius: 20px 0px 0px 20px;
+                                                                              transform: matrix(-1, 0, 0, 1, 0, 0);
+                                                                              margin-top: 40px;
+                                                                              margin-bottom: 40px;
+                                                                          }
+                                                                          
+                                                                          .lu_div_texto_objetivos {
+                                                                              position: relative;
+                                                                              top: 60px;
+                                                                              left: 220px;
+                                                                              z-index: 1;
+                                                                          }
+                                                                          
+                                                                          .lu_span_objetivos {
+                                                                              font-family: Fredoka One;
+                                                                              font-style: normal;
+                                                                              font-weight: normal;
+                                                                              font-size: 30px;
+                                                                              line-height: 36px;
+                                                                              text-align: center;
+                                                                              color: #706A6A;
+                                                                              text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                                              margin-bottom: 10px;
+                                                                          }
+                                                                          
+                                                                          .lu_span_sub_titulo_objetivo {
+                                                                              font-family: Fredoka One;
+                                                                              font-size: 21px;
+                                                                              line-height: 25px;
+                                                                              color: rgba(118, 40, 138, 0.6);
+                                                                              z-index: 2;
+                                                                          }
+                                                                          
+                                                                          .lu_div_cards_objetivo_categoria {
+                                                                              position: relative;
+                                                                              top: 60px;
+                                                                              left: 200px;
+                                                                              width: 200px;
+                                                                              height: 105px;
+                                                                              z-index: 4;
+                                                                          }
+                                                                          
+                                                                          #lu_div_categoria_rosa {
+                                                                              position: absolute;
+                                                                              width: 433px;
+                                                                              height: 206px;
+                                                                              background: #F84D69;
+                                                                              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                                              border-radius: 20px;
+                                                                              margin-top: 40px;
+                                                                              margin-bottom: 40px;
+                                                                          }
+                                                                          
+                                                                          div:hover #lu_div_categoria_rosa {
+                                                                              box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+                                                                          }
+                                                                          
+                                                                          #lu_div_categoria_white {
+                                                                              position: relative;
+                                                                              right: -80px;
+                                                                              width: 288px;
+                                                                              height: 206px;
+                                                                              background: #FFFFFF;
+                                                                              border-radius: 20px 0px 0px 20px;
+                                                                              transform: matrix(-1, 0, 0, 1, 0, 0);
+                                                                              margin-top: 40px;
+                                                                              margin-bottom: 40px;
+                                                                              -webkit-box-shadow: 4px 0px 5px -4px rgba(0, 0, 0, 0.7);
+                                                                              -moz-box-shadow: 4px 0px 5px -4px rgba(0, 0, 0, 0.7);
+                                                                              box-shadow: 4px 0px 5px -4px rgba(0, 0, 0, 0.7);
+                                                                          }
+                                                                          
+                                                                          .lu_card {
+                                                                              background: #FFF;
+                                                                              border-radius: 2px;
+                                                                              width: 433px;
+                                                                              height: 206px;
+                                                                              border-radius: 20px;
+                                                                              margin-top: 80px;
+                                                                          }
+                                                                          
+                                                                          .lu_card {
+                                                                              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                                                                              transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+                                                                              margin-bottom: -60px;
+                                                                          }
+                                                                          
+                                                                          .lu_card:hover {
+                                                                              box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                                                                              cursor: pointer;
+                                                                          }
+                                                                          
+                                                                          .lu_card_amarelo {
+                                                                              position: relative;
+                                                                              top: -106px;
+                                                                              left: -2px;
+                                                                          }
+                                                                          
+                                                                          @media screen and (max-width:576px) {
+                                                                              .lu_card {
+                                                                                  width: 335px;
+                                                                                  height: 178px;
+                                                                              }
+                                                                              .lu_span_sub_titulo_objetivo {
+                                                                                  font-size: 18px;
+                                                                              }
+                                                                              .lu_div_cards_objetivo_categoria {
+                                                                                  top: 50px;
+                                                                                  left: 146px;
+                                                                              }
+                                                                              .lu_card_amarelo {
+                                                                                  position: relative;
+                                                                                  top: -106px;
+                                                                                  left: -2px;
+                                                                                  width: 140px;
+                                                                              }
+                                                                          }
+                                                                          
+                                                                          a:link.links_cards {
+                                                                              text-decoration: none;
+                                                                          }
+                                                                          /*Luciano - CSS tela de Depentendes*/
+                                                                          
+                                                                          #texto_dependentes {
+                                                                              font-family: Fredoka One;
+                                                                              font-style: normal;
+                                                                              font-weight: normal;
+                                                                              font-size: 3em;
+                                                                              line-height: 60px;
+                                                                              text-align: center;
+                                                                              color: #706A6A;
+                                                                              text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                                          }
+                                                                          
+                                                                          .card_dependentes {
+                                                                              width: 330px;
+                                                                              height: 186px;
+                                                                              background: #FFFFFF;
+                                                                              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 6px rgba(0, 0, 0, 0.25);
+                                                                              border-radius: 10px;
+                                                                          }
+                                                                          
+                                                                          .card_dependentes:hover {
+                                                                              box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                                                                              cursor: pointer;
+                                                                          }
+                                                                          
+                                                                          #icon_deletar {
+                                                                              position: relative;
+                                                                              top: -70px;
+                                                                              left: 256px;
+                                                                          }
+                                                                          
+                                                                          #icon_editar {
+                                                                              position: relative;
+                                                                              top: -70px;
+                                                                              left: 245px;
+                                                                          }
+                                                                          
+                                                                          #img_dependente {
+                                                                              position: relative;
+                                                                              width: 100px;
+                                                                              height: 100px;
+                                                                              top: -25px;
+                                                                              left: -50px;
+                                                                              border-radius: 50%;
+                                                                              border: 1px solid grey;
+                                                                          }
+                                                                          
+                                                                          #nome_dependente {
+                                                                              position: relative;
+                                                                              top: -20px;
+                                                                              left: -40px;
+                                                                              color: #706A6A;
+                                                                              font-size: 30px;
+                                                                          }
+                                                                          
+                                                                          #total_tarefas_dependente {
+                                                                              position: relative;
+                                                                              top: -60px;
+                                                                              left: 150px;
+                                                                              color: #706A6A;
+                                                                              font-size: 20px;
+                                                                          }
+                                                                          
+                                                                          #pontos_acomulados {
+                                                                              position: relative;
+                                                                              top: 0px;
+                                                                              left: -85px;
+                                                                              color: #FFF;
+                                                                              z-index: 1;
+                                                                              font-size: 20px;
+                                                                          }
+                                                                          
+                                                                          #total_pontos_acomulados {
+                                                                              position: relative;
+                                                                              top: 0px;
+                                                                              left: 0px;
+                                                                              color: white;
+                                                                              font-size: 30px;
+                                                                              z-index: 1;
+                                                                          }
+                                                                          
+                                                                          .div_card_dependentes {
+                                                                              width: 354px;
+                                                                              height: 186px;
+                                                                              color: white;
+                                                                              box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                                              border-radius: 10px;
+                                                                              margin-top: 20px;
+                                                                          }
+                                                                          
+                                                                          .cards {
+                                                                              width: 350px;
+                                                                              height: 300px;
+                                                                              background: #FFFFFF;
+                                                                              border: 1px solid #C4C4C4;
+                                                                              box-sizing: border-box;
+                                                                              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                                                                              transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+                                                                              border-radius: 5px;
+                                                                              color: white;
+                                                                          }
+                                                                          
+                                                                          .cards_jogos {
+                                                                              width: 354px;
+                                                                              height: 186px;
+                                                                              background: #FFFFFF;
+                                                                              border: 1px solid #C4C4C4;
+                                                                              box-sizing: border-box;
+                                                                              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                                                                              transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+                                                                              border-radius: 20px;
+                                                                              color: white;
+                                                                          }
+                                                                          
+                                                                          .card_footer_dependentes {
+                                                                              position: relative;
+                                                                              top: 141px;
+                                                                              right: 3px;
+                                                                              width: 335px;
+                                                                          }
+                                                                          
+                                                                          .img_jogos {
+                                                                              border-radius: 20px 20px 0px 0px;
+                                                                          }
+                                                                          
+                                                                          .cards_jogos:hover {
+                                                                              box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+                                                                          }
+                                                                          /*------------------------------------------*/
+                                                                          /*
+                                                                            @media only screen and (min-width: 800px) and (max-width: 1200px) {
+                                                                                .cards_query {
+                                                                                    width: 300px;
+                                                                                    background: #FFFFFF;
+                                                                                    border: 1px solid #C4C4C4;
+                                                                                    box-sizing: border-box;
+                                                                                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                                                                                    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+                                                                                    border-radius: 20px;
+                                                                                    color: white;
+                                                                                    margin: 20px;
+                                                                                }
+                                                                                body {
+                                                                                    background-color: rgb(0, 255, 85);
+                                                                                }
+                                                                            }
+                                                                            */
+                                                                          /* latin */
+                                                                          /*  
+                                                                            @font-face {
+                                                                                font-family: 'Fredoka One';
+                                                                                font-style: normal;
+                                                                                font-weight: 400;
+                                                                                font-display: swap;
+                                                                                src: local('Fredoka One'), local('FredokaOne-Regular'), url(https://fonts.gstatic.com/s/fredokaone/v8/k3kUo8kEI-tA1RRcTZGmTlHGCac.woff2) format('woff2');
+                                                                                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                                                                            }
+                                                                            */
+                                                                          /**CSS Anderson - Footer/
+                                                                          .setinha_subir {
+                                                                              position: relative;
+                                                                              left: 50vw;
+                                                                              top: 13vw;
+                                                                              width: 4%;
+                                                                          }
+                                                                          
+                                                                          .splash_image {
+                                                                              width: 100%;
+                                                                          }
+                                                                          /*FOOTER */
+                                                                          /* ------------------------CÓDIGO DO FOOTER E SPLASH------------------------*/
+                                                                          /* ------------------------CÓDIGO DO FOOTER E SPLASH------------------------*/
+                                                                          
+                                                                          .setinha_subir {
+                                                                              position: relative;
+                                                                              left: 48vw;
+                                                                              top: 13vw;
+                                                                              width: 4%;
+                                                                              min-width: 50px;
+                                                                          }
+                                                                          
+                                                                          .splash_image {
+                                                                              width: 100%;
+                                                                              height: 100%;
+                                                                          }
+                                                                          
+                                                                          .footer_superior {
+                                                                              width: 100%;
+                                                                              height: 45vh;
+                                                                              background-color: #FD0000;
+                                                                              display: flex;
+                                                                              flex-direction: row;
+                                                                              flex-wrap: wrap;
+                                                                          }
+                                                                          
+                                                                          .footer_lista {
+                                                                              width: 100%;
+                                                                              padding-left: 15%;
+                                                                              padding-right: 15%;
+                                                                              margin: 0;
+                                                                              list-style: none;
+                                                                          }
+                                                                          /*------- FOOTER - CONTEINER SUPERIOR ESQUERDO-----------*/
+                                                                          
+                                                                          .footer_superior_conteiner_esquerdo {
+                                                                              display: flex;
+                                                                              flex-direction: column;
+                                                                              align-content: center;
+                                                                              justify-content: center;
+                                                                              /*coloca os itens no meio do conteiner, mas não no centro*/
+                                                                              align-items: center;
+                                                                              /*complementa o justify-content e deixa os elementos no centro*/
+                                                                              color: white;
+                                                                              width: 30%;
+                                                                              height: 100%;
+                                                                              text-align: center;
+                                                                          }
+                                                                          
+                                                                          .footer_esquerdo_santander_logo {
+                                                                              height: 30%;
+                                                                          }
+                                                                          /*------- FOOTER - CONTEINER SUPERIOR DO MEIO-----------*/
+                                                                          
+                                                                          .footer_superior_meio {
+                                                                              width: 35%;
+                                                                              height: 100%;
+                                                                          }
+                                                                          
+                                                                          .footer_lista {
+                                                                              display: flex;
+                                                                              justify-content: space-evenly;
+                                                                          }
+                                                                          /* -------- FOOTER - CONTEINER SUPERIOR DIREITO------- */
+                                                                          
+                                                                          .footer_superior_direito {
+                                                                              width: 30%;
+                                                                              height: 100%;
+                                                                              text-align: center;
+                                                                              display: flex;
+                                                                              flex-direction: column;
+                                                                              justify-content: center;
+                                                                          }
+                                                                          
+                                                                          .footer_superior_direito_imagens {
+                                                                              width: 30%;
+                                                                          }
+                                                                          
+                                                                          .footer_superior_direito>h2,
+                                                                          h3 {
+                                                                              color: white;
+                                                                              font-weight: bold;
+                                                                          }
+                                                                          /*footer inferior*/
+                                                                          
+                                                                          .footer_inferior {
+                                                                              background-color: #CC0000;
+                                                                              width: 100%;
+                                                                              height: 3vh;
+                                                                              display: flex;
+                                                                              flex-direction: row;
+                                                                              justify-content: center;
+                                                                              align-items: center;
+                                                                          }
+                                                                          
+                                                                          .footer_inferior p {
+                                                                              /*determina branco como a cor da mensagem "[...]direitos autorais" */
+                                                                              color: white;
+                                                                              display: flex;
+                                                                              flex-direction: row;
+                                                                              justify-content: center;
+                                                                              align-content: center;
+                                                                              font-size: 1.2vw;
+                                                                              margin-bottom: 0;
+                                                                          }
+                                                                          /*---------- footer --> conteiner superior do meio -------------*/
+                                                                          
+                                                                          .footer_superior_meio {
+                                                                              display: flex;
+                                                                              flex-direction: column;
+                                                                              justify-content: center;
+                                                                          }
+                                                                          
+                                                                          .footer_meio_dados {
+                                                                              display: flex;
+                                                                              justify-content: space-evenly;
+                                                                              font-size: 1.5vh;
+                                                                          }
+                                                                          
+                                                                          .footer_meio_dados_texto {
+                                                                              color: white;
+                                                                              font-weight: bold;
+                                                                              font-size: 2em;
+                                                                              text-align: center;
+                                                                              width: 80%;
+                                                                              margin-top: 5%;
+                                                                          }
+                                                                          
+                                                                          #email_img {
+                                                                              margin-top: 3%;
+                                                                          }
+                                                                          
+                                                                          .footer_meio_dados_imagem {
+                                                                              /*Imagens do GPS, Telefone e e-mail*/
+                                                                              height: 8%;
+                                                                              width: 8%;
+                                                                              margin-top: 2%;
+                                                                          }
+                                                                          
+                                                                          .footer_contato {
+                                                                              /*efeito de sublinhado superior e inferior na palavra CONTATO:*/
+                                                                              display: block;
+                                                                              color: white;
+                                                                              font-weight: bold;
+                                                                              border: 1px solid #FFFFFF;
+                                                                              border-left: none;
+                                                                              border-right: none;
+                                                                              text-align: center;
+                                                                          }
+                                                                          
+                                                                          #footer_meio_localizacao_imagem {}
+                                                                          /* -------------------------------------midia query----------------------------------*/
+                                                                          /*
+                                                                          @media screen and (min-width:1920px) {
+                                                                              .carrossel_imagens {
+                                                                                  height: 1200px;
+                                                                                 
+                                                                              }
+                                                                              .footer_superior {
+                                                                                  width: 100%;
+                                                                                  height: 51vh;
+                                                                                  background-color: #FD0000;
+                                                                                  display: flex;
+                                                                              }
+                                                                              .logo {
+                                                                                  width: 20vw;
+                                                                                  margin: auto;
+                                                                                  display: flex;
+                                                                                  justify-content: center;
+                                                                              }
+                                                                          }
+                                                                          
+                                                                          @media screen and (max-width:950px) {
+                                                                              .carrossel {
+                                                                                  position: relative;
+                                                                              }
+                                                                              .carrossel_imagens {}
+                                                                              .conteiner_carrossel_mensagem {
+                                                                                  width: 30vw;
+                                                                                  position: absolute;
+                                                                                  top: 27vw;
+                                                                                  left: 3vw;
+                                                                              }
+                                                                              .conteiner_carrossel_mensagem>p {
+                                                                                  font-size: 2vw;
+                                                                                  line-height: 15px;
+                                                                                  margin-top: 0;
+                                                                                  margin-bottom: 0;
+                                                                              }
+                                                                              .carrossel_botao {
+                                                                                  font-size: 1.5vw;
+                                                                              }
+                                                                              .card_conta,
+                                                                              .card_midia {
+                                                                                  width: 27vw;
+                                                                                  height: 27vw;
+                                                                              }
+                                                                              .card_texto {
+                                                                                  display: flex;
+                                                                                  align-items: center;
+                                                                                  justify-content: center;
+                                                                              }
+                                                                              .card_texto>a,
+                                                                              .card_texto_conta>a {
+                                                                                  font-size: 55%;
+                                                                              }
+                                                                              #imagem_conta {
+                                                                                  margin-left: 1vw;
+                                                                              }
+                                                                              .conteudo_cards,
+                                                                              .conteudo_cards_midia {
+                                                                                  width: 100%;
+                                                                                  height: 40vw;
+                                                                                  padding: 10px;
+                                                                              }
+                                                                              .conteiner_direito_download_app {
+                                                                                  margin-top: 7vh;
+                                                                              }
+                                                                              .conteiner_direito_download_app_texto {
+                                                                                  font-size: 2.6vw;
+                                                                              }
+                                                                              .conteiner_direito_download_app_conteiner {
+                                                                                  width: 40vw;
+                                                                              }
+                                                                              .conteiner_direito_download_app_play_store {
+                                                                                  width: 50%;
+                                                                              }
+                                                                              .conteiner_direito_download_app_play_store>a {
+                                                                                  width: 100%;
+                                                                              }
+                                                                              .imagem_play_store {
+                                                                                  max-width: 18vw;
+                                                                              }
+                                                                              .imagem_app_store {
+                                                                                  max-width: 20vw;
+                                                                              }
+                                                                              .setinha_subir {
+                                                                                  left: 48vw;
+                                                                              }
+                                                                              .footer_esquerdo_santander_logo {
+                                                                                  max-width: 10vw;
+                                                                                  max-height: 10vw;
+                                                                              }
+                                                                              .footer_esquerdo_santander_logo {
+                                                                                  max-width: 10vw;
+                                                                                  max-height: 10vw;
+                                                                              }
+                                                                              .footer_superior_meio>h2 {
+                                                                                  font-size: 1.5em;
+                                                                              }
+                                                                              .footer_meio_dados_texto {
+                                                                                  font-size: 1.1em;
+                                                                              }
+                                                                              .footer_superior_direito>h2,
+                                                                              .footer_superior_direito>h3 {
+                                                                                  font-size: 1em;
+                                                                              }
+                                                                              .footer_esquerdo_texto {
+                                                                                  font-size: 0.8em;
+                                                                              }
+                                                                              .footer_superior {
+                                                                                  height: 38vh;
+                                                                              }
+                                                                              .footer_lista>li {
+                                                                                  font-size: .6em;
+                                                                              }
+                                                                          }
+                                                                          
+                                                                          
+                                                                          @media screen and (max-width:500px) {
+                                                                              .carrossel_texto {
+                                                                                  line-height: 1 !important;
+                                                                                  font-size: 2.5vw !important;
+                                                                              }
+                                                                              .conteiner_carrossel_mensagem {
+                                                                                  top: 20vw;
+                                                                              }
+                                                                              .carrossel_botao {
+                                                                                  font-size: 0.4em;
+                                                                                  padding: 0px 5px 2px 5px;
+                                                                              }
+                                                                              .conteudo_cards,
+                                                                              .conteudo_cards_midia {
+                                                                                  display: flex;
+                                                                                  flex-direction: column;
+                                                                                  flex-wrap: nowrap;
+                                                                                  height: 280vw;
+                                                                                  align-items: center;
+                                                                              }
+                                                                              .card_conta,
+                                                                              .card_midia {
+                                                                                  width: 70vw;
+                                                                                  height: 70vw;
+                                                                              }
+                                                                              .logo {
+                                                                                  margin-top: 20px;
+                                                                                  width: 70%;
+                                                                              }
+                                                                              .card_texto_conta,
+                                                                              .card_texto {
+                                                                                  font-size: 2em;
+                                                                              }
+                                                                              .conteudo_cards_midia {
+                                                                                  display: flex;
+                                                                                  flex-direction: column;
+                                                                                  flex-wrap: nowrap;
+                                                                                  height: 280vw;
+                                                                                  align-items: center;
+                                                                              }
+                                                                              .download_apps {
+                                                                                  display: flex;
+                                                                                  flex-direction: column;
+                                                                                  flex-wrap: nowrap;
+                                                                                  height: 105vw;
+                                                                              }
+                                                                              .conteiner_esquerdo_download_app {
+                                                                                  width: 80vw;
+                                                                                  height: 65vw;
+                                                                              }
+                                                                              .conteiner_direito_download_app {
+                                                                                  margin-top: 30px;
+                                                                              }
+                                                                              .conteiner_direito_download_app_texto {
+                                                                                  font-size: 3.5vw;
+                                                                              }
+                                                                              .conteiner_direito_download_app_texto>h2 {
+                                                                                  font-size: 4vw;
+                                                                              }
+                                                                              .setinha_subir {
+                                                                                  position: relative;
+                                                                                  left: 44vw;
+                                                                                  top: 8vw;
+                                                                              }
+                                                                              .footer_lista {
+                                                                                  width: 100%;
+                                                                                  padding-left: 0%;
+                                                                                  padding-right: 0%;
+                                                                                  margin: 0;
+                                                                              }
+                                                                              .footer_superior {
+                                                                                  display: flex;
+                                                                                  flex-direction: column;
+                                                                                  flex-wrap: nowrap;
+                                                                                  height: 155vw;
+                                                                                  align-items: center;
+                                                                              }
+                                                                              .footer_superior_conteiner_esquerdo,
+                                                                              .footer_superior_meio,
+                                                                              .footer_superior_direito {
+                                                                                  width: 80vw;
+                                                                              }
+                                                                              .footer_superior_meio>h2 {
+                                                                                  font-size: 1.5em;
+                                                                              }
+                                                                              .footer_meio_dados_texto {
+                                                                                  font-size: 1.4em;
+                                                                              }
+                                                                              .footer_superior_direito>h2,
+                                                                              .footer_superior_direito>h3 {
+                                                                                  font-size: 1em;
+                                                                              }
+                                                                              .footer_esquerdo_texto {
+                                                                                  font-size: 0.8em;
+                                                                              }
+                                                                              .footer_superior_conteiner_esquerdo {
+                                                                                  height: 60%;
+                                                                              }
+                                                                              .footer_superior_direito_imagens {
+                                                                                  width: 45%;
+                                                                              }
+                                                                              .footer_lista>li {
+                                                                                  font-size: .6em;
+                                                                              }
+                                                                              .footer_inferior {
+                                                                                  height: 5vw;
+                                                                              }
+                                                                              .footer_inferior>p {
+                                                                                  font-size: .6em;
+                                                                              }
+                                                                          }
+                                                                          
+                                                                          @media screen and (max-width:500px) {
+                                                                              .setinha_subir {
+                                                                                  left: 45vw;
+                                                                                  top: 5vh;
+                                                                              }
+                                                                          }
+                                                                          */
+
+                                                                          
+                                                                          /*Campo de Cadastro de Categorias*/
+                                                                          
+                                                                          .form__group {
+                                                                              position: relative;
+                                                                              padding: 15px 0 0;
+                                                                              margin-top: px;
+                                                                              width: 50%;
+                                                                          }
+                                                                          
+                                                                          @media only screen and (max-width: 576px) {
+                                                                              .form__group {
+                                                                                  position: relative;
+                                                                                  padding: 15px 0 0;
+                                                                                  margin-top: -30px;
+                                                                                  width: 90%;
+                                                                              }
+                                                                          }
+                                                                          
+                                                                          .form__field {
+                                                                              font-family: inherit;
+                                                                              width: 100%;
+                                                                              border: 0;
+                                                                              border-bottom: 2px solid #9b9b9b;
+                                                                              outline: 0;
+                                                                              font-size: 1.3rem;
+                                                                              color: rgb(87, 79, 79);
+                                                                              padding: 7px 0;
+                                                                              background: transparent;
+                                                                              transition: border-color 0.2s;
+                                                                          }
+                                                                          
+                                                                          .form__field::placeholder {
+                                                                              color: transparent;
+                                                                          }
+                                                                          
+                                                                          .form__field:placeholder-shown~.form__label {
+                                                                              font-size: 1.3rem;
+                                                                              cursor: text;
+                                                                              top: 20px;
+                                                                          }
+                                                                          
+                                                                          .form__label {
+                                                                              position: absolute;
+                                                                              top: 0;
+                                                                              display: block;
+                                                                              transition: 0.2s;
+                                                                              font-size: 1rem;
+                                                                              color: #9b9b9b;
+                                                                          }
+                                                                          
+                                                                          .form__field:focus {
+                                                                              padding-bottom: 6px;
+                                                                              font-weight: 700;
+                                                                              border-width: 3px;
+                                                                              border-image: linear-gradient(to right, #11998e, #38ef7d);
+                                                                              border-image-slice: 1;
+                                                                          }
+                                                                          
+                                                                          .form__field:focus~.form__label {
+                                                                              position: absolute;
+                                                                              top: 0;
+                                                                              display: block;
+                                                                              transition: 0.2s;
+                                                                              font-size: 1rem;
+                                                                              color: #11998e;
+                                                                              font-weight: 700;
+                                                                          }
+                                                                          /* reset input */
+                                                                          
+                                                                          .form__field:required,
+                                                                          .form__field:invalid {
+                                                                              box-shadow: none;
+                                                                          }
+                                                                          /* demo */
+                                                                          
+                                                                          .lu_input_categoria {
+                                                                              font-family: "Poppins", sans-serif;
+                                                                              display: flex;
+                                                                              flex-direction: column;
+                                                                              justify-content: center;
+                                                                              align-items: center;
+                                                                              min-height: 100vh;
+                                                                              font-size: 1.5rem;
+                                                                              margin-top: -200px;
+                                                                              color: red;
+                                                                          }
+                                                                          /*CSS Luciano da segunda sprint - edição de tarefas*/
+                                                                          
+                                                                          .borda {
+                                                                              border: 1px solid black;
+                                                                              color: black;
+                                                                          }
+                                                                          
+                                                                          .lu_card_editar_tarefas {
+                                                                              width: 8.3rem;
+                                                                              height: 6rem;
+                                                                          }
+                                                                          
+                                                                          .lu_card_editar_tarefas_titulo {
+                                                                              position: relative;
+                                                                              top: 10px;
+                                                                              display: flex;
+                                                                              justify-content: center;
+                                                                              color: #302f2f;
+                                                                          }
+                                                                          
+                                                                          .lu_card_editar_tarefas_campo_texto {
+                                                                              margin-top: 5px;
+                                                                              background-color: rgb(178, 175, 180);
+                                                                              padding: 4px;
+                                                                          }
+                                                                          /*Classe sobrescrita do bootstrap*/
+                                                                          
+                                                                          .card-img {
+                                                                              margin-top: -28px;
+                                                                          }
+                                                                          
+                                                                          .lu_img_controles {
+                                                                              width: 27px;
+                                                                              height: 27px;
+                                                                              margin-top: 1px;
+                                                                              cursor: pointer;
+                                                                          }
+                                                                          
+                                                                          .lu_div_controles:hover {
+                                                                              box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                                          }
+                                                                          
+                                                                          .btn:focus {
+                                                                              box-shadow: none;
+                                                                          }
+                                                                          
+                                                                          .lu input:focus {
+                                                                              outline-color: blueviolet;
+                                                                          }
+                                                                          
+                                                                          .lu input {
+                                                                              border: 0;
+                                                                          }
+                                                                          
+                                                                          .lu_tamanho_fundo_tarefas {
+                                                                              max-width: 98%;
+                                                                          }
+                                                                          
+                                                                          @media only screen and (max-width:578px) {
+                                                                              .lu_tamanho_fundo_tarefas {
+                                                                                  max-width: 74%;
+                                                                              }
+                                                                          }
+                                                                          
+                                                                          @media only screen and (width:579px) and (max-width:768px) {
+                                                                              .lu_tamanho_fundo_tarefas {
+                                                                                  max-width: 70%;
+                                                                              }
+                                                                          }
+                                                                          
+                                                                          .lu_div_editar {
+                                                                              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                                              border-radius: 20px;
+                                                                          }
